@@ -1,10 +1,6 @@
 {
   "name": "@spectrum-css/slider",
-<<<<<<< HEAD
-  "version": "3.1.24",
-=======
   "version": "4.0.0-beta.0",
->>>>>>> 4e575fe3a (feat(slider!): slider core tokens (CSS-177))
   "description": "The Spectrum CSS slider component",
   "license": "Apache-2.0",
   "author": "Adobe",
