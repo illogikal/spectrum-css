@@ -2356,11 +2356,6 @@
   resolved "https://registry.yarnpkg.com/@spectrum-css/closebutton/-/closebutton-1.2.13.tgz#a02a33e211349138bcde0988cd4317749a7618e4"
   integrity sha512-V/P/XVWPh/TR2Qo66vn6o+vi5/utDbrMIdNV+zuF1dbl1wxH5QMOdCQrQOtzHrzcwulJRu3+Sk759VRPojLYCA==
 
-"@spectrum-css/divider@2.0.1":
-  version "2.0.1"
-  resolved "https://registry.yarnpkg.com/@spectrum-css/divider/-/divider-2.0.1.tgz#fadd80f89af9f9da97f5365309fb5ee6c9c61887"
-  integrity sha512-bDN9Y9NaAoW/NzQBep+Gxos+WModcPp4/xhsvIp5Eael/jJHUtceeI2lvwIvo4uC1JqkPw283FMakIP9HNRiYA==
-
 "@spectrum-css/divider@^1.0.27":
   version "1.0.27"
   resolved "https://registry.yarnpkg.com/@spectrum-css/divider/-/divider-1.0.27.tgz#435bf738a65b4eb15c899edf5c536bea22f2d679"
