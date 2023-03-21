@@ -28,6 +28,8 @@ module.exports = {
     '@whitespace/storybook-addon-html',
     // https://storybook.js.org/addons/@etchteam/storybook-addon-status
     '@etchteam/storybook-addon-status',
+    // https://storybook.js.org/addons/storybook-addon-designs
+    "storybook-addon-designs",
   ],
   env: {
     MIGRATED_PACKAGES: componentPkgs.filter(dir => {

@@ -71,7 +71,12 @@ export default {
     },
     status: {
       type: process.env.MIGRATED_PACKAGES.includes('tabs') ? 'migrated' : undefined
-    }
+    },
+    // Getting the Figma link: https://help.figma.com/hc/en-us/articles/360045003494-Storybook-and-Figma
+    // design: {
+    //   type: "figma",
+    //   url: "https://www.figma.com/file/LKQ4FJ4bTnCSjedbRpk931/Sample-File",
+    // },
   }
 };
 
@@ -79,7 +84,7 @@ export const Horizontal = Template.bind({});
 Horizontal.args = {
   selectorStyle: {
     "width": "35px",
-  },   
+  },
   items: [
     {
       id: "tab-1",
@@ -101,7 +106,7 @@ export const HorizontalWithIcon = Template.bind({});
 HorizontalWithIcon.args = {
   selectorStyle: {
     "width": "60px",
-  },   
+  },
   items: [
     {
       id: "tab-1",
@@ -126,7 +131,7 @@ export const HorizontalIconOnly = Template.bind({});
 HorizontalIconOnly.args = {
   selectorStyle: {
     "width": "20px",
-  }, 
+  },
   items: [
     {
       id: "tab-1",
@@ -150,7 +155,7 @@ Vertical.args = {
   selectorStyle: {
     "height": "46px",
     "top": "0"
-  }, 
+  },
   items: [
     {
       id: "tab-1",
@@ -174,7 +179,7 @@ VerticalWithIcon.args = {
   selectorStyle: {
     "height": "46px",
     "top": "0"
-  }, 
+  },
   items: [
     {
       id: "tab-1",
@@ -194,4 +199,3 @@ VerticalWithIcon.args = {
     }
   ]
 };
-
