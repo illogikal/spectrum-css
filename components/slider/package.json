@@ -1,6 +1,10 @@
 {
   "name": "@spectrum-css/slider",
+<<<<<<< HEAD
   "version": "3.1.24",
+=======
+  "version": "4.0.0-beta.0",
+>>>>>>> 4e575fe3a (feat(slider!): slider core tokens (CSS-177))
   "description": "The Spectrum CSS slider component",
   "license": "Apache-2.0",
   "author": "Adobe",
@@ -18,11 +22,11 @@
     "build": "gulp"
   },
   "peerDependencies": {
-    "@spectrum-css/vars": ">=9"
+    "@spectrum-css/tokens": "^4.0.0"
   },
   "devDependencies": {
-    "@spectrum-css/component-builder": "^4.0.8",
-    "@spectrum-css/vars": "^9.0.5",
+    "@spectrum-css/component-builder-simple": "^2.0.0",
+    "@spectrum-css/tokens": "^4.0.0",
     "gulp": "^4.0.0"
   },
   "publishConfig": {
