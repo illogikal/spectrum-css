@@ -10,7 +10,14 @@ OF ANY KIND, either express or implied. See the License for the specific languag
 governing permissions and limitations under the License.
 */
 
-@import "../vars/css/components/spectrum-card.css";
+.spectrum-Card {
+  --spectrum-card-border-width: var(--spectrum-border-width-100);
+  --spectrum-card-border-radius: var(--spectrum-corner-radius-100);
+  --spectrum-card-body-spacing: var(--spectrum-spacing-400);
+  --spectrum-card-title-padding-top: var(--spectrum-spacing-300);
+  --spectrum-card-title-padding-right: var(--spectrum-spacing-400);
+  --spectrum-card-content-margin-top: var(--spectrum-spacing-300);
+}
 
 .spectrum-Card--sizeS {
   @remapvars {
@@ -35,15 +42,32 @@ governing permissions and limitations under the License.
   flex-direction: column;
 
   box-sizing: border-box;
-  min-inline-size: var(--spectrum-card-min-width); /* setting min-width incase a product overrides width */
+  min-inline-size: var(--mod-spectrum-card-border-width, var(--spectrum-card-minimum-width));
 
-  border: var(--spectrum-card-border-size) solid transparent;
-  border-radius: var(--spectrum-card-border-radius);
+  border: var(--mod-spectrum-card-border-width, var(--spectrum-card-border-width)) solid transparent;
+  border-radius: var(--mod-spectrum-card-border-width, var(--spectrum-card-border-radius));
+  border-color: var(--spectrum-card-m-border-color);/* TODO */
+  background-color: var(--spectrum-card-m-background-color);/* TODO */
 
   text-decoration: none;
 
   &:focus {
     outline: none;
+  }
+  &:hover {
+    border-color: var(--spectrum-card-m-border-color-hover);/* TODO */
+  }
+
+  &.is-selected,
+  &:focus-ring {
+    border-color: var(--spectrum-card-m-border-color-key-focus);/* TODO */
+    box-shadow: 0 0 0 1px var(--spectrum-card-m-border-color-key-focus);/* TODO */
+  }
+
+  &.is-drop-target {
+    border-color: var(--spectrum-card-m-border-color-key-focus);/* TODO */
+    box-shadow: 0 0 0 1px var(--spectrum-card-m-border-color-key-focus);/* TODO */
+    background-color: var(--spectrum-alias-highlight-selected);/* TODO */
   }
 
   &.is-focused,
@@ -62,19 +86,19 @@ governing permissions and limitations under the License.
 
 .spectrum-Card-actions {
   position: absolute;
-  inset-inline-end: var(--spectrum-card-actions-margin);
-  inset-block-start: var(--spectrum-card-actions-margin);
-  block-size: var(--spectrum-quickactions-height);
+  inset-inline-end: var(--spectrum-card-actions-margin);/* TODO */
+  inset-block-start: var(--spectrum-card-actions-margin);/* TODO */
+  block-size: var(--spectrum-quickactions-height);/* TODO */
   visibility: hidden;
 }
 
 .spectrum-Card-quickActions {
   position: absolute;
-  inset-inline-start: var(--spectrum-card-checkbox-margin);
-  inset-block-start: var(--spectrum-card-checkbox-margin);
+  inset-inline-start: var(--spectrum-card-checkbox-margin);/* TODO */
+  inset-block-start: var(--spectrum-card-checkbox-margin);/* TODO */
 
-  inline-size: var(--spectrum-quickactions-height);
-  block-size: var(--spectrum-quickactions-height);
+  inline-size: var(--spectrum-quickactions-height);/* TODO */
+  block-size: var(--spectrum-quickactions-height);/* TODO */
 
   visibility: hidden;
 
@@ -86,82 +110,90 @@ governing permissions and limitations under the License.
 }
 
 .spectrum-Card-coverPhoto {
-  block-size: var(--spectrum-card-coverphoto-height);
+  block-size: var(--spectrum-card-coverphoto-height);/* TODO */
   box-sizing: border-box;
 
   display: flex;
   align-items: center;
   justify-content: center;
 
-  border-block-end: var(--spectrum-card-coverphoto-border-bottom-size) solid transparent;
-  border-top-left-radius: calc(var(--spectrum-card-border-radius) - 1px);
-  border-top-right-radius: calc(var(--spectrum-card-border-radius) - 1px);
+  border-block-end: var(--spectrum-card-coverphoto-border-bottom-size) solid transparent;/* TODO */
+  border-top-left-radius: calc(var(--spectrum-card-border-radius) - 1px);/* TODO */
+  border-top-right-radius: calc(var(--spectrum-card-border-radius) - 1px);/* TODO */
   border-bottom-right-radius: 0;
   border-bottom-left-radius: 0;
 
   background-size: cover;
   background-position: center center;
+  background-color: var(--spectrum-card-m-coverphoto-background-color); /* TODO */
+  border-block-end-color: var(--spectrum-card-m-coverphoto-border-color); /* TODO */
 }
 
 .spectrum-Card-body {
-  padding-block-start: var(--spectrum-card-body-padding-top);
-  padding-inline-end: var(--spectrum-card-body-padding-right);
-  padding-block-end: var(--spectrum-card-body-padding-bottom);
-  padding-inline-start: var(--spectrum-card-body-padding-left);
+  padding-block-start: var(--mod-spectrum-card-title-padding-top, var(--spectrum-card-title-padding-top));
+  padding-inline-end: var(--mod-spectrum-card-body-spacing, var(--spectrum-card-body-spacing));
+  padding-inline-start: var(--mod-spectrum-card-body-spacing, var(--spectrum-card-body-spacing));
+  padding-block-end: var(--spectrum-card-body-padding-bottom);/* TODO */
 
   &:last-child {
     border-top-left-radius: 0;
     border-top-right-radius: 0;
-    border-bottom-right-radius: var(--spectrum-card-border-radius);
-    border-bottom-left-radius: var(--spectrum-card-border-radius);
+    border-bottom-right-radius: var(--spectrum-card-border-radius);/* TODO */
+    border-bottom-left-radius: var(--spectrum-card-border-radius);/* TODO */
   }
 }
 
 .spectrum-Card-preview {
   overflow: hidden;
-  border-top-left-radius: calc(var(--spectrum-card-border-radius) - 1px);
-  border-top-right-radius: calc(var(--spectrum-card-border-radius) - 1px);
+  border-top-left-radius: calc(var(--spectrum-card-border-radius) - 1px);/* TODO */
+  border-top-right-radius: calc(var(--spectrum-card-border-radius) - 1px);/* TODO */
   border-bottom-right-radius: 0;
   border-bottom-left-radius: 0;
 }
 
 .spectrum-Card-header {
-  block-size: var(--spectrum-card-body-header-height);
+  block-size: var(--spectrum-card-body-header-height);/* TODO */
 }
 
 .spectrum-Card-content {
   display: flex;
-  min-block-size: var(--spectrum-card-body-content-min-height);
-  margin-block-start: var(--spectrum-card-body-content-margin-top);
+  min-block-size: var(--spectrum-card-body-content-min-height);/* TODO */
+  margin-block-start: var(--mod-spectrum-card-content-margin-top, var(--spectrum-card-content-margin-top));
 }
 
 .spectrum-Card-title {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-  padding-inline-end: var(--spectrum-card-title-padding-right);
+  padding-inline-end: var(--mod-spectrum-card-title-padding-right, var(--spectrum-card-title-padding-right));
 }
 
 .spectrum-Card-subtitle {
-  padding-inline-end: var(--spectrum-card-subtitle-padding-right);
+  padding-inline-end: var(--spectrum-card-subtitle-padding-right);/* TODO */
+  color: var(--spectrum-card-m-description-text-color);/* TODO */
+
 }
 
 .spectrum-Card-description {
-  font-size: var(--spectrum-card-subtitle-text-size);
+  font-size: var(--spectrum-card-subtitle-text-size);/* TODO */
+  color: var(--spectrum-card-m-description-text-color); /* TODO */
+
 }
 
 .spectrum-Card-subtitle + .spectrum-Card-description:before {
   content: "•";
-  padding-inline-end: var(--spectrum-card-subtitle-padding-right);
+  padding-inline-end: var(--spectrum-card-subtitle-padding-right);/* TODO */
 }
 
 .spectrum-Card-footer {
-  padding-block-start: var(--spectrum-card-footer-padding-top);
-  margin-inline-end: var(--spectrum-card-body-padding-right);
-  padding-block-end: var(--spectrum-card-body-padding-bottom);
-  margin-inline-start: var(--spectrum-card-body-padding-left);
+  padding-block-start: var(--spectrum-card-footer-padding-top);/* TODO */
+  padding-inline-start: var(--mod-spectrum-card-body-spacing, var(--spectrum-card-body-spacing));
+  padding-inline-end: var(--mod-spectrum-card-body-spacing, var(--spectrum-card-body-spacing));
+  padding-block-end: var(--mod-spectrum-card-body-spacing, var(--spectrum-card-body-spacing));
 
-  border-block-start: var(--spectrum-card-footer-border-top-size) solid;
+  border-block-start: var(--spectrum-card-footer-border-top-size) solid;/* TODO */
+  border-color: var(--spectrum-card-m-border-color); /* TODO */
+
 }
 
 .spectrum-Card-header {
@@ -178,28 +210,32 @@ governing permissions and limitations under the License.
 
 .spectrum-Card--quiet {
   .spectrum-Card-preview {
-    min-block-size: var(--spectrum-card-quiet-min-height);
+    min-block-size: var(--spectrum-card-quiet-min-height);/* TODO */
   }
 }
 
 .spectrum-Card--quiet,
 .spectrum-Card--gallery {
   block-size: 100%;
-  min-inline-size: var(--spectrum-card-quiet-min-width);
+  min-inline-size: var(--spectrum-card-quiet-min-width);/* TODO */
   border-width: 0;
   border-radius: 0;
   overflow: visible;
+  border-color: transparent;
+  background-color: transparent;
 
   .spectrum-Card-preview {
+    background-color: var(--spectrum-card-m-quiet-preview-background-color); /* TODO */
     inline-size: 100%;
     flex: 1;
-    padding: var(--spectrum-card-quiet-preview-padding);
+    padding: var(--spectrum-card-quiet-preview-padding);/* TODO */
     margin: 0 auto;
     box-sizing: border-box;
-    border-radius: var(--spectrum-card-quiet-border-radius);
+    border-radius: var(--spectrum-card-quiet-border-radius);/* TODO */
     position: relative;
-    transition: background-color var(--spectrum-global-animation-duration-100);
+    transition: background-color var(--spectrum-global-animation-duration-100);/* TODO */
     overflow: visible;
+    
 
     /* Use a :before to show the selection outline so that the border doesn't
      * affect the layout of the content within the preview. */
@@ -212,28 +248,82 @@ governing permissions and limitations under the License.
       block-size: 100%;
       box-sizing: border-box;
       border-radius: inherit;
-      border: var(--spectrum-card-quiet-border-size) solid transparent;
+      border: var(--spectrum-card-quiet-border-size) solid transparent;/* TODO */
+    }
+  }
+
+  &:hover {
+    border-color: transparent;
+    .spectrum-Card-preview {
+      background-color: var(--spectrum-card-m-quiet-preview-background-color-hover); /* TODO */
+    }
+  }
+
+  &.is-selected,
+  &:focus-ring {
+    border-color: transparent;
+    box-shadow: none;
+    .spectrum-Card-preview {
+      background-color: var(--spectrum-card-m-quiet-preview-background-color); /* TODO */
+
+      &:before {
+        border-color: var(--spectrum-card-m-quiet-border-color-selected); /* TODO */
+        box-shadow: 0 0 0 1px var(--spectrum-card-m-quiet-border-color-selected); /* TODO */
+      }
     }
   }
 
   &.is-drop-target {
+    border-color: transparent;
+    background-color: transparent;
+    box-shadow: none;
+
     .spectrum-Card-preview {
       transition: none;
+      background-color: var(--spectrum-alias-highlight-selected); /* TODO */
+
+      &:before {
+        border-color: var(--spectrum-card-m-quiet-border-color-selected); /* TODO */
+        box-shadow: 0 0 0 1px var(--spectrum-card-m-quiet-border-color-selected); /* TODO */ 
+      }
     }
   }
 
+  .spectrum-Asset-folderBackground,
+  .spectrum-Asset-fileBackground {
+    fill: var(--spectrum-alias-highlight-selected); /* TODO */
+  }
+  .spectrum-Asset-folderOutline,
+  .spectrum-Asset-fileOutline {
+    fill: var(--spectrum-card-m-quiet-border-color-selected); /* TODO */
+  }
+
+  .spectrum-Card-title {
+    color: var(--spectrum-card-m-quiet-title-text-color);
+  }
+
   .spectrum-Card-header {
-    block-size: var(--spectrum-card-quiet-body-header-height);
-    margin-block-start: var(--spectrum-card-quiet-body-header-margin-top);
+    block-size: var(--spectrum-card-quiet-body-header-height);/* TODO */
+    margin-block-start: var(--spectrum-card-quiet-body-header-margin-top);/* TODO */
   }
 
   .spectrum-Card-body {
     padding: 0;
   }
+
+  .spectrum-Card-subtitle {
+    color: var(--spectrum-card-m-quiet-subtitle-text-color);
+  }
 }
 
 .spectrum-Card--horizontal {
   flex-direction: row;
+
+  &:hover {
+    .spectrum-Card-preview {
+      border-color: var(--spectrum-card-m-border-color-hover);/* TODO */
+    }
+  }
 
   .spectrum-Card-preview {
     flex-shrink: 0;
@@ -242,14 +332,17 @@ governing permissions and limitations under the License.
     align-items: center;
     justify-content: center;
 
-    border-start-start-radius: var(--spectrum-card-quiet-border-radius);
+    border-start-start-radius: var(--spectrum-card-quiet-border-radius);/* TODO */
     border-start-end-radius: 0;
-    border-end-start-radius: var(--spectrum-card-quiet-border-radius);
+    border-end-start-radius: var(--spectrum-card-quiet-border-radius);/* TODO */
     border-end-end-radius: 0;
 
-    border-inline-end: var(--spectrum-card-border-size) solid transparent;
+    border-inline-end: var(--spectrum-card-border-size) solid transparent;/* TODO */
 
-    padding: var(--spectrum-global-dimension-size-175);
+    padding: var(--spectrum-global-dimension-size-175);/* TODO */
+    background-color: var(--spectrum-card-m-quiet-preview-background-color);/* TODO */
+
+    border-color: var(--spectrum-card-m-border-color);/* TODO */
   }
 
   .spectrum-Card-header,
@@ -269,7 +362,7 @@ governing permissions and limitations under the License.
     flex-direction: column;
 
     padding-block: 0;
-    padding-inline: var(--spectrum-global-dimension-size-200);
+    padding-inline: var(--spectrum-global-dimension-size-200);/* TODO */
   }
 }
 
