@@ -17,6 +17,11 @@ governing permissions and limitations under the License.
   --spectrum-card-title-padding-top: var(--spectrum-spacing-300);
   --spectrum-card-title-padding-right: var(--spectrum-spacing-400);
   --spectrum-card-content-margin-top: var(--spectrum-spacing-300);
+  --spectrum-card-footer-margin-top: var(--spectrum-spacing-300);
+  --spectrum-card-footer-padding-top: var(--spectrum-spacing-100);
+  --spectrum-card-checkbox-spacing: var(--spectrum-spacing-300);
+  --spectrum-card-checkbox-size: var(--spectrum-card-selection-background-size);
+  --spectrum-card-checkbox-border-radius: var(--spectrum-corner-radius-100);
 }
 
 .spectrum-Card--sizeS {
@@ -94,13 +99,14 @@ governing permissions and limitations under the License.
 
 .spectrum-Card-quickActions {
   position: absolute;
-  inset-inline-start: var(--spectrum-card-checkbox-margin);/* TODO */
-  inset-block-start: var(--spectrum-card-checkbox-margin);/* TODO */
-
-  inline-size: var(--spectrum-quickactions-height);/* TODO */
-  block-size: var(--spectrum-quickactions-height);/* TODO */
-
   visibility: hidden;
+  inset-inline-start: var(--mod-spectrum-card-checkbox-spacing, var(--spectrum-card-checkbox-spacing));
+  inset-block-start: var(--mod-spectrum-card-checkbox-spacing, var(--spectrum-card-checkbox-spacing));
+
+  inline-size: var(--mod-spectrum-card-checkbox-size, var(--spectrum-card-checkbox-size));
+  block-size: var(--mod-spectrum-card-checkbox-size, var(--spectrum-card-checkbox-size));
+  border-radius: var(--mod-spectrum-card-checkbox-border-radius, var(--spectrum-card-checkbox-border-radius));
+
 
   /* hack to work around #124 */
   .spectrum-Checkbox:dir(ltr),
@@ -186,13 +192,14 @@ governing permissions and limitations under the License.
 }
 
 .spectrum-Card-footer {
-  padding-block-start: var(--spectrum-card-footer-padding-top);/* TODO */
-  padding-inline-start: var(--mod-spectrum-card-body-spacing, var(--spectrum-card-body-spacing));
-  padding-inline-end: var(--mod-spectrum-card-body-spacing, var(--spectrum-card-body-spacing));
+  margin-block-start: var(--mod-spectrum-card-footer-margin-top, var(--spectrum-card-footer-margin-top));
+  margin-inline-start: var(--mod-spectrum-card-body-spacing, var(--spectrum-card-body-spacing));
+  margin-inline-end: var(--mod-spectrum-card-body-spacing, var(--spectrum-card-body-spacing));
+  padding-block-start: var(--mod-spectrum-card-footer-padding-top, var(--spectrum-card-footer-padding-top));
   padding-block-end: var(--mod-spectrum-card-body-spacing, var(--spectrum-card-body-spacing));
 
-  border-block-start: var(--spectrum-card-footer-border-top-size) solid;/* TODO */
-  border-color: var(--spectrum-card-m-border-color); /* TODO */
+  border-block-start: var(--spectrum-card-border-width) solid;/* TODO need a token for this */
+  border-color: var(--spectrum-gray-200); /* TODO need a token for this */
 
 }
 
