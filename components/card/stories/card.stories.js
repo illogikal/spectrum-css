@@ -203,7 +203,8 @@ Quiet.argTypes = {
 };
 Quiet.args = {
   title: "Name",
-  image: "example-card-square.png",
+  showAsset: "image",
+  image: "example-ava@2x.jpg",
   subtitle: "jpg",
   description: "10/15/18",
   isQuiet: true,

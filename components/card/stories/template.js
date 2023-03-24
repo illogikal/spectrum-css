@@ -21,6 +21,7 @@ export const Template = ({
   subtitle,
   description,
   footer,
+  isFocused = false,
   isSelected = false,
   isHorizontal = false,
   isQuiet = false,
@@ -43,6 +44,7 @@ export const Template = ({
       class=${classMap({
         [rootClass]: true,
         'is-selected': isSelected,
+        'is-focused': isFocused,
         [`${rootClass}--quiet`]: isQuiet,
         [`${rootClass}--gallery`]: isGallery,
         [`${rootClass}--horizontal`]: isHorizontal,
