@@ -11,17 +11,45 @@ governing permissions and limitations under the License.
 */
 
 .spectrum-Card {
-  --spectrum-card-border-width: var(--spectrum-border-width-100);
-  --spectrum-card-border-radius: var(--spectrum-corner-radius-100);
+
+  /* Default Layout */
+  --spectrum-card-background-color: var(--spectrum-background-layer-2-color);
   --spectrum-card-body-spacing: var(--spectrum-spacing-400);
   --spectrum-card-title-padding-top: var(--spectrum-spacing-300);
   --spectrum-card-title-padding-right: var(--spectrum-spacing-400);
   --spectrum-card-content-margin-top: var(--spectrum-spacing-300);
   --spectrum-card-footer-margin-top: var(--spectrum-spacing-300);
   --spectrum-card-footer-padding-top: var(--spectrum-spacing-100);
+
+  /* Border */
+  --spectrum-card-border-width: var(--spectrum-border-width-100);
+  --spectrum-card-corner-radius: var(--spectrum-corner-radius-100);
+  --spectrum-card-border-color: var(--spectrum-gray-200);
+  --spectrum-card-border-color-hover: var(--spectrum-gray-300);
+  --spectrum-card-border-color-selected: var(--spectrum-blue-700);
+
+  /* Selection Checkbox */
   --spectrum-card-checkbox-spacing: var(--spectrum-spacing-300);
   --spectrum-card-checkbox-size: var(--spectrum-card-selection-background-size);
   --spectrum-card-checkbox-border-radius: var(--spectrum-corner-radius-100);
+  --spectrum-card-checkbox-background-color: var(--spectrum-card-selection-background-color);
+  --spectrum-card-checkbox-background-color-opacity: var(--spectrum-card-selection-background-color-opacity); /* Not using this yet */ 
+  --spectrum-card-checkbox-drop-shadow-color: var(--spectrum-drop-shadow-color);
+  --spectrum-card-checkbox-drop-shadow-x: var(--spectrum-drop-shadow-x);
+  --spectrum-card-checkbox-drop-shadow-y: var(--spectrum-drop-shadow-y);
+  --spectrum-card-checkbox-drop-shadow-blur: var(--spectrum-drop-shadow-blur);
+
+
+
+
+
+  /* Focus */
+  --spectrum-card-focus-indicator-gap: var(--spectrum-focus-indicator-gap);
+  --spectrum-card-focus-indicator-color: var(--spectrum-focus-indicator-color);
+  --spectrum-card-focus-indicator-width: var(--spectrum-focus-indicator-thickness);
+  --spectrum-card-focus-indicator-corner-radius: var(--spectrum-corner-radius-100);
+
+
 }
 
 .spectrum-Card--sizeS {
@@ -47,24 +75,49 @@ governing permissions and limitations under the License.
   flex-direction: column;
 
   box-sizing: border-box;
-  min-inline-size: var(--mod-spectrum-card-border-width, var(--spectrum-card-minimum-width));
+  min-inline-size: var(--mod-card-border-width, var(--spectrum-card-minimum-width));
 
-  border: var(--mod-spectrum-card-border-width, var(--spectrum-card-border-width)) solid transparent;
-  border-radius: var(--mod-spectrum-card-border-width, var(--spectrum-card-border-radius));
-  border-color: var(--spectrum-card-m-border-color);/* TODO */
-  background-color: var(--spectrum-card-m-background-color);/* TODO */
+  border: var(--mod-card-border-width, var(--spectrum-card-border-width)) solid transparent;
+  border-radius: var(--mod-card-corner-radius, var(--spectrum-card-corner-radius));
+  border-color: var(--highcontrast-card-border-color, var(--mod-card-border-color, var(--spectrum-card-border-color)));
+  background-color: var(--highcontrast-card-background-color, var(--mod-spectrum-card-background-color, var(--spectrum-card-background-color)));
 
   text-decoration: none;
 
-  &:focus {
-    outline: none;
-  }
-  &:hover {
-    border-color: var(--spectrum-card-m-border-color-hover);/* TODO */
+  &::after {
+    content: '';
+    block-size: calc(100% + (var(--mod-card-focus-indicator-gap, var(--spectrum-card-focus-indicator-gap)) * 2));
+    inline-size: calc(100% + (var(--mod-card-focus-indicator-gap, var(--spectrum-card-focus-indicator-gap)) * 2));
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    border-style: solid;
+    border-color: transparent;
+    border-width: 0;
+    border-radius: var(--mod-card-focus-indicator-corner-radius, var(--spectrum-card-focus-indicator-corner-radius));
+    margin-block-start: calc((var(--mod-card-focus-indicator-gap, var(--spectrum-card-focus-indicator-gap))
+                        + var(--mod-card-focus-indicator-width, var(--spectrum-card-focus-indicator-width)))
+                        * -1);
+    margin-inline-start: calc((var(--mod-card-focus-indicator-gap, var(--spectrum-card-focus-indicator-gap))
+                        + var(--mod-card-focus-indicator-width, var(--spectrum-card-focus-indicator-width)))
+                        * -1);
   }
 
-  &.is-selected,
-  &:focus-ring {
+  &:focus, 
+  &.is-focused {
+    outline: none;
+    &::after {
+      border-width: var(--mod-card-focus-indicator-width, var(--spectrum-card-focus-indicator-width));
+      border-color: var(--mod-card-focus-indicator-color, var(--spectrum-card-focus-indicator-color));
+    }
+  }
+
+  &:hover {
+    border-color: var(--highcontrast-card-border-color-hover, var(--mod-card-border-color-hover, var(--spectrum-card-border-color-hover)));
+  }
+
+  &.is-selected {
     border-color: var(--spectrum-card-m-border-color-key-focus);/* TODO */
     box-shadow: 0 0 0 1px var(--spectrum-card-m-border-color-key-focus);/* TODO */
   }
@@ -89,23 +142,21 @@ governing permissions and limitations under the License.
   }
 }
 
-.spectrum-Card-actions {
-  position: absolute;
-  inset-inline-end: var(--spectrum-card-actions-margin);/* TODO */
-  inset-block-start: var(--spectrum-card-actions-margin);/* TODO */
-  block-size: var(--spectrum-quickactions-height);/* TODO */
-  visibility: hidden;
-}
-
 .spectrum-Card-quickActions {
   position: absolute;
   visibility: hidden;
-  inset-inline-start: var(--mod-spectrum-card-checkbox-spacing, var(--spectrum-card-checkbox-spacing));
-  inset-block-start: var(--mod-spectrum-card-checkbox-spacing, var(--spectrum-card-checkbox-spacing));
+  background-color: var(--highcontrast-card-checkbox-background-color, var(--mod-card-checkbox-background-color, var(--spectrum-card-checkbox-background-color)));
+  inset-inline-start: var(--mod-card-checkbox-spacing, var(--spectrum-card-checkbox-spacing));
+  inset-block-start: var(--mod-card-checkbox-spacing, var(--spectrum-card-checkbox-spacing));
 
-  inline-size: var(--mod-spectrum-card-checkbox-size, var(--spectrum-card-checkbox-size));
-  block-size: var(--mod-spectrum-card-checkbox-size, var(--spectrum-card-checkbox-size));
-  border-radius: var(--mod-spectrum-card-checkbox-border-radius, var(--spectrum-card-checkbox-border-radius));
+  box-shadow: var(--mod-card-checkbox-drop-shadow-x, var(--spectrum-card-checkbox-drop-shadow-x))  
+                      var(--mod-card-checkbox-drop-shadow-y, var(--spectrum-card-checkbox-drop-shadow-y)) 
+                      var(--mod-card-checkbox-drop-shadow-blur, var(--spectrum-card-checkbox-drop-shadow-blur)) 
+                      var(--mod-card-checkbox-drop-shadow-color, var(--spectrum-card-checkbox-drop-shadow-color));
+
+  inline-size: var(--mod-card-checkbox-size, var(--spectrum-card-checkbox-size));
+  block-size: var(--mod-card-checkbox-size, var(--spectrum-card-checkbox-size));
+  border-radius: var(--mod-card-checkbox-border-radius, var(--spectrum-card-checkbox-border-radius));
 
 
   /* hack to work around #124 */
@@ -136,9 +187,9 @@ governing permissions and limitations under the License.
 }
 
 .spectrum-Card-body {
-  padding-block-start: var(--mod-spectrum-card-title-padding-top, var(--spectrum-card-title-padding-top));
-  padding-inline-end: var(--mod-spectrum-card-body-spacing, var(--spectrum-card-body-spacing));
-  padding-inline-start: var(--mod-spectrum-card-body-spacing, var(--spectrum-card-body-spacing));
+  padding-block-start: var(--mod-card-title-padding-top, var(--spectrum-card-title-padding-top));
+  padding-inline-end: var(--mod-card-body-spacing, var(--spectrum-card-body-spacing));
+  padding-inline-start: var(--mod-card-body-spacing, var(--spectrum-card-body-spacing));
   padding-block-end: var(--spectrum-card-body-padding-bottom);/* TODO */
 
   &:last-child {
@@ -164,14 +215,14 @@ governing permissions and limitations under the License.
 .spectrum-Card-content {
   display: flex;
   min-block-size: var(--spectrum-card-body-content-min-height);/* TODO */
-  margin-block-start: var(--mod-spectrum-card-content-margin-top, var(--spectrum-card-content-margin-top));
+  margin-block-start: var(--mod-card-content-margin-top, var(--spectrum-card-content-margin-top));
 }
 
 .spectrum-Card-title {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-  padding-inline-end: var(--mod-spectrum-card-title-padding-right, var(--spectrum-card-title-padding-right));
+  padding-inline-end: var(--mod-card-title-padding-right, var(--spectrum-card-title-padding-right));
 }
 
 .spectrum-Card-subtitle {
@@ -192,11 +243,11 @@ governing permissions and limitations under the License.
 }
 
 .spectrum-Card-footer {
-  margin-block-start: var(--mod-spectrum-card-footer-margin-top, var(--spectrum-card-footer-margin-top));
-  margin-inline-start: var(--mod-spectrum-card-body-spacing, var(--spectrum-card-body-spacing));
-  margin-inline-end: var(--mod-spectrum-card-body-spacing, var(--spectrum-card-body-spacing));
-  padding-block-start: var(--mod-spectrum-card-footer-padding-top, var(--spectrum-card-footer-padding-top));
-  padding-block-end: var(--mod-spectrum-card-body-spacing, var(--spectrum-card-body-spacing));
+  margin-block-start: var(--mod-card-footer-margin-top, var(--spectrum-card-footer-margin-top));
+  margin-inline-start: var(--mod-card-body-spacing, var(--spectrum-card-body-spacing));
+  margin-inline-end: var(--mod-card-body-spacing, var(--spectrum-card-body-spacing));
+  padding-block-start: var(--mod-card-footer-padding-top, var(--spectrum-card-footer-padding-top));
+  padding-block-end: var(--mod-card-body-spacing, var(--spectrum-card-body-spacing));
 
   border-block-start: var(--spectrum-card-border-width) solid;/* TODO need a token for this */
   border-color: var(--spectrum-gray-200); /* TODO need a token for this */
