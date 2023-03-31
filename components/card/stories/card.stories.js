@@ -132,15 +132,15 @@ export default {
       },
       control: { type: "text" },
     },
-    subtitle: {
-      name: "Subtitle",
-      type: { name: "string" },
-      table: {
-        type: { summary: "string" },
-        category: "Content",
-      },
-      control: { type: "text" },
-    },
+    // subtitle: {
+    //   name: "Subtitle",
+    //   type: { name: "string" },
+    //   table: {
+    //     type: { summary: "string" },
+    //     category: "Content",
+    //   },
+    //   control: { type: "text" },
+    // },
     description: {
       name: "Description",
       type: { name: "string" },
@@ -190,7 +190,7 @@ Default.argTypes = {
 Default.args = {
   title: "Card title",
   image: "example-card-portrait.png",
-  subtitle: "jpg",
+  description: "Optional description that should be one or two lines",
   footer: [ html`Footer` ],
 };
 
@@ -205,7 +205,6 @@ Quiet.args = {
   title: "Name",
   showAsset: "image",
   image: "example-ava@2x.jpg",
-  subtitle: "jpg",
   description: "10/15/18",
   isQuiet: true,
 };
@@ -220,7 +219,7 @@ QuietFile.argTypes = {
 };
 QuietFile.args = {
   title: "FileName",
-  subtitle: "PDF",
+  description: "PDF",
   showAsset: "file",
   isQuiet: true,
 };
@@ -235,7 +234,7 @@ Horizontal.argTypes = {
 };
 Horizontal.args = {
   title: "Card title",
-  subtitle: "jpg",
+  description: "jpg",
   showAsset: "file",
   isQuiet: false,
   isHorizontal: true,
