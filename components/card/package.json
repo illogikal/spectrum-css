@@ -24,7 +24,7 @@
     "@spectrum-css/icon": ">=3",
     "@spectrum-css/quickaction": ">=3",
     "@spectrum-css/typography": ">=4 <=5",
-    "@spectrum-css/tokens": "^7.6.0"
+    "@spectrum-css/tokens": ">=8 <=9"
   },
   "devDependencies": {
     "@spectrum-css/actionbutton": "^3.0.37",
@@ -34,7 +34,7 @@
     "@spectrum-css/quickaction": "^3.0.50",
     "@spectrum-css/typography": "^5.0.11",
     "@spectrum-css/component-builder-simple": "^2.0.6",
-    "@spectrum-css/tokens": "^7.6.0",
+    "@spectrum-css/tokens": "^8.0.1",
     "gulp": "^4.0.0"
   },
   "publishConfig": {
