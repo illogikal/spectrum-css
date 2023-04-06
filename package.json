@@ -34,6 +34,7 @@
     "dev": "NODE_ENV=development BROWSERSYNC_OPEN=true gulp dev",
     "docs:mod": "node tasks/mod-extractor.js",
     "lint:components": "node ./tasks/packageLint.js",
+    "lint:styles": "stylelint ./components/**/*.css",
     "mv:preview": "rimraf dist/preview && mv tools/preview/storybook-static dist/preview",
     "new": "yarn workspace @spectrum-css/generator new",
     "precommit": "lint-staged",
@@ -74,6 +75,8 @@
     "prismjs": "^1.23.0",
     "rimraf": "^5.0.0",
     "semver": "^7.4.0",
+    "stylelint": "^15.4.0",
+    "stylelint-config-standard": "^32.0.0",
     "through2": "^3.0.1",
     "yargs": "^17.6.2"
   },
