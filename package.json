@@ -75,8 +75,8 @@
     "prismjs": "^1.23.0",
     "rimraf": "^5.0.0",
     "semver": "^7.4.0",
-    "stylelint": "^15.4.0",
-    "stylelint-config-standard": "^32.0.0",
+    "stylelint": "^15.5.0",
+    "stylelint-config-standard": "^33.0.0",
     "through2": "^3.0.1",
     "yargs": "^17.6.2"
   },
