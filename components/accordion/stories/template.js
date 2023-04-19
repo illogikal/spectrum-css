@@ -6,7 +6,6 @@ import { ifDefined } from "lit-html/directives/if-defined.js";
 import { Template as Icon } from "@spectrum-css/icon/stories/template.js";
 
 import '../index.css';
-import '../skin.css';
 
 export const AccordionItem = ({
   heading,
