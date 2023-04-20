@@ -10,10 +10,13 @@ OF ANY KIND, either express or implied. See the License for the specific languag
 governing permissions and limitations under the License.
 */
 
-@import "../vars/css/components/spectrum-search.css";
+@import "vars/css/components/spectrum-search.css";
 
 .spectrum-Search {
-  --spectrum-search-quiet-button-offset: calc(var(--spectrum-actionbutton-m-texticon-min-width) / 2 - var(--spectrum-alias-ui-icon-cross-size-100) / 2); /* TODO this seems more complicated than necessary */
+  --spectrum-search-quiet-button-offset: calc(
+    var(--spectrum-actionbutton-m-texticon-min-width) / 2 -
+      var(--spectrum-alias-ui-icon-cross-size-100) / 2
+  ); /* TODO this seems more complicated than necessary */
 }
 
 .spectrum-Search {

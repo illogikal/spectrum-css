@@ -15,7 +15,9 @@
   },
   "main": "dist/index-vars.css",
   "scripts": {
-    "build": "gulp"
+    "build": "spectrum build",
+    "clean": "spectrum clean",
+    "lint": "spectrum lint"
   },
   "peerDependencies": {
     "@spectrum-css/icon": ">=3",
@@ -24,14 +26,8 @@
     "@spectrum-css/tokens": ">=8 <=9"
   },
   "devDependencies": {
-    "@spectrum-css/component-builder-simple": "^2.0.10",
-    "@spectrum-css/helptext": "^4.0.23",
-    "@spectrum-css/icon": "^3.0.41",
-    "@spectrum-css/menu": "^4.0.26",
-    "@spectrum-css/popover": "^6.0.38",
-    "@spectrum-css/progresscircle": "^2.0.34",
-    "@spectrum-css/tokens": "^9.0.4",
-    "gulp": "^4.0.0"
+    "@spectrum-css/component-builder": "^4.0.7",
+    "@spectrum-css/tokens": "^9.0.4"
   },
   "publishConfig": {
     "access": "public"

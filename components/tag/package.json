@@ -15,19 +15,17 @@
   },
   "main": "dist/index-vars.css",
   "scripts": {
-    "build": "gulp"
+    "build": "spectrum build",
+    "clean": "spectrum clean",
+    "lint": "spectrum lint"
   },
   "peerDependencies": {
     "@spectrum-css/clearbutton": ">=1",
     "@spectrum-css/tokens": ">=8 <=9"
   },
   "devDependencies": {
-    "@spectrum-css/avatar": "^6.0.21",
-    "@spectrum-css/clearbutton": "^1.2.28",
-    "@spectrum-css/component-builder-simple": "^2.0.10",
-    "@spectrum-css/icon": "^3.0.41",
-    "@spectrum-css/tokens": "^9.0.4",
-    "gulp": "^4.0.0"
+    "@spectrum-css/component-builder": "^4.0.7",
+    "@spectrum-css/tokens": "^9.0.4"
   },
   "publishConfig": {
     "access": "public"

@@ -1,78 +1,54 @@
-| Modifiable Custom Properties |
-| --- |
-|`--mod-tag-border-color`|
-|`--mod-tag-background-color`|
-|`--mod-tag-content-color`|
-|`--mod-tag-corner-radius`|
-|`--mod-tag-border-width`|
-|`--mod-tag-spacing-inline-start`|
-|`--mod-tag-height`|
-|`--mod-tag-animation-duration`|
-|`--mod-tag-icon-size`|
-|`--mod-tag-icon-spacing-block-start`|
-|`--mod-tag-icon-spacing-block-end`|
-|`--mod-tag-icon-spacing-inline-end`|
-|`--mod-tag-avatar-spacing-block-start`|
-|`--mod-tag-avatar-spacing-block-end`|
-|`--mod-tag-avatar-spacing-inline-end`|
-|`--mod-tag-clear-button-spacing-block`|
-|`--mod-tag-clear-button-spacing-inline-start`|
-|`--mod-tag-label-spacing-inline-end`|
-|`--mod-tag-clear-button-spacing-inline-end`|
-|`--mod-clearbutton-fill-background-color`|
-|`--mod-clearbutton-fill-size`|
-|`--mod-tag-label-line-height`|
-|`--mod-tag-label-font-weight`|
-|`--mod-tag-font-size`|
-|`--mod-tag-label-spacing-block`|
-|`--mod-tag-border-color-hover`|
-|`--mod-tag-background-color-hover`|
-|`--mod-tag-content-color-hover`|
-|`--mod-tag-border-color-active`|
-|`--mod-tag-background-color-active`|
-|`--mod-tag-content-color-active`|
-|`--mod-tag-border-color-focus`|
-|`--mod-tag-background-color-focus`|
-|`--mod-tag-content-color-focus`|
-|`--mod-tag-focus-ring-gap`|
-|`--mod-tag-focus-ring-thickness`|
-|`--mod-tag-focus-ring-color`|
-|`--mod-tag-border-color-selected`|
-|`--mod-tag-background-color-selected`|
-|`--mod-tag-content-color-selected`|
-|`--mod-tag-border-color-selected-hover`|
-|`--mod-tag-background-color-selected-hover`|
-|`--mod-tag-border-color-selected-active`|
-|`--mod-tag-background-color-selected-active`|
-|`--mod-tag-border-color-selected-focus`|
-|`--mod-tag-background-color-selected-focus`|
-|`--mod-tag-border-color-invalid`|
-|`--mod-tag-content-color-invalid`|
-|`--mod-tag-border-color-invalid-hover`|
-|`--mod-tag-content-color-invalid-hover`|
-|`--mod-tag-border-color-invalid-active`|
-|`--mod-tag-content-color-invalid-active`|
-|`--mod-tag-border-color-invalid-focus`|
-|`--mod-tag-content-color-invalid-focus`|
-|`--mod-tag-border-color-invalid-selected`|
-|`--mod-tag-background-color-invalid-selected`|
-|`--mod-tag-content-color-invalid-selected`|
-|`--mod-tag-border-color-invalid-selected-hover`|
-|`--mod-tag-background-color-invalid-selected-hover`|
-|`--mod-tag-border-color-invalid-selected-active`|
-|`--mod-tag-background-color-invalid-selected-active`|
-|`--mod-tag-border-color-invalid-selected-focus`|
-|`--mod-tag-background-color-invalid-selected-focus`|
-|`--mod-tag-border-color-emphasized`|
-|`--mod-tag-background-color-emphasized`|
-|`--mod-tag-content-color-emphasized`|
-|`--mod-tag-border-color-emphasized-hover`|
-|`--mod-tag-background-color-emphasized-hover`|
-|`--mod-tag-border-color-emphasized-active`|
-|`--mod-tag-background-color-emphasized-active`|
-|`--mod-tag-border-color-emphasized-focus`|
-|`--mod-tag-background-color-emphasized-focus`|
-|`--mod-tag-border-color-disabled`|
-|`--mod-tag-background-color-disabled`|
-|`--mod-tag-content-color-disabled`|
-|`--mod-avatar-opacity-disabled`|
+| Modifiable custom properties                                  |
+| ------------------------------------------------------------- |
+| `--spectrum-white`                                            |
+| `--highcontrast-tag-border-color`                             |
+| `--highcontrast-tag-background-color`                         |
+| `--highcontrast-tag-content-color`                            |
+| `--highcontrast-tag-border-color-hover`                       |
+| `--highcontrast-tag-background-color-hover`                   |
+| `--highcontrast-tag-content-color-hover`                      |
+| `--highcontrast-tag-border-color-active`                      |
+| `--highcontrast-tag-background-color-active`                  |
+| `--highcontrast-tag-content-color-active`                     |
+| `--highcontrast-tag-border-color-focus`                       |
+| `--highcontrast-tag-background-color-focus`                   |
+| `--highcontrast-tag-content-color-focus`                      |
+| `--highcontrast-tag-focus-ring-color`                         |
+| `--highcontrast-tag-border-color-selected`                    |
+| `--highcontrast-tag-background-color-selected`                |
+| `--highcontrast-tag-content-color-selected`                   |
+| `--highcontrast-tag-border-color-selected-hover`              |
+| `--highcontrast-tag-background-color-selected-hover`          |
+| `--highcontrast-tag-border-color-selected-active`             |
+| `--highcontrast-tag-background-color-selected-active`         |
+| `--highcontrast-tag-border-color-selected-focus`              |
+| `--highcontrast-tag-background-color-selected-focus`          |
+| `--highcontrast-tag-border-color-invalid`                     |
+| `--highcontrast-tag-content-color-invalid`                    |
+| `--highcontrast-tag-border-color-invalid-hover`               |
+| `--highcontrast-tag-content-color-invalid-hover`              |
+| `--highcontrast-tag-border-color-invalid-active`              |
+| `--highcontrast-tag-content-color-invalid-active`             |
+| `--highcontrast-tag-border-color-invalid-focus`               |
+| `--highcontrast-tag-content-color-invalid-focus`              |
+| `--highcontrast-tag-border-color-invalid-selected`            |
+| `--highcontrast-tag-background-color-invalid-selected`        |
+| `--highcontrast-tag-content-color-invalid-selected`           |
+| `--highcontrast-tag-border-color-invalid-selected-hover`      |
+| `--highcontrast-tag-background-color-invalid-selected-hover`  |
+| `--highcontrast-tag-border-color-invalid-selected-active`     |
+| `--highcontrast-tag-background-color-invalid-selected-active` |
+| `--highcontrast-tag-border-color-invalid-selected-focus`      |
+| `--highcontrast-tag-background-color-invalid-selected-focus`  |
+| `--highcontrast-tag-border-color-emphasized`                  |
+| `--highcontrast-tag-background-color-emphasized`              |
+| `--highcontrast-tag-content-color-emphasized`                 |
+| `--highcontrast-tag-border-color-emphasized-hover`            |
+| `--highcontrast-tag-background-color-emphasized-hover`        |
+| `--highcontrast-tag-border-color-emphasized-active`           |
+| `--highcontrast-tag-background-color-emphasized-active`       |
+| `--highcontrast-tag-border-color-emphasized-focus`            |
+| `--highcontrast-tag-background-color-emphasized-focus`        |
+| `--highcontrast-tag-border-color-disabled`                    |
+| `--highcontrast-tag-background-color-disabled`                |
+| `--highcontrast-tag-content-color-disabled`                   |

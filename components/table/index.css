@@ -10,7 +10,7 @@ OF ANY KIND, either express or implied. See the License for the specific languag
 governing permissions and limitations under the License.
 */
 
-@import "../vars/css/components/spectrum-table.css";
+@import "vars/css/components/spectrum-table.css";
 
 .spectrum-Table {
   border-collapse: separate;
@@ -19,7 +19,7 @@ governing permissions and limitations under the License.
 
 .spectrum-Table--sizeS {
   @remapvars {
-    find: /--spectrum-table(.*)-s-/;
+    find: /--spectrum-table(. *)-s-/;
     filter: color;
     replace: --spectrum-table$1-;
   }
@@ -27,12 +27,11 @@ governing permissions and limitations under the License.
 
 .spectrum-Table--sizeM {
   @remapvars {
-    find: /--spectrum-table(.*)-m-/;
+    find: /--spectrum-table(. *)-m-/;
     filter: color;
     replace: --spectrum-table$1-;
   }
 }
-
 
 .spectrum-Table-sortedIcon {
   display: none;
@@ -40,7 +39,8 @@ governing permissions and limitations under the License.
 
   vertical-align: middle;
 
-  transition: transform var(--spectrum-global-animation-duration-100) ease-in-out;
+  transition: transform var(--spectrum-global-animation-duration-100)
+    ease-in-out;
 }
 
 .spectrum-Table-headCell {
@@ -52,8 +52,10 @@ governing permissions and limitations under the License.
   min-block-size: var(--spectrum-table-regular-header-min-height);
   letter-spacing: var(--spectrum-table-regular-header-text-letter-spacing);
   text-transform: uppercase;
-  padding-block: var(--spectrum-table-regular-header-padding-top) var(--spectrum-table-regular-header-padding-bottom);
-  padding-inline: var(--spectrum-table-regular-header-padding-left) var(--spectrum-table-regular-header-padding-right);
+  padding-block: var(--spectrum-table-regular-header-padding-top)
+    var(--spectrum-table-regular-header-padding-bottom);
+  padding-inline: var(--spectrum-table-regular-header-padding-left)
+    var(--spectrum-table-regular-header-padding-right);
   transition: color var(--spectrum-global-animation-duration-100) ease-in-out;
   cursor: default;
   outline: 0;
@@ -90,7 +92,7 @@ governing permissions and limitations under the License.
 /* Helper for shared drop target overlay */
 %drop-target {
   &::before {
-    content: '';
+    content: "";
     position: absolute;
     inset-block-start: 0;
     inset-inline-start: 0;
@@ -143,10 +145,18 @@ governing permissions and limitations under the License.
   font-size: var(--spectrum-table-regular-cell-text-size);
   font-weight: var(--spectrum-table-regular-cell-text-font-weight);
   line-height: var(--spectrum-table-regular-cell-text-line-height);
-  padding-block: var(--spectrum-table-regular-cell-padding-top) var(--spectrum-table-regular-cell-padding-bottom);
-  padding-inline: var(--spectrum-table-regular-cell-padding-left) var(--spectrum-table-regular-cell-padding-right);
+  padding-block: var(--spectrum-table-regular-cell-padding-top)
+    var(--spectrum-table-regular-cell-padding-bottom);
+  padding-inline: var(--spectrum-table-regular-cell-padding-left)
+    var(--spectrum-table-regular-cell-padding-right);
   /* Subtract top/bottom padding for this value to be correct in this implementation */
-  min-block-size: calc(var(--spectrum-table-regular-cell-min-height) - calc(var(--spectrum-table-regular-cell-padding-top) + var(--spectrum-table-regular-cell-padding-bottom)));
+  min-block-size: calc(
+    var(--spectrum-table-regular-cell-min-height) -
+      calc(
+        var(--spectrum-table-regular-cell-padding-top) +
+          var(--spectrum-table-regular-cell-padding-bottom)
+      )
+  );
 }
 
 .spectrum-Table-cell,
@@ -158,7 +168,7 @@ governing permissions and limitations under the License.
     outline: none;
 
     &::before {
-      content: '';
+      content: "";
 
       /* Float above border */
       z-index: 1;
@@ -169,7 +179,9 @@ governing permissions and limitations under the License.
       inset-block-end: 0;
       inset-inline-start: 0;
 
-      border-radius: calc(var(--spectrum-table-regular-cell-border-radius-key-focus) - 1px);
+      border-radius: calc(
+        var(--spectrum-table-regular-cell-border-radius-key-focus) - 1px
+      );
     }
   }
 }
@@ -193,7 +205,8 @@ governing permissions and limitations under the License.
 .spectrum-Table-row {
   position: relative;
   cursor: pointer;
-  transition: background-color var(--spectrum-global-animation-duration-100) ease-in-out;
+  transition: background-color var(--spectrum-global-animation-duration-100)
+    ease-in-out;
 
   &:focus {
     outline: 0;
@@ -228,7 +241,9 @@ governing permissions and limitations under the License.
   /* have to eliminate vertical padding to allow proper vertical alignment */
   padding-block-start: 0px;
   padding-block-end: 0px;
-  vertical-align: var(--spectrum-table-regular-cell-checkbox-vertical-alignment);
+  vertical-align: var(
+    --spectrum-table-regular-cell-checkbox-vertical-alignment
+  );
 }
 
 .spectrum-Table-checkbox {
@@ -242,7 +257,8 @@ governing permissions and limitations under the License.
 
     vertical-align: middle;
 
-    transition: transform var(--spectrum-global-animation-duration-100) ease-in-out;
+    transition: transform var(--spectrum-global-animation-duration-100)
+      ease-in-out;
   }
 
   .spectrum-Table-headCell {
@@ -254,8 +270,10 @@ governing permissions and limitations under the License.
     min-block-size: var(--spectrum-table-compact-header-min-height);
     letter-spacing: var(--spectrum-table-compact-header-text-letter-spacing);
     text-transform: uppercase;
-    padding-block: var(--spectrum-table-compact-header-padding-top) var(--spectrum-table-compact-header-padding-bottom);
-    padding-inline: var(--spectrum-table-compact-header-padding-left) var(--spectrum-table-compact-header-padding-right);
+    padding-block: var(--spectrum-table-compact-header-padding-top)
+      var(--spectrum-table-compact-header-padding-bottom);
+    padding-inline: var(--spectrum-table-compact-header-padding-left)
+      var(--spectrum-table-compact-header-padding-right);
     transition: color var(--spectrum-global-animation-duration-100) ease-in-out;
     cursor: default;
     outline: 0;
@@ -292,7 +310,7 @@ governing permissions and limitations under the License.
   /* Helper for shared drop target overlay */
   %drop-target {
     &::before {
-      content: '';
+      content: "";
       position: absolute;
       inset-block-start: 0;
       inset-inline-start: 0;
@@ -345,10 +363,18 @@ governing permissions and limitations under the License.
     font-size: var(--spectrum-table-compact-cell-text-size);
     font-weight: var(--spectrum-table-compact-cell-text-font-weight);
     line-height: var(--spectrum-table-compact-cell-text-line-height);
-    padding-block: var(--spectrum-table-compact-cell-padding-top) var(--spectrum-table-compact-cell-padding-bottom);
-    padding-inline: var(--spectrum-table-compact-cell-padding-left) var(--spectrum-table-compact-cell-padding-right);
+    padding-block: var(--spectrum-table-compact-cell-padding-top)
+      var(--spectrum-table-compact-cell-padding-bottom);
+    padding-inline: var(--spectrum-table-compact-cell-padding-left)
+      var(--spectrum-table-compact-cell-padding-right);
     /* Subtract top/bottom padding for this value to be correct in this implementation */
-    min-block-size: calc(var(--spectrum-table-compact-cell-min-height) - calc(var(--spectrum-table-compact-cell-padding-top) + var(--spectrum-table-compact-cell-padding-bottom)));
+    min-block-size: calc(
+      var(--spectrum-table-compact-cell-min-height) -
+        calc(
+          var(--spectrum-table-compact-cell-padding-top) +
+            var(--spectrum-table-compact-cell-padding-bottom)
+        )
+    );
   }
 
   .spectrum-Table-cell,
@@ -360,7 +386,7 @@ governing permissions and limitations under the License.
       outline: none;
 
       &::before {
-        content: '';
+        content: "";
 
         /* Float above border */
         z-index: 1;
@@ -371,7 +397,9 @@ governing permissions and limitations under the License.
         inset-block-end: 0;
         inset-inline-start: 0;
 
-        border-radius: calc(var(--spectrum-table-compact-cell-border-radius-key-focus) - 1px);
+        border-radius: calc(
+          var(--spectrum-table-compact-cell-border-radius-key-focus) - 1px
+        );
       }
     }
   }
@@ -395,7 +423,8 @@ governing permissions and limitations under the License.
   .spectrum-Table-row {
     position: relative;
     cursor: pointer;
-    transition: background-color var(--spectrum-global-animation-duration-100) ease-in-out;
+    transition: background-color var(--spectrum-global-animation-duration-100)
+      ease-in-out;
 
     &:focus {
       outline: 0;
@@ -426,11 +455,15 @@ governing permissions and limitations under the License.
   }
 
   .spectrum-Table-checkboxCell {
-    padding-inline-end: var(--spectrum-table-compact-cell-checkbox-padding-right);
+    padding-inline-end: var(
+      --spectrum-table-compact-cell-checkbox-padding-right
+    );
     /* have to eliminate vertical padding to allow proper vertical alignment */
     padding-block-start: 0px;
     padding-block-end: 0px;
-    vertical-align: var(--spectrum-table-compact-cell-checkbox-vertical-alignment);
+    vertical-align: var(
+      --spectrum-table-compact-cell-checkbox-vertical-alignment
+    );
   }
 
   .spectrum-Table-checkbox {
@@ -445,7 +478,8 @@ governing permissions and limitations under the License.
 
     vertical-align: middle;
 
-    transition: transform var(--spectrum-global-animation-duration-100) ease-in-out;
+    transition: transform var(--spectrum-global-animation-duration-100)
+      ease-in-out;
   }
 
   .spectrum-Table-headCell {
@@ -457,8 +491,10 @@ governing permissions and limitations under the License.
     min-block-size: var(--spectrum-table-spacious-header-min-height);
     letter-spacing: var(--spectrum-table-spacious-header-text-letter-spacing);
     text-transform: uppercase;
-    padding-block: var(--spectrum-table-spacious-header-padding-top) var(--spectrum-table-spacious-header-padding-bottom);
-    padding-inline: var(--spectrum-table-spacious-header-padding-left) var(--spectrum-table-spacious-header-padding-right);
+    padding-block: var(--spectrum-table-spacious-header-padding-top)
+      var(--spectrum-table-spacious-header-padding-bottom);
+    padding-inline: var(--spectrum-table-spacious-header-padding-left)
+      var(--spectrum-table-spacious-header-padding-right);
     transition: color var(--spectrum-global-animation-duration-100) ease-in-out;
     cursor: default;
     outline: 0;
@@ -495,7 +531,7 @@ governing permissions and limitations under the License.
   /* Helper for shared drop target overlay */
   %drop-target {
     &::before {
-      content: '';
+      content: "";
       position: absolute;
       inset-block-start: 0;
       inset-inline-start: 0;
@@ -548,10 +584,18 @@ governing permissions and limitations under the License.
     font-size: var(--spectrum-table-spacious-cell-text-size);
     font-weight: var(--spectrum-table-spacious-cell-text-font-weight);
     line-height: var(--spectrum-table-spacious-cell-text-line-height);
-    padding-block: var(--spectrum-table-spacious-cell-padding-top) var(--spectrum-table-spacious-cell-padding-bottom);
-    padding-inline: var(--spectrum-table-spacious-cell-padding-left) var(--spectrum-table-spacious-cell-padding-right);
+    padding-block: var(--spectrum-table-spacious-cell-padding-top)
+      var(--spectrum-table-spacious-cell-padding-bottom);
+    padding-inline: var(--spectrum-table-spacious-cell-padding-left)
+      var(--spectrum-table-spacious-cell-padding-right);
     /* Subtract top/bottom padding for this value to be correct in this implementation */
-    min-block-size: calc(var(--spectrum-table-spacious-cell-min-height) - calc(var(--spectrum-table-spacious-cell-padding-top) + var(--spectrum-table-spacious-cell-padding-bottom)));
+    min-block-size: calc(
+      var(--spectrum-table-spacious-cell-min-height) -
+        calc(
+          var(--spectrum-table-spacious-cell-padding-top) +
+            var(--spectrum-table-spacious-cell-padding-bottom)
+        )
+    );
   }
 
   .spectrum-Table-cell,
@@ -563,7 +607,7 @@ governing permissions and limitations under the License.
       outline: none;
 
       &::before {
-        content: '';
+        content: "";
 
         /* Float above border */
         z-index: 1;
@@ -574,7 +618,9 @@ governing permissions and limitations under the License.
         inset-block-end: 0;
         inset-inline-start: 0;
 
-        border-radius: calc(var(--spectrum-table-spacious-cell-border-radius-key-focus) - 1px);
+        border-radius: calc(
+          var(--spectrum-table-spacious-cell-border-radius-key-focus) - 1px
+        );
       }
     }
   }
@@ -598,7 +644,8 @@ governing permissions and limitations under the License.
   .spectrum-Table-row {
     position: relative;
     cursor: pointer;
-    transition: background-color var(--spectrum-global-animation-duration-100) ease-in-out;
+    transition: background-color var(--spectrum-global-animation-duration-100)
+      ease-in-out;
 
     &:focus {
       outline: 0;
@@ -629,11 +676,15 @@ governing permissions and limitations under the License.
   }
 
   .spectrum-Table-checkboxCell {
-    padding-inline-end: var(--spectrum-table-spacious-cell-checkbox-padding-right);
+    padding-inline-end: var(
+      --spectrum-table-spacious-cell-checkbox-padding-right
+    );
     /* have to eliminate vertical padding to allow proper vertical alignment */
     padding-block-start: 0px;
     padding-block-end: 0px;
-    vertical-align: var(--spectrum-table-spacious-cell-checkbox-vertical-alignment);
+    vertical-align: var(
+      --spectrum-table-spacious-cell-checkbox-vertical-alignment
+    );
   }
 
   .spectrum-Table-checkbox {

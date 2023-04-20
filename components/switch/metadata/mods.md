@@ -1,39 +1,25 @@
-| Modifiable Custom Properties |
-| --- |
-|`--mod-focus-indicator-thickness`|
-|`--mod-switch-height`|
-|`--mod-switch-control-width`|
-|`--mod-focus-indicator-gap`|
-|`--mod-switch-label-color-default`|
-|`--mod-switch-control-label-spacing`|
-|`--mod-switch-spacing-top-to-label`|
-|`--mod-switch-font-size`|
-|`--mod-line-height-100`|
-|`--mod-animation-duration-200`|
-|`--mod-switch-control-height`|
-|`--mod-switch-spacing-top-to-control`|
-|`--mod-animation-duration-100`|
-|`--mod-border-width-200`|
-|`--mod-switch-background-color`|
-|`--mod-switch-handle-background-color`|
-|`--mod-switch-handle-border-color-default`|
-|`--mod-switch-handle-border-color-hover`|
-|`--mod-switch-label-color-hover`|
-|`--mod-switch-background-color-selected-hover`|
-|`--mod-switch-handle-border-color-selected-hover`|
-|`--mod-switch-background-color-disabled`|
-|`--mod-switch-handle-border-color-disabled`|
-|`--mod-switch-label-color-disabled`|
-|`--mod-switch-background-color-selected-disabled`|
-|`--mod-switch-handle-border-color-down`|
-|`--mod-switch-label-color-down`|
-|`--mod-switch-background-color-selected-down`|
-|`--mod-switch-handle-border-color-selected-down`|
-|`--mod-switch-focus-indicator-thickness`|
-|`--mod-switch-focus-indicator-color`|
-|`--mod-switch-handle-border-color-focus`|
-|`--mod-switch-background-color-selected-focus`|
-|`--mod-switch-handle-border-color-selected-focus`|
-|`--mod-switch-label-color-focus`|
-|`--mod-switch-background-color-selected-default`|
-|`--mod-switch-handle-border-color-selected-default`|
+| Modifiable custom properties                                 |
+| ------------------------------------------------------------ |
+| `--highcontrast-switch-label-color-default`                  |
+| `--highcontrast-switch-background-color`                     |
+| `--highcontrast-switch-handle-background-color`              |
+| `--highcontrast-switch-handle-border-color-default`          |
+| `--highcontrast-switch-handle-border-color-hover`            |
+| `--highcontrast-switch-label-color-hover`                    |
+| `--highcontrast-switch-background-color-selected-hover`      |
+| `--highcontrast-switch-handle-border-color-selected-hover`   |
+| `--highcontrast-switch-background-color-disabled`            |
+| `--highcontrast-switch-handle-border-color-disabled`         |
+| `--highcontrast-switch-label-color-disabled`                 |
+| `--highcontrast-switch-background-color-selected-disabled`   |
+| `--highcontrast-switch-handle-border-color-down`             |
+| `--highcontrast-switch-label-color-down`                     |
+| `--highcontrast-switch-background-color-selected-down`       |
+| `--highcontrast-switch-handle-border-color-selected-down`    |
+| `--highcontrast-switch-focus-indicator-color`                |
+| `--highcontrast-switch-handle-border-color-focus`            |
+| `--highcontrast-switch-background-color-selected-focus`      |
+| `--highcontrast-switch-handle-border-color-selected-focus`   |
+| `--highcontrast-switch-label-color-focus`                    |
+| `--highcontrast-switch-background-color-selected-default`    |
+| `--highcontrast-switch-handle-border-color-selected-default` |

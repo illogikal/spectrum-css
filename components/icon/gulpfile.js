@@ -9,19 +9,20 @@ the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR REPRESENTA
 OF ANY KIND, either express or implied. See the License for the specific language
 governing permissions and limitations under the License.
 */
+
+const path = require('path');
+
 const gulp = require('gulp');
 const rename = require('gulp-rename');
-const path = require('path');
 const svgmin = require('gulp-svgmin');
 const replace = require('gulp-replace');
 const sort = require('gulp-sort');
 const svgcombiner = require('gulp-svgcombiner');
 const svgstore = require('gulp-svgstore');
-const del = require('del');
 const vinylPaths = require('vinyl-paths');
 
 function clean() {
-  return del([
+  return require('rimraf').sync([
     'combined/**'
   ]);
 }
@@ -72,8 +73,6 @@ const updateIcons = gulp.series(
   generateCombinedIcons
 );
 
-const tasks = require('@spectrum-css/component-builder');
-
 function generateSVGSprite() {
   return gulp.src('combined/*.svg')
     .pipe(rename(function(filePath) {
@@ -109,11 +108,5 @@ const buildIcons = gulp.parallel(
   generateSVGSprite
 );
 
-const build = gulp.parallel(
-  buildIcons,
-  tasks.buildCSS
-);
-
 exports.updateIcons = updateIcons;
-exports.build = exports.buildLite = exports.buildHeavy = exports.buildMedium = build;
-exports.default = build;
+exports.default = buildIcons;

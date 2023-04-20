@@ -1,13 +1,15 @@
-| Modifiable Custom Properties |
-| --- |
-|`--mod-link-animation-duration`|
-|`--mod-link-text-color-primary-default`|
-|`--mod-link-text-color-primary-hover`|
-|`--mod-link-text-color-primary-active`|
-|`--mod-link-text-color-primary-focus`|
-|`--mod-link-text-color-secondary-default`|
-|`--mod-link-text-color-secondary-hover`|
-|`--mod-link-text-color-secondary-active`|
-|`--mod-link-text-color-secondary-focus`|
-|`--mod-link-text-color-white`|
-|`--mod-link-text-color-black`|
+| Modifiable custom properties                       |
+| -------------------------------------------------- |
+| `--spectrum-white`                                 |
+| `--spectrum-black`                                 |
+| `--highcontrast-link-text-color-primary-default`   |
+| `--highcontrast-link-text-color-primary-hover`     |
+| `--highcontrast-link-text-color-primary-active`    |
+| `--highcontrast-link-text-color-primary-focus`     |
+| `--highcontrast-link-focus-color`                  |
+| `--highcontrast-link-text-color-secondary-default` |
+| `--highcontrast-link-text-color-secondary-hover`   |
+| `--highcontrast-link-text-color-secondary-active`  |
+| `--highcontrast-link-text-color-secondary-focus`   |
+| `--highcontrast-link-text-color-white`             |
+| `--highcontrast-link-text-color-black`             |

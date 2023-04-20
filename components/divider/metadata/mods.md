@@ -1,10 +1,30 @@
-| Modifiable Custom Properties |
-| --- |
-|`--mod-divider-thickness`|
-|`--mod-divider-background-color`|
-|`--mod-divider-background-color-small-static-white`|
-|`--mod-divider-background-color-medium-static-white`|
-|`--mod-divider-background-color-large-static-white`|
-|`--mod-divider-background-color-small-static-black`|
-|`--mod-divider-background-color-medium-static-black`|
-|`--mod-divider-background-color-large-static-black`|
+| Modifiable custom properties                              |
+| --------------------------------------------------------- |
+| `--spectrum-divider-thickness-medium`                     |
+| `--spectrum-divider-background-color-medium`              |
+| `--spectrum-gray-300`                                     |
+| `--spectrum-gray-800`                                     |
+| `--spectrum-transparent-white-300`                        |
+| `--spectrum-transparent-white-800`                        |
+| `--spectrum-transparent-black-300`                        |
+| `--spectrum-transparent-black-800`                        |
+| `--spectrum-divider-thickness-small`                      |
+| `--spectrum-divider-background-color-small`               |
+| `--spectrum-divider-thickness-large`                      |
+| `--spectrum-divider-background-color-large`               |
+| `--mod-divider-thickness`                                 |
+| `--spectrum-divider-thickness`                            |
+| `--mod-divider-background-color`                          |
+| `--spectrum-divider-background-color`                     |
+| `--mod-divider-background-color-small-static-white`       |
+| `--spectrum-divider-background-color-small-static-white`  |
+| `--mod-divider-background-color-medium-static-white`      |
+| `--spectrum-divider-background-color-medium-static-white` |
+| `--mod-divider-background-color-large-static-white`       |
+| `--spectrum-divider-background-color-large-static-white`  |
+| `--mod-divider-background-color-small-static-black`       |
+| `--spectrum-divider-background-color-small-static-black`  |
+| `--mod-divider-background-color-medium-static-black`      |
+| `--spectrum-divider-background-color-medium-static-black` |
+| `--mod-divider-background-color-large-static-black`       |
+| `--spectrum-divider-background-color-large-static-black`  |

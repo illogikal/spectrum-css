@@ -1,8 +1,20 @@
-| Modifiable Custom Properties |
-| --- |
-|`--mod-spectrum-contextual-help-minimum-width`|
-|`--mod-spectrum-contextual-help-padding`|
-|`--mod-spectrum-contextual-help-body-size`|
-|`--mod-spectrum-contextual-help-content-spacing`|
-|`--mod-spectrum-contextual-help-title-size`|
-|`--mod-spectrum-contextual-help-link-spacing`|
+| Modifiable custom properties                     |
+| ------------------------------------------------ |
+| `--spectrum-spacing-400`                         |
+| `--spectrum-spacing-100`                         |
+| `--spectrum-spacing-300`                         |
+| `--spectrum-heading-size-xs`                     |
+| `--spectrum-body-size-s`                         |
+| `--spectrum-spacing-200`                         |
+| `--mod-spectrum-contextual-help-minimum-width`   |
+| `--spectrum-contextual-help-minimum-width`       |
+| `--mod-spectrum-contextual-help-padding`         |
+| `--spectrum-contextual-help-padding`             |
+| `--mod-spectrum-contextual-help-body-size`       |
+| `--spectrum-contextual-help-body-size`           |
+| `--mod-spectrum-contextual-help-content-spacing` |
+| `--spectrum-contextual-help-content-spacing`     |
+| `--mod-spectrum-contextual-help-title-size`      |
+| `--spectrum-contextual-help-title-size`          |
+| `--mod-spectrum-contextual-help-link-spacing`    |
+| `--spectrum-contextual-help-link-spacing`        |

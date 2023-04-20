@@ -1,10 +1,26 @@
-| Modifiable Custom Properties |
-| --- |
-|`--mod-actiongroup-horizontal-spacing-regular`|
-|`--mod-actiongroup-vertical-spacing-regular`|
-|`--mod-actiongroup-gap-size-compact`|
-|`--mod-actiongroup-border-radius-reset`|
-|`--mod-actiongroup-border-radius`|
-|`--mod-actiongroup-button-spacing-reset`|
-|`--mod-actiongroup-horizontal-spacing-compact`|
-|`--mod-actiongroup-vertical-spacing-compact`|
+| Modifiable custom properties                               |
+| ---------------------------------------------------------- |
+| `--spectrum-actionbutton-focus-ring-border-radius`         |
+| `--spectrum-corner-radius-100`                             |
+| `--spectrum-spacing-75`                                    |
+| `--spectrum-spacing-100`                                   |
+| `--mod-actiongroup-horizontal-spacing-regular`             |
+| `--spectrum-actiongroup-horizontal-spacing-regular`        |
+| `--mod-actiongroup-vertical-spacing-regular`               |
+| `--spectrum-actiongroup-vertical-spacing-regular`          |
+| `--mod-actiongroup-gap-size-compact`                       |
+| `--spectrum-actiongroup-gap-size-compact`                  |
+| `--mod-actiongroup-border-radius-reset`                    |
+| `--spectrum-actiongroup-border-radius-reset`               |
+| `--mod-actiongroup-border-radius`                          |
+| `--spectrum-actiongroup-border-radius`                     |
+| `--mod-actiongroup-button-spacing-reset`                   |
+| `--spectrum-actiongroup-button-spacing-reset`              |
+| `--mod-actiongroup-horizontal-spacing-compact`             |
+| `--spectrum-actiongroup-horizontal-spacing-compact`        |
+| `--mod-actiongroup-vertical-spacing-compact`               |
+| `--spectrum-actiongroup-vertical-spacing-compact`          |
+| `--spectrum-spacing-50`                                    |
+| `--system-spectrum-actiongroup-gap-size-compact`           |
+| `--system-spectrum-actiongroup-horizontal-spacing-compact` |
+| `--system-spectrum-actiongroup-vertical-spacing-compact`   |

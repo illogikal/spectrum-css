@@ -10,7 +10,7 @@ OF ANY KIND, either express or implied. See the License for the specific languag
 governing permissions and limitations under the License.
 */
 
-@import "../vars/css/components/spectrum-thumbnail.css";
+@import "vars/css/components/spectrum-thumbnail.css";
 
 .spectrum-Thumbnail {
   position: relative;
@@ -31,14 +31,18 @@ governing permissions and limitations under the License.
 
   overflow: hidden;
 
-  background-size: var(--spectrum-global-dimension-static-size-200) var(--spectrum-global-dimension-static-size-200);
+  background-size: var(--spectrum-global-dimension-static-size-200)
+    var(--spectrum-global-dimension-static-size-200);
 
-  background-position: 0 0, 0 var(--spectrum-global-dimension-static-size-100), var(--spectrum-global-dimension-static-size-100) calc(-1 * var(--spectrum-global-dimension-static-size-100)), calc(-1 * var(--spectrum-global-dimension-static-size-100)) 0;
+  background-position: 0 0, 0 var(--spectrum-global-dimension-static-size-100),
+    var(--spectrum-global-dimension-static-size-100)
+      calc(-1 * var(--spectrum-global-dimension-static-size-100)),
+    calc(-1 * var(--spectrum-global-dimension-static-size-100)) 0;
 
   z-index: 0;
 
   &:before {
-    content: '';
+    content: "";
     z-index: 2;
     position: absolute;
     width: 100%;
@@ -49,35 +53,35 @@ governing permissions and limitations under the License.
 
 .spectrum-Thumbnail--sizeXXS {
   @remapvars {
-    find: /--spectrum-thumbnail(.*)-xxs-/;
+    find: /--spectrum-thumbnail(. *)-xxs-/;
     replace: --spectrum-thumbnail$1-;
   }
 }
 
 .spectrum-Thumbnail--sizeXS {
   @remapvars {
-    find: /--spectrum-thumbnail(.*)-xs-/;
+    find: /--spectrum-thumbnail(. *)-xs-/;
     replace: --spectrum-thumbnail$1-;
   }
 }
 
 .spectrum-Thumbnail--sizeS {
   @remapvars {
-    find: /--spectrum-thumbnail(.*)-s-/;
+    find: /--spectrum-thumbnail(. *)-s-/;
     replace: --spectrum-thumbnail$1-;
   }
 }
 
 .spectrum-Thumbnail--sizeM {
   @remapvars {
-    find: /--spectrum-thumbnail(.*)-m-/;
+    find: /--spectrum-thumbnail(. *)-m-/;
     replace: --spectrum-thumbnail$1-;
   }
 }
 
 .spectrum-Thumbnail--sizeL {
   @remapvars {
-    find: /--spectrum-thumbnail(.*)-l-/;
+    find: /--spectrum-thumbnail(. *)-l-/;
     replace: --spectrum-thumbnail$1-;
   }
 }

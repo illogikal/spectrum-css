@@ -10,10 +10,10 @@ OF ANY KIND, either express or implied. See the License for the specific languag
 governing permissions and limitations under the License.
 */
 
-@import "../vars/css/scales/spectrum-large.css";
-@import "../vars/css/scales/spectrum-medium.css";
-@import "../vars/css/components/spectrum-listitem.css";
-@import "../vars/css/components/spectrum-divider.css";
+@import "vars/css/scales/spectrum-large.css";
+@import "vars/css/scales/spectrum-medium.css";
+@import "vars/css/components/spectrum-listitem.css";
+@import "vars/css/components/spectrum-divider.css";
 
 .spectrum-Menu {
   --spectrum-menu-margin-x: var(--spectrum-global-dimension-size-40);
@@ -23,8 +23,10 @@ governing permissions and limitations under the License.
   --spectrum-listitem-texticon-heading-text-font-weight: 400;
   --spectrum-listitem-texticon-heading-text-transform: uppercase;
   --spectrum-listitem-texticon-heading-letter-spacing: 0.06em;
-  --spectrum-listitem-texticon-heading-margin: var(--spectrum-global-dimension-size-75) 0
-    0 0;
+  --spectrum-listitem-texticon-heading-margin: var(
+      --spectrum-global-dimension-size-75
+    )
+    0 0 0;
   --spectrum-listitem-texticon-heading-padding: 0
     var(--spectrum-global-dimension-size-450) 0
     var(--spectrum-global-dimension-size-150);
@@ -34,7 +36,7 @@ governing permissions and limitations under the License.
   );
 
   --spectrum-listitem-texticon-selectable-padding-right: calc(
-      var(--spectrum-listitem-texticon-ui-icon-width) +
+    var(--spectrum-listitem-texticon-ui-icon-width) +
       var(--spectrum-listitem-texticon-ui-icon-gap) +
       var(--spectrum-listitem-texticon-padding-right) -
       var(--spectrum-popover-border-size)
@@ -53,7 +55,7 @@ governing permissions and limitations under the License.
 
 .spectrum-Menu {
   @remapvars {
-    find: /--spectrum-listitem-m(.*)/;
+    find: /--spectrum-listitem-m(. *) /;
     filter: color;
     replace: --spectrum-listitem$1;
   }
@@ -80,7 +82,9 @@ governing permissions and limitations under the License.
 
   &.is-selectable {
     .spectrum-Menu-item {
-      padding-inline-end: var(--spectrum-listitem-texticon-selectable-padding-right);
+      padding-inline-end: var(
+        --spectrum-listitem-texticon-selectable-padding-right
+      );
 
       &.is-selected {
         padding-inline-end: calc(
@@ -119,8 +123,8 @@ governing permissions and limitations under the License.
 
   margin: 0;
 
-  border-inline-start: var(--spectrum-listitem-texticon-focus-indicator-size) solid
-    transparent;
+  border-inline-start: var(--spectrum-listitem-texticon-focus-indicator-size)
+    solid transparent;
 
   min-block-size: var(--spectrum-listitem-texticon-height);
 
@@ -191,7 +195,10 @@ governing permissions and limitations under the License.
 .spectrum-Menu-chevron {
   flex-grow: 0;
   padding-inline-start: var(--spectrum-listitem-texticon-icon-gap);
-  margin-block-start: calc(var(--spectrum-listitem-texticon-ui-icon-margin-top) - var(--spectrum-listitem-texticon-padding-y) + 1px);
+  margin-block-start: calc(
+    var(--spectrum-listitem-texticon-ui-icon-margin-top) -
+      var(--spectrum-listitem-texticon-padding-y) + 1px
+  );
 }
 
 .spectrum-Menu-chevron {

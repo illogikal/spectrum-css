@@ -1,14 +1,55 @@
-| Modifiable Custom Properties |
-| --- |
-|`--mod-fieldlabel-font-size`|
-|`--mod-fieldlabel-font-weight`|
-|`--mod-fieldlabel-line-height`|
-|`--mod-fieldlabel-line-height-cjk`|
-|`--mod-field-label-text-to-asterisk`|
-|`--mod-fieldlabel-side-padding-top`|
-|`--mod-fieldlabel-side-padding-right`|
-|`--mod-spacing-300`|
-|`--mod-tableform-border-spacing`|
-|`--mod-tableform-margin`|
-|`--mod-disabled-content-color`|
-|`--mod-field-label-top-to-asterisk`|
+| Modifiable custom properties                          |
+| ----------------------------------------------------- |
+| `--spectrum-neutral-subdued-content-color-default`    |
+| `--spectrum-field-label-top-to-asterisk-medium`       |
+| `--spectrum-field-label-text-to-asterisk-medium`      |
+| `--spectrum-regular-font-weight`                      |
+| `--spectrum-component-top-to-text-75`                 |
+| `--spectrum-component-bottom-to-text-75`              |
+| `--spectrum-font-size-75`                             |
+| `--spectrum-line-height-100`                          |
+| `--spectrum-cjk-line-height-100`                      |
+| `--spectrum-spacing-100`                              |
+| `--spectrum-field-label-top-to-asterisk-small`        |
+| `--spectrum-field-label-text-to-asterisk-small`       |
+| `--spectrum-line-height-200`                          |
+| `--spectrum-cjk-line-height-200`                      |
+| `--spectrum-spacing-200`                              |
+| `--spectrum-component-top-to-text-100`                |
+| `--spectrum-component-bottom-to-text-100`             |
+| `--spectrum-font-size-100`                            |
+| `--spectrum-field-label-top-to-asterisk-large`        |
+| `--spectrum-field-label-text-to-asterisk-large`       |
+| `--spectrum-component-top-to-text-200`                |
+| `--spectrum-component-bottom-to-text-200`             |
+| `--spectrum-font-size-200`                            |
+| `--spectrum-field-label-top-to-asterisk-extra-large`  |
+| `--spectrum-field-label-text-to-asterisk-extra-large` |
+| `--spectrum-fieldlabel-top-to-text`                   |
+| `--spectrum-fieldlabel-bottom-to-text`                |
+| `--mod-fieldlabel-font-size`                          |
+| `--spectrum-fieldlabel-font-size`                     |
+| `--mod-fieldlabel-font-weight`                        |
+| `--spectrum-fieldlabel-font-weight`                   |
+| `--mod-fieldlabel-line-height`                        |
+| `--spectrum-fieldlabel-line-height`                   |
+| `--spectrum-fieldlabel-color`                         |
+| `--mod-fieldlabel-line-height-cjk`                    |
+| `--spectrum-fieldlabel-line-height-cjk`               |
+| `--mod-field-label-text-to-asterisk`                  |
+| `--spectrum-field-label-text-to-asterisk`             |
+| `--mod-fieldlabel-side-padding-top`                   |
+| `--spectrum-fieldlabel-side-padding-top`              |
+| `--mod-fieldlabel-side-padding-right`                 |
+| `--spectrum-fieldlabel-side-padding-right`            |
+| `--mod-spacing-300`                                   |
+| `--spectrum-spacing-300`                              |
+| `--spectrum-tableform-margin-calc`                    |
+| `--mod-tableform-border-spacing`                      |
+| `--spectrum-tableform-border-spacing`                 |
+| `--mod-tableform-margin`                              |
+| `--spectrum-tableform-margin`                         |
+| `--mod-disabled-content-color`                        |
+| `--spectrum-disabled-content-color`                   |
+| `--mod-field-label-top-to-asterisk`                   |
+| `--spectrum-field-label-top-to-asterisk`              |

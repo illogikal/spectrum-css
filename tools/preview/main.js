@@ -119,9 +119,9 @@ module.exports = {
               loader: "postcss-loader",
               options: {
                 implementation: require("postcss"),
-                postcssOptions: {
-                  config: resolve(__dirname, 'postcss.config.js'),
-                },
+                // postcssOptions: {
+                //   config: resolve(__dirname, 'postcss.config.js'),
+                // },
               },
             }],
           },

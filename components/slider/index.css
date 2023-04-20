@@ -10,7 +10,7 @@ OF ANY KIND, either express or implied. See the License for the specific languag
 governing permissions and limitations under the License.
 */
 
-@import "../vars/css/components/spectrum-slider.css";
+@import "vars/css/components/spectrum-slider.css";
 
 .spectrum-Slider {
   @remapvars {
@@ -376,10 +376,7 @@ governing permissions and limitations under the License.
   z-index: 0;
 
   margin: 0 var(--spectrum-slider-track-margin-offset);
-  margin-block-start: calc(
-    var(--spectrum-slider-tick-mark-height) +
-    1px
-  );
+  margin-block-start: calc(var(--spectrum-slider-tick-mark-height) + 1px);
 }
 
 .spectrum-Slider-tick {
@@ -406,7 +403,11 @@ governing permissions and limitations under the License.
     align-items: center;
     justify-content: center;
 
-    margin-block: calc(var(--spectrum-slider-label-gap-y) + var(--spectrum-slider-tick-mark-height)) 0;
+    margin-block: calc(
+        var(--spectrum-slider-label-gap-y) +
+          var(--spectrum-slider-tick-mark-height)
+      )
+      0;
     margin-inline: calc(var(--spectrum-slider-label-gap-x) * -1)
       calc(var(--spectrum-slider-label-gap-x) * -1);
 
@@ -439,7 +440,6 @@ governing permissions and limitations under the License.
     }
   }
 }
-
 
 .spectrum-Slider {
   &.is-disabled {

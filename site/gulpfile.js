@@ -10,36 +10,41 @@ OF ANY KIND, either express or implied. See the License for the specific languag
 governing permissions and limitations under the License.
 */
 
-const gulp = require('gulp');
+const fsp = require('fs').promises;
 const path = require('path');
 
-function buildSite_resources() {
-  return gulp.src(path.join(__dirname, 'resources/**'))
-    .pipe(gulp.dest(path.join(__dirname, 'dist/')));
+const gulp = require('gulp');
+const pug = require('pug');
+const rename = require('gulp-rename');
+const yaml = require('js-yaml');
+const through = require('through2');
+const ext = require('replace-ext');
+
+const distPath = path.join(__dirname, 'dist/');
+
+async function fetchDependencies({ devDependencies }) {
+  const dependencies = new Set();
+  if (!devDependencies) return dependencies;
+  Object.keys(devDependencies).forEach((dep) => {
+    if (dep.startsWith('@spectrum-css') && !dep.includes('builder')) {
+      const name = dep.split('/')?.pop();
+      if (name) dependencies.add(name);
+    }
+  });
+
+  return dependencies;
 }
 
-function buildSite_loadicons() {
-  return gulp.src(require.resolve('loadicons'))
-    .pipe(gulp.dest(path.join(__dirname, 'dist/js/loadicons/')));
-}
-
-function buildSite_focusPolyfill() {
-  return gulp.src(require.resolve('@adobe/focus-ring-polyfill'))
-    .pipe(gulp.dest(path.join(__dirname, 'dist/js/focus-ring-polyfill/')));
-}
-
-function buildSite_lunr() {
-  return gulp.src(require.resolve('lunr'))
-    .pipe(gulp.dest(path.join(__dirname, 'dist/js/lunr/')));
-}
-
-function buildSite_prism() {
-  return gulp.src([
-    `${path.dirname(require.resolve('prismjs'))}/themes/prism.css`,
-    `${path.dirname(require.resolve('prismjs'))}/themes/prism-dark.css`
-  ])
-    .pipe(gulp.dest(path.join(__dirname, 'dist/css/prism/')));
-}
+exports.buildDocs = gulp.parallel(
+  function buildDocs_resources() {
+    return gulp.src(`dist/**`)
+      .pipe(gulp.dest(path.join(distPath, 'docs/components/', packageName)));
+  },
+  function buildDocs_html() {
+    return new Promise(async (resolve, reject) => {
+      const pkg = require('package.json');
+      const dependencies = await fetchDependencies(pkg);
+      const packageName = pkg?.name?.split('/')?.pop();
 
 exports.copySiteResources = gulp.parallel(
   buildSite_resources,

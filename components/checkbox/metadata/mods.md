@@ -1,39 +1,18 @@
-| Modifiable Custom Properties |
-| --- |
-|`--mod-checkbox-content-color-default`|
-|`--mod-checkox-height`|
-|`--mod-checkbox-control-color-hover`|
-|`--mod-checkbox-control-selected-color-hover`|
-|`--mod-checkbox-content-color-hover`|
-|`--mod-checkbox-control-color-down`|
-|`--mod-checkbox-control-selected-color-down`|
-|`--mod-checkbox-content-color-down`|
-|`--mod-checkbox-invalid-color-default`|
-|`--mod-checkbox-invalid-color-hover`|
-|`--mod-checkbox-control-selected-color-default`|
-|`--mod-checkbox-checkmark-color`|
-|`--mod-checkbox-selected-border-width`|
-|`--mod-checkbox-emphasized-color-default`|
-|`--mod-checkbox-emphasized-color-hover`|
-|`--mod-checkbox-emphasized-color-focus`|
-|`--mod-checkbox-invalid-color-focus`|
-|`--mod-checkbox-emphasized-color-down`|
-|`--mod-checkbox-control-invalid-color-down`|
-|`--mod-checkbox-control-color-focus`|
-|`--mod-checkbox-text-to-control`|
-|`--mod-checkbox-top-to-text`|
-|`--mod-checkbox-font-size`|
-|`--mod-checkbox-animation-duration`|
-|`--mod-checkbox-line-height`|
-|`--mod-checkbox-line-height-cjk`|
-|`--mod-checkbox-control-color-default`|
-|`--mod-checkbox-focus-indicator-thinkness`|
-|`--mod-checkbox-focus-indicator-color`|
-|`--mod-checkbox-focus-indicator-gap`|
-|`--mod-checkbox-content-color-focus`|
-|`--mod-checkbox-control-size`|
-|`--mod-checkbox-spacing`|
-|`--mod-checkbox-border-width`|
-|`--mod-checkbox-control-color-disabled`|
-|`--mod-checkbox-content-color-disabled`|
-|`--mod-focus-indicator-thickness`|
+| Modifiable custom properties                       |
+| -------------------------------------------------- |
+| `--highcontrast-checkbox-content-color-default`    |
+| `--highcontrast-checkbox-highlight-color-hover`    |
+| `--highcontrast-checkbox-content-color-hover`      |
+| `--highcontrast-checkbox-highlight-color-down`     |
+| `--highcontrast-checkbox-content-color-down`       |
+| `--highcontrast-checkbox-color-default`            |
+| `--highcontrast-checkbox-color-hover`              |
+| `--highcontrast-checkbox-selected-color-default`   |
+| `--highcontrast-checkbox-background-color-default` |
+| `--highcontrast-checkbox-highlight-color-default`  |
+| `--highcontrast-checkbox-highlight-color-focus`    |
+| `--highcontrast-checkbox-color-focus`              |
+| `--highcontrast-checkbox-focus-indicator-color`    |
+| `--highcontrast-checkbox-content-color-focus`      |
+| `--highcontrast-checkbox-disabled-color-default`   |
+| `--highcontrast-checkbox-focus-indicator-gap`      |

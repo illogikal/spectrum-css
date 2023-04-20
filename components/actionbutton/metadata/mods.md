@@ -1,33 +1,18 @@
-| Modifiable Custom Properties |
-| --- |
-|`--mod-actionbutton-min-width`|
-|`--mod-actionbutton-height`|
-|`--mod-actionbutton-border-radius`|
-|`--mod-actionbutton-border-width`|
-|`--mod-actionbutton-text-to-visual`|
-|`--mod-actionbutton-edge-to-text`|
-|`--mod-actionbutton-edge-to-visual-only`|
-|`--mod-actionbutton-background-color-default`|
-|`--mod-actionbutton-border-color-default`|
-|`--mod-actionbutton-content-color-default`|
-|`--mod-actionbutton-background-color-hover`|
-|`--mod-actionbutton-border-color-hover`|
-|`--mod-actionbutton-content-color-hover`|
-|`--mod-actionbutton-background-color-focus`|
-|`--mod-actionbutton-border-color-focus`|
-|`--mod-actionbutton-content-color-focus`|
-|`--mod-actionbutton-background-color-down`|
-|`--mod-actionbutton-border-color-down`|
-|`--mod-actionbutton-content-color-down`|
-|`--mod-actionbutton-background-color-disabled`|
-|`--mod-actionbutton-border-color-disabled`|
-|`--mod-actionbutton-content-color-disabled`|
-|`--mod-actionbutton-icon-size`|
-|`--mod-actionbutton-edge-to-visual`|
-|`--mod-actionbutton-font-size`|
-|`--mod-actionbutton-edge-to-hold-icon`|
-|`--mod-actionbutton-animation-duration`|
-|`--mod-actionbutton-focus-indicator-gap`|
-|`--mod-actionbutton-focus-indicator-border-radius`|
-|`--mod-actionbutton-focus-indicator-thickness`|
-|`--mod-actionbutton-focus-indicator-color`|
+| Modifiable custom properties                            |
+| ------------------------------------------------------- |
+| `--highcontrast-actionbutton-background-color-default`  |
+| `--highcontrast-actionbutton-border-color-default`      |
+| `--highcontrast-actionbutton-content-color-default`     |
+| `--highcontrast-actionbutton-background-color-hover`    |
+| `--highcontrast-actionbutton-border-color-hover`        |
+| `--highcontrast-actionbutton-content-color-hover`       |
+| `--highcontrast-actionbutton-background-color-focus`    |
+| `--highcontrast-actionbutton-border-color-focus`        |
+| `--highcontrast-actionbutton-content-color-focus`       |
+| `--highcontrast-actionbutton-background-color-down`     |
+| `--highcontrast-actionbutton-border-color-down`         |
+| `--highcontrast-actionbutton-content-color-down`        |
+| `--highcontrast-actionbutton-background-color-disabled` |
+| `--highcontrast-actionbutton-border-color-disabled`     |
+| `--highcontrast-actionbutton-content-color-disabled`    |
+| `--highcontrast-actionbutton-focus-indicator-color`     |

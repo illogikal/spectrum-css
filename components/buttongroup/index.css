@@ -38,15 +38,21 @@ governing permissions and limitations under the License.
 .spectrum-ButtonGroup {
   display: flex;
   flex-wrap: wrap;
-  gap: var(--mod-buttongroup-spacing-horizontal, var(--spectrum-buttongroup-spacing-horizontal));
+  gap: var(
+    --mod-buttongroup-spacing-horizontal,
+    var(--spectrum-buttongroup-spacing-horizontal)
+  );
+}
 
-  .spectrum-ButtonGroup-item {
-    flex-shrink: 0;
-  }
+.spectrum-ButtonGroup .spectrum-ButtonGroup-item {
+  flex-shrink: 0;
 }
 
 .spectrum-ButtonGroup--vertical {
   display: inline-flex;
   flex-direction: column;
-  gap: var(--mod-buttongroup-spacing-vertical, var(--spectrum-buttongroup-spacing-vertical));
+  gap: var(
+    --mod-buttongroup-spacing-vertical,
+    var(--spectrum-buttongroup-spacing-vertical)
+  );
 }

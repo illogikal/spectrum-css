@@ -13,7 +13,6 @@ const path = require('path');
 const fsp = require('fs').promises;
 
 const fg = require('fast-glob');
-const semver = require('semver');
 
 const yargs = require('yargs');
 const { hideBin } = require('yargs/helpers');
@@ -109,16 +108,6 @@ async function main(dirs = [`${path.join(rootDir, 'components')}/*`], verbose = 
             updated = true;
         }
 
-        const peerDepsCheck = await checkPeerDependencies(peerDependencies, devDependencies, verbose);
-        if (peerDepsCheck) {
-            ['peerDependencies', 'devDependencies'].forEach((dep) => {
-                if (peerDepsCheck[dep]) {
-                    packageJSON[dep] = peerDepsCheck[dep];
-                    updated = true;
-                }
-            });
-        }
-
         if (!updated) continue;
 
         report.map(r => console.log(r));
@@ -131,50 +120,6 @@ async function main(dirs = [`${path.join(rootDir, 'components')}/*`], verbose = 
     }
 
     return await Promise.all(promises);
-};
-
-
-/**
- * Validate peer deps for components; escapes before running lerna if they are not valid.
- **/
-async function checkPeerDependencies(peerDependencies, devDependencies, verbose = false) {
-    if (!peerDependencies) return;
-
-    const report = [];
-    let updated;
-    for (const dependency of Object.keys(peerDependencies)) {
-        if (!devDependencies) continue;
-        const devDepVer = semver.coerce(devDependencies[dependency]?.replace('^', ''));
-        if (devDepVer === null) continue;
-        if (semver.satisfies(devDepVer, peerDependencies[dependency])) continue;
-
-        // Set a new peer dependency or bump the dev dependency to align them
-        const peerDepVer = semver.coerce(peerDependencies[dependency]);
-        if (semver.gt(devDepVer, peerDepVer)) {
-            if (verbose) {
-                report.push(`    ⚠️ Out of date peerDependencies ${dependency}: devDependency ${devDepVer.toString()} is greater than ${peerDepVer.toString()}`);
-            }
-
-            const newPeerDepVer = semver.coerce('^' + devDepVer.toString()?.replace(/-\d+$/, '')?.split('.')?.shift());
-            peerDependencies[dependency] = `>=${newPeerDepVer.toString()}`;
-            updated = true;
-            report.push(`    ✔ Updated ${dependency} to >=${newPeerDepVer.toString()}`);
-        } else {
-            if (verbose) {
-                report.push(`    ⚠️ Out of date peerDependencies ${dependency}: devDependency ${devDepVer.toString()} is less than ${peerDepVer.toString()}`);
-            }
-
-            const newDevDepVer = semver.coerce('^' + peerDepVer.toString().replace(/-\d+$/, ''));
-            devDependencies[dependency] = `^${newDevDepVer.toString()}`;
-            updated = true;
-            report.push(`    ✔ Updated ${dependency} to ^${newDevDepVer}`);
-        }
-    }
-
-    if (!updated) return;
-
-    report.map(r => console.log(r));
-    return { peerDependencies, devDependencies };
 };
 
 const { _, verbose = false } = yargs(hideBin(process.argv))
