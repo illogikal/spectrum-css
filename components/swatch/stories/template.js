@@ -2,16 +2,22 @@ import { html } from "lit-html";
 import { classMap } from "lit-html/directives/class-map.js";
 import { ifDefined } from "lit-html/directives/if-defined.js";
 
+import { useArgs } from '@storybook/client-api';
+
 import "../index.css";
 
 export const Template = ({
   rootClass = "spectrum-Swatch",
   size = "m",
+  isSelected = false,
+  isDisabled = false,
+  isRounded = true,
   customClasses = [],
   id,
   ...globals
 }) => {
   const { express } = globals;
+  const [_, updateArgs] = useArgs();
 
   try {
     if (!express) import(/* webpackPrefetch: true */ "../themes/spectrum.css");
@@ -25,11 +31,23 @@ export const Template = ({
       class=${classMap({
         [rootClass]: true,
         [`${rootClass}--size${size?.toUpperCase()}`]: typeof size !== "undefined",
+        'is-selected': !isDisabled && isSelected,
+        'is-disabled': isDisabled,
+        [`${rootClass}--roundingNone`]: !isRounded,
         ...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
       })}
+      ?disabled=${isDisabled}
       id=${ifDefined(id)}
       style="--spectrum-picked-color: rgb(174, 216, 230)"
       tabindex="0"
+      @click=${(e) => {
+        updateArgs({ isSelected: !isSelected });
+      }}
+      @focusout=${() => updateArgs({ isSelected: false })}
+      @keypress=${(e) => {
+        if (e.key !== 'Enter' && e.key !== ' ') return;
+        updateArgs({ isSelected: !isSelected });
+      }}
     >
       <div class="${rootClass}-fill"></div>
     </div>
