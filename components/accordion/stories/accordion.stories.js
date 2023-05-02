@@ -8,9 +8,20 @@ export default {
   component: "Accordion",
   argTypes: {
     items: { table: { disable: true } },
+    size: {
+      name: "Size",
+      type: { name: "string", required: true },
+      table: {
+        type: { summary: "string" },
+        category: "Component",
+      },
+      options: ["s", "m", "l", "xl"],
+      control: "select"
+    },
   },
   args: {
     rootClass: "spectrum-Accordion",
+    size: "m",
   },
   parameters: {
     actions: {

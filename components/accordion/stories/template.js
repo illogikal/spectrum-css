@@ -70,6 +70,7 @@ export const AccordionItem = ({
 
 export const Template = ({
   rootClass = "spectrum-Accordion",
+  size = "m",
   items,
   id,
   customClasses = [],
@@ -81,6 +82,7 @@ export const Template = ({
     <div
       class="${classMap({
         [rootClass]: true,
+        [`${rootClass}--size${size?.toUpperCase()}`]: typeof size !== "undefined",
         ...customClasses.reduce((a, c) => ({ ...a, [c]: true }), {}),
       })}"
       id=${ifDefined(id)}
