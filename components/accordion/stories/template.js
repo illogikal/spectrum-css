@@ -15,6 +15,7 @@ export const AccordionItem = ({
   idx = 0,
   isDisabled = false,
   isOpen = false,
+  iconSize = "m",
   // customClasses = [],
   ...globals
 }) => {
@@ -49,6 +50,7 @@ export const AccordionItem = ({
         </button>
         ${Icon({
           iconName: "ChevronRight100",
+          size: `${iconSize}`,
           customClasses: [
             `${rootClass}Indicator`,
           ],
@@ -95,6 +97,7 @@ export const Template = ({
           rootClass: `${rootClass}-item`,
           heading,
           idx,
+          iconSize: `${size}`,
           ...item,
           ...globals,
         });
