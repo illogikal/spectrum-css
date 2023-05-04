@@ -14,11 +14,10 @@ window.addEventListener('DOMContentLoaded', function() {
   "use strict"
 
   var config = {
-    /* REPEAT AFTER ME:
-     I WILL NOT REUSE THE ADOBE FONTS ID FOR SPECTRUM-CSS DOCS IN MY PRODUCT / PRODUCTION
-     I WILL NOT REUSE THE ADOBE FONTS ID FOR SPECTRUM-CSS DOCS IN MY PRODUCT / PRODUCTION
-     I WILL NOT REUSE THE ADOBE FONTS ID FOR SPECTRUM-CSS DOCS IN MY PRODUCT / PRODUCTION
-     See https://wiki.corp.adobe.com/display/devrel/Using+Typekit+at+Adobe to get set up right. */
+    /**
+     * DO NOT REUSE THE ADOBE FONTS ID FOR SPECTRUM-CSS DOCS IN MY PRODUCT / PRODUCTION
+     * See https://wiki.corp.adobe.com/display/devrel/Using+Typekit+at+Adobe to get set up right.
+     */
      // On pageload, determine to current pages language setting.
      // If it is US-language or unset use the 1st Adobe font web project id (smaller size),
      // otherwise use the 2nd kit with all the language settings (larger size)

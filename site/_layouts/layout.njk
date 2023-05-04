@@ -1,15 +1,24 @@
 <!DOCTYPE html>
 <html lang="en-US" dir="ltr">
     <head>
-        <title>{{ title }}{% if title %} | {% endif %}Spectrum CSS</title>
+        <title>{{ title }}{% if title %} | {% endif %}{{ site.name }}</title>
         {% include 'meta-info.njk' %}
+        {% include 'stylesheets.njk' %}
         {% block head %}{% endblock %}
     </head>
     <body class="spectrum spectrum--light spectrum--medium">
-        {% block content %}
-            {{ content | safe }}
-        {% endblock %}
+        {% block content %}{{ content | safe }}{% endblock %}
         {% block foot %}{% endblock %}
+
         {% initClipboardJS %}
+
+        <script src="{{ '/js/loadicons/index.js' | url }}"></script>
+        <script src="{{ '/js/focus-ring-polyfill/index.js' | url }}"></script>
+        <script src="{{ '/js/typekit.js' | url }}"></script>
+
+        {% for packageName in dependencies | dedupe -%}
+            {% if packageName %}<script src="{{ '/components/' + packageName + '/enhancement.js' | url }}"></script>{% endif %}
+        {%- endfor %}
+        <script src="{{ '/js/site.js' | url }}"></script>
     </body>
 </html>

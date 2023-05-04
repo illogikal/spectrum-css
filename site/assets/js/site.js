@@ -9,8 +9,42 @@ the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR REPRESENTA
 OF ANY KIND, either express or implied. See the License for the specific language
 governing permissions and limitations under the License.
 */
-/* eslint-disable no-unused-vars */
-/* global document, window, Element, loadIcons, URLSearchParams */
+
+const SP_THEME_COLOR_KEY = 'theme:color';
+const SP_THEME_SCALE_KEY = 'theme:scale';
+const SP_THEME_CONTEXT_KEY = 'theme:context';
+const SP_THEME_DIR_KEY = 'theme:dir';
+
+const COLOR_FALLBACK = matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+const SCALE_FALLBACK = matchMedia('(max-width: 700px) and (hover: none) and (pointer: coarse), (max-height: 700px) and (hover: none) and (pointer: coarse)').matches ? 'large' : 'medium';
+const CONTEXT_FALLBACK = 'spectrum';
+
+const DIR_FALLBACK = 'ltr';
+const DEFAULT_COLOR = (
+    window.localStorage
+        ? localStorage.getItem(SP_THEME_COLOR_KEY) || COLOR_FALLBACK
+        : COLOR_FALLBACK
+);
+const DEFAULT_SCALE = (
+    window.localStorage
+        ? localStorage.getItem(SP_THEME_SCALE_KEY) || SCALE_FALLBACK
+        : SCALE_FALLBACK
+);
+const DEFAULT_THEME = (
+    window.localStorage
+        ? localStorage.getItem(SP_THEME_CONTEXT_KEY) || CONTEXT_FALLBACK
+        : CONTEXT_FALLBACK
+);
+const DEFAULT_DIR = (
+    window.localStorage
+        ? localStorage.getItem(SP_THEME_DIR_KEY) || DIR_FALLBACK
+        : DIR_FALLBACK
+);
+
+matchMedia('screen and (max-width: 960px)').addEventListener('change', (event) => {
+  if (!event.matches) return;
+  // @todo display nav content when this is false; otherwise show the drawer
+});
 
 function setPickerValue(picker, value, label) {
   const menu = picker.nextElementSibling.querySelector(".spectrum-Menu");
@@ -49,7 +83,363 @@ function setPickerValue(picker, value, label) {
   }))
 }
 
-window.addEventListener('DOMContentLoaded', function() {
+function loadJSON(url, callback) {
+  function handleLoad() {
+    let object = null;
+    try {
+      object = JSON.parse(req.responseText);
+    }
+    catch (err) {
+      console.error(`Failed to load JSON from ${url}: ${err}`);
+      callback(err);
+    }
+
+    callback(null, object);
+  }
+
+  var req = new XMLHttpRequest();
+  req.addEventListener('load', handleLoad.bind(this));
+  req.open('GET', url);
+  req.send();
+}
+class Search {
+  Categories = [
+    'components',
+  ];
+
+  CategoryNames = {
+    components: 'Components'
+  };
+
+  constructor(el) {
+    this.index = null;
+    this.hasResults = false;
+    this.el = el;
+
+    this.el.innerHTML = `
+<div class="spectrum-Site-search" role="search">
+  <form class="spectrum-Search js-form" role="combobox" aria-expanded="false" aria-owns="search-results-listbox" aria-haspopup="listbox">
+    <div class="spectrum-Textfield spectrum-Search-textfield">
+      <svg class="spectrum-Icon spectrum-Icon--sizeM spectrum-Textfield-icon spectrum-Search-icon" focusable="false" aria-hidden="true">
+        <use xlink:href="#spectrum-icon-18-Magnify" />
+      </svg>
+      <input type="search" placeholder="Search" name="search" value="" class="spectrum-Textfield-input spectrum-Search-input js-input" autocomplete="off">
+    </div>
+    <button type="reset" value="Reset" class="spectrum-ClearButton spectrum-ClearButton--sizeM spectrum-Search-clearButton js-clearButton" tabindex="-1" hidden>
+      <div class="spectrum-ClearButton-fill">
+        <svg class="spectrum-ClearButton-icon spectrum-Icon spectrum-UIIcon-Cross100" focusable="false" aria-hidden="true">
+          <use xlink:href="#spectrum-css-icon-Cross100" />
+        </svg>
+      </div>
+    </button>
+  </form>
+  <div class="spectrum-Popover spectrum-Site-searchResults js-popover">
+    <ul class="spectrum-Menu js-searchResults" id="search-results-listbox" role="listbox" aria-label="Search">
+    </ul>
+    <div class="spectrum-IllustratedMessage spectrum-Site-noSearchResults js-searchError">
+      <div class="spectrum-IllustratedMessage spectrum-Site-noSearchResults">
+        <h2 class="spectrum-Heading spectrum-Heading--pageTitle spectrum-IllustratedMessage-heading">No results found</h2>
+        <p class="spectrum-Body--secondary spectrum-IllustratedMessage-description"><em>Try another search term.</em></p>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+    this.form = this.el.querySelector('.js-form');
+    this.popover = this.el.querySelector('.js-popover');
+    this.input = this.el.querySelector('.js-input');
+    this.searchResults = this.el.querySelector('.js-searchResults');
+    this.searchError = this.el.querySelector('.js-searchError');
+    this.clearButton = this.el.querySelector('.js-clearButton');
+    document.body.appendChild(this.popover);
+
+    this.clearButton.addEventListener('click', this.hideResults.bind(this));
+    this.el.addEventListener('submit', this.handleSubmit.bind(this));
+    this.el.addEventListener('reset', this.handleReset.bind(this));
+    this.input.addEventListener('keydown', this.handleKeyDown.bind(this));
+    this.input.addEventListener('keypress', this.handleKeyPress.bind(this));
+
+    this.popover.addEventListener('keydown', this.handlePopoverNavigation.bind(this));
+    this.popover.addEventListener('click', this.hideResults.bind(this));
+
+    this.popover.addEventListener('focusin', this.handleListInteraction.bind(this));
+    this.popover.addEventListener('mouseenter', this.handleListInteraction.bind(this));
+    this.popover.addEventListener('keydown', this.handleListInteraction.bind(this));
+
+    this.el.addEventListener('focusout', function (e) {
+      if (!this.el.contains(e.relatedTarget) && !this.popover.contains(e.relatedTarget)) {
+        // Don't do this right away or Safari gets all pissy
+        setTimeout(this.hideResults.bind(this), 100);
+      }
+    }.bind(this));
+
+    this.input.addEventListener('focus', function () {
+      // if (this.input.value.length) {
+      //   this.doSearch();
+      // }
+      var event = new Event('SearchFocused');
+      window.dispatchEvent(event);
+    }.bind(this));
+
+    document.addEventListener('keydown', function (e) {
+      if (e.key === '/' && document.activeElement === document.body) {
+        this.input.classList.add('focus-ring');
+        this.input.setSelectionRange(0, this.input.value.length);
+        setTimeout(this.input.focus.bind(this.input), 100);
+        e.preventDefault();
+      }
+    }.bind(this));
+
+    this.loadIndex();
+    this.loadStore();
+  }
+
+  loadStore() {
+    loadJSON('../store.json', function (err, object) {
+      this.store = object;
+    }.bind(this));
+  }
+
+  loadIndex() {
+    loadJSON('../index.json', function (err, object) {
+      this.index = lunr.Index.load(object);
+    }.bind(this));
+  }
+
+  handleSubmit(event) {
+    event.preventDefault();
+  }
+
+  handleReset(event) {
+    this.hasResults = false;
+    this.hideResults();
+    this.input.value = '';
+    this.showHideClear();
+  }
+
+  showHideClear(event) {
+    this.clearButton.hidden = this.input.value.length === 0;
+  }
+
+  hideResults(event) {
+    this.form.setAttribute('aria-expanded', 'false');
+    this.popover.classList.remove('is-open');
+  }
+
+  showResults(event) {
+    this.form.setAttribute('aria-expanded', 'true');
+    var inputRect = this.input.getBoundingClientRect();
+    this.popover.style.top = `${inputRect.bottom + 10}px`;
+
+    var isRTL = window.getComputedStyle(document.documentElement, null).getPropertyValue('direction') === 'rtl';
+
+    if (isRTL) {
+      var width = window.innerWidth;
+      this.popover.style.right = `${window.innerWidth - inputRect.right}px`;
+      this.popover.style.left = 'auto';
+    }
+    else {
+      this.popover.style.right = 'auto';
+      this.popover.style.left = `${inputRect.left}px`;
+    }
+
+    this.popover.classList.add('is-open');
+
+    let firstItem = this.popover.querySelector('.spectrum-Menu-item');
+    if (firstItem) {
+      // Provide some visual indication that we will navigate here on enter
+      firstItem.classList.add('is-highlighted');
+    }
+  }
+
+  handleListInteraction(e) {
+    let firstItem = this.popover.querySelector('.spectrum-Menu-item');
+    if (firstItem) {
+      firstItem.classList.remove('is-highlighted');
+    }
+  }
+
+  handlePopoverNavigation(e) {
+    let currentItem = document.activeElement;
+    if (currentItem.classList.contains('spectrum-Menu-item')) {
+      let items = Array.prototype.slice.call(this.popover.querySelectorAll('.spectrum-Menu-item'));
+      let currentItemIndex = items.indexOf(currentItem);
+      let newItemIndex = -1;
+      if (e.key === 'ArrowDown') {
+        newItemIndex = currentItemIndex + 1 < items.length ? currentItemIndex + 1 : 0;
+      }
+      else if (e.key === 'ArrowUp') {
+        newItemIndex = currentItemIndex - 1 >= 0 ? currentItemIndex - 1 : items.length - 1;
+      }
+      else if (e.key === 'Home') {
+        newItemIndex = 0;
+      }
+      else if (e.key === 'End') {
+        newItemIndex = items.length - 1;
+      }
+      else if (e.key === 'Escape') {
+        this.input.focus();
+      }
+      else if (e.key === 'Enter') {
+        currentItem.click();
+      }
+      if (newItemIndex !== -1) {
+        items[newItemIndex].focus();
+
+        // Don't scroll the list
+        e.preventDefault();
+      }
+    }
+  }
+
+  handleKeyDown(e) {
+    if (e.key === 'ArrowDown') {
+      let firstItem = this.popover.querySelector('.spectrum-Menu-item');
+      if (firstItem) {
+        this.showResults();
+        firstItem.focus();
+      }
+    }
+    else if (e.key === 'Escape') {
+      this.handleReset();
+    }
+  }
+
+  handleKeyPress(e) {
+    if (e.key === 'Enter') {
+      let firstItem = this.popover.querySelector('.spectrum-Menu-item');
+      if (firstItem) {
+        firstItem.click();
+        this.input.blur();
+        this.hideResults();
+      }
+    }
+    else if (e.key !== 'Escape') {
+      this.showHideClear();
+      if (this.input.value.length === 0) {
+        this.handleReset();
+      }
+      else {
+        this.doSearch();
+      }
+    }
+  }
+
+  doSearch() {
+    this.search(this.input.value);
+  }
+
+  search(val) {
+    this.searchVal = val;
+    let r = [];
+    if (val.length > 1) {
+      let searchParam = val.trim().split(' ').map((term) => `${term}* ${term}`).join(' ');
+      try {
+        r = this.index.search(searchParam);
+      }
+      catch (err) {
+        this.popover.innerHTML = `
+<div class="spectrum-IllustratedMessage spectrum-Site-noSearchResults">
+  <h2 class="spectrum-Heading spectrum-Heading--pageTitle spectrum-IllustratedMessage-heading">Search error</h2>
+  <p class="spectrum-Body--secondary spectrum-IllustratedMessage-description"><em>${err}</em></p>
+</div>
+`;
+        this.showResults();
+        return;
+      }
+    }
+
+    let results = {
+      length: r.length,
+      components: r.map(function (result) {
+        return this.store[result.ref];
+      }, this)
+    };
+
+    this.hasResults = !!r.length;
+
+    if (results.length) {
+      this.searchError.hidden = true;
+      this.searchResults.hidden = false;
+
+      let markup = `
+  ${Search.Categories.map(function (category) {
+        return results[category].length ?
+          `
+        <li role="group" aria-labelledby="searchResults-${category}">
+          <span class="spectrum-Menu-sectionHeading" id="searchResults-${category}" aria-hidden="true">${Search.CategoryNames[category]}</span>
+          <ul class="spectrum-Menu" role="presentation">
+            ${results[category].map(function (result, i) {
+            return `
+                <a class="spectrum-Menu-item" href="${result.href}" role="option">
+                  <span class="spectrum-Menu-itemLabel">${result.name}</span>
+                </a>
+                `;
+          }).join('\n')}
+          </ul>
+        </li>
+        ` : '';
+      }).join('\n')}
+`;
+      this.searchResults.innerHTML = markup;
+
+    }
+    else {
+      this.searchError.hidden = false;
+      this.searchResults.hidden = true;
+    }
+
+    this.showResults();
+  }
+}
+
+window.addEventListener("DOMContentLoaded", () => {
+  // @todo Look for and load any missing assets
+  let manifest = {};
+  loadJSON('/manifest.json', function (err, object) {
+    manifest = object;
+
+    if (manifest) {
+      Object.keys(manifest).forEach(className => {
+        if (!document.querySelector(`.${className}`)) return;
+
+        const scriptsLoaded = [...document.querySelectorAll('script')].map(item => {
+          return item.src;
+        });
+        const stylesheetsLoaded = [...document.querySelectorAll('link')].map(item => {
+          return item.href;
+        });
+
+        // Check if necessary assets are loaded:
+        // - index-vars.css
+        // - enhancement.js
+        const scriptPath = manifest[className].script;
+        if (scriptPath) {
+          // console.log(scriptPath, scriptsLoaded);
+          if (!scriptsLoaded.filter(s => s.endsWith(scriptPath))?.length) {
+            const injectScript = document.createElement('script');
+            injectScript.src = scriptPath;
+            injectScript.type = "module";
+            document.body.appendChild(injectScript);
+          }
+        }
+
+        const stylesheetPath = manifest[className].stylesheet;
+        if (stylesheetPath) {
+          // console.log(stylesheetPath, stylesheetsLoaded);
+          if (!stylesheetsLoaded.filter(s => s.endsWith(stylesheetPath)?.length)) {
+            const injectStylesheet = document.createElement('link');
+            injectStylesheet.href = stylesheetPath;
+            injectStylesheet.rel = "stylesheet";
+            injectStylesheet.type = "text/css";
+            document.head.appendChild(injectStylesheet);
+          }
+        }
+      });
+    }
+  });
+
   // Switcher
   const scalePicker = document.querySelector('#switcher-scale');
   const themePicker = document.querySelector('#switcher-theme');
@@ -365,7 +755,7 @@ class SpectrumSwitcher {
 
     this._rootEl.classList.add(`spectrum--${theme}`);
 
-    this.updateCodeBlocks(theme);
+    updateCodeBlocks(theme);
 
     this._theme = theme;
   };
