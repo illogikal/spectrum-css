@@ -1,6 +1,6 @@
 {
   "name": "@spectrum-css/tray",
-  "version": "2.0.29",
+  "version": "2.0.36",
   "description": "The Spectrum CSS tray component",
   "license": "Apache-2.0",
   "author": "Adobe",
@@ -18,19 +18,19 @@
     "build": "gulp"
   },
   "peerDependencies": {
-    "@spectrum-css/button": "^6.0.0 || ^7.0.0 || ^8.0.0 || ^9.0.0",
-    "@spectrum-css/icon": "^3.0.0",
-    "@spectrum-css/modal": "^3.0.0",
-    "@spectrum-css/tokens": ">=8.0.0"
+    "@spectrum-css/button": ">=10",
+    "@spectrum-css/icon": ">=3",
+    "@spectrum-css/modal": ">=3",
+    "@spectrum-css/tokens": ">=8 <=9"
   },
   "devDependencies": {
-    "@spectrum-css/button": "^9.1.4",
-    "@spectrum-css/component-builder-simple": "*",
-    "@spectrum-css/dialog": "^6.0.34",
-    "@spectrum-css/divider": "^2.0.28",
-    "@spectrum-css/icon": "^3.0.38",
-    "@spectrum-css/modal": "^3.0.36",
-    "@spectrum-css/tokens": "^8.1.0",
+    "@spectrum-css/button": "^10.0.4",
+    "@spectrum-css/component-builder-simple": "^2.0.10",
+    "@spectrum-css/dialog": "^6.0.41",
+    "@spectrum-css/divider": "^2.0.35",
+    "@spectrum-css/icon": "^3.0.42",
+    "@spectrum-css/modal": "^3.0.40",
+    "@spectrum-css/tokens": "^9.1.0",
     "gulp": "^4.0.0"
   },
   "publishConfig": {

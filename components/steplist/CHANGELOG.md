@@ -3,6 +3,76 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="3.0.48"></a>
+## 3.0.48
+🗓 2023-05-02 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/steplist@3.0.47...@spectrum-css/steplist@3.0.48)
+
+**Note:** Version bump only for package @spectrum-css/steplist
+
+
+
+
+
+<a name="3.0.47"></a>
+## 3.0.47
+🗓 2023-04-26 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/steplist@3.0.46...@spectrum-css/steplist@3.0.47)
+
+**Note:** Version bump only for package @spectrum-css/steplist
+
+
+
+
+
+<a name="3.0.46"></a>
+## 3.0.46
+🗓 2023-04-25 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/steplist@3.0.44...@spectrum-css/steplist@3.0.46)
+
+**Note:** Version bump only for package @spectrum-css/steplist
+
+
+
+
+
+<a name="3.0.45"></a>
+## 3.0.45
+🗓 2023-04-25 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/steplist@3.0.44...@spectrum-css/steplist@3.0.45)
+
+**Note:** Version bump only for package @spectrum-css/steplist
+
+
+
+
+
+<a name="3.0.44"></a>
+## 3.0.44
+🗓 2023-04-25 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/steplist@3.0.43...@spectrum-css/steplist@3.0.44)
+
+**Note:** Version bump only for package @spectrum-css/steplist
+
+
+
+
+
+<a name="3.0.43"></a>
+## 3.0.43
+🗓 2023-04-21 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/steplist@3.0.42...@spectrum-css/steplist@3.0.43)
+
+**Note:** Version bump only for package @spectrum-css/steplist
+
+
+
+
+
+<a name="3.0.42"></a>
+## 3.0.42
+🗓 2023-04-20 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/steplist@3.0.41...@spectrum-css/steplist@3.0.42)
+
+**Note:** Version bump only for package @spectrum-css/steplist
+
+
+
+
+
 <a name="3.0.41"></a>
 ## 3.0.41
 🗓 2023-04-17 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/steplist@3.0.40...@spectrum-css/steplist@3.0.41)

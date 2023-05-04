@@ -1,4 +1,4 @@
-/*
+/*!
 Copyright 2023 Adobe. All rights reserved.
 This file is licensed to you under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License. You may obtain a copy
@@ -47,4 +47,13 @@ governing permissions and limitations under the License.
   --spectrum-menu-item-checkmark-width-extra-large: 14px;
 
   --spectrum-rating-icon-spacing: var(--spectrum-spacing-75);
+
+  --spectrum-button-top-to-text-small: 5px;
+  --spectrum-button-bottom-to-text-small: 4px;
+  --spectrum-button-top-to-text-medium: 7px;
+  --spectrum-button-bottom-to-text-medium: 8px;
+  --spectrum-button-top-to-text-large: 10px;
+  --spectrum-button-bottom-to-text-large: 10px;
+  --spectrum-button-top-to-text-extra-large: 13px;
+  --spectrum-button-bottom-to-text-extra-large: 13px;
 }

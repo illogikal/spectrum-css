@@ -1,4 +1,4 @@
-/*
+/*!
 Copyright 2023 Adobe. All rights reserved.
 This file is licensed to you under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License. You may obtain a copy
@@ -49,17 +49,6 @@ governing permissions and limitations under the License.
   box-sizing: border-box;
   border-radius: var(--mod-colorarea-border-radius, var(--spectrum-colorarea-border-radius));
   border: var(--mod-colorarea-border-width, var(--spectrum-colorarea-border-width)) solid var(--highcontrast-colorarea-border-color, var(--mod-colorarea-border-color, var(--spectrum-colorarea-border-color)));
-
-  &.is-focused {
-    z-index: 2;
-    .spectrum-ColorArea-handle {
-      inline-size: calc(var(--spectrum-color-handle-size) * 2);
-      block-size: calc(var(--spectrum-color-handle-size) * 2);
-
-      margin-inline-start: calc(-1 * var(--spectrum-color-handle-size));
-      margin-block-start: calc(-1 * var(--spectrum-color-handle-size));
-    }
-  }
 
   &.is-disabled {
     pointer-events: none;

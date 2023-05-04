@@ -3,6 +3,88 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="9.1.0"></a>
+# 9.1.0
+🗓 2023-05-02 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tokens@9.0.4...@spectrum-css/tokens@9.1.0)
+
+### ✨ Features
+
+* **tokens:** add custom drop zone rgb background color tokens ([#1834](https://github.com/adobe/spectrum-css/issues/1834)) ([b637006](https://github.com/adobe/spectrum-css/commit/b637006))
+
+
+
+
+
+<a name="9.0.4"></a>
+## 9.0.4
+🗓 2023-04-26 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tokens@9.0.3...@spectrum-css/tokens@9.0.4)
+
+**Note:** Version bump only for package @spectrum-css/tokens
+
+
+
+
+
+<a name="9.0.3"></a>
+## 9.0.3
+🗓 2023-04-25 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tokens@9.0.1...@spectrum-css/tokens@9.0.3)
+
+**Note:** Version bump only for package @spectrum-css/tokens
+
+
+
+
+
+<a name="9.0.2"></a>
+## 9.0.2
+🗓 2023-04-25 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tokens@9.0.1...@spectrum-css/tokens@9.0.2)
+
+**Note:** Version bump only for package @spectrum-css/tokens
+
+
+
+
+
+<a name="9.0.1"></a>
+## 9.0.1
+🗓 2023-04-25 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tokens@9.0.0...@spectrum-css/tokens@9.0.1)
+
+**Note:** Version bump only for package @spectrum-css/tokens
+
+
+
+
+
+<a name="9.0.0"></a>
+# 9.0.0
+🗓 2023-04-21 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tokens@8.1.1...@spectrum-css/tokens@9.0.0)
+
+* chore(tokens)!: use v12.6.0 release of @adobe/spectrum-tokens ([419aa49](https://github.com/adobe/spectrum-css/commit/419aa49))
+
+
+### 🛑 BREAKING CHANGES
+
+* updates to `@adobe/spectrum-tokens@12.6.0`.
+
+* Includes additions and deprecations from `12.5.0`
+* https://github.com/adobe/spectrum-tokens/releases/tag/%40adobe%2Fspectrum-tokens%4012.5.0
+* Includes additions, updates, and deprecations from `12.6.0`
+* https://github.com/adobe/spectrum-tokens/releases/tag/%40adobe%2Fspectrum-tokens%4012.6.0
+
+
+
+
+
+<a name="8.1.1"></a>
+## 8.1.1
+🗓 2023-04-20 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tokens@8.1.0...@spectrum-css/tokens@8.1.1)
+
+**Note:** Version bump only for package @spectrum-css/tokens
+
+
+
+
+
 <a name="8.1.0"></a>
 # 8.1.0
 🗓 2023-04-17 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/tokens@8.0.4...@spectrum-css/tokens@8.1.0)

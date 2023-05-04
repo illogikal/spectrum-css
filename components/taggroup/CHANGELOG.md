@@ -3,6 +3,76 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="3.3.37"></a>
+## 3.3.37
+🗓 2023-05-02 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/taggroup@3.3.36...@spectrum-css/taggroup@3.3.37)
+
+**Note:** Version bump only for package @spectrum-css/taggroup
+
+
+
+
+
+<a name="3.3.36"></a>
+## 3.3.36
+🗓 2023-04-26 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/taggroup@3.3.35...@spectrum-css/taggroup@3.3.36)
+
+**Note:** Version bump only for package @spectrum-css/taggroup
+
+
+
+
+
+<a name="3.3.35"></a>
+## 3.3.35
+🗓 2023-04-25 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/taggroup@3.3.33...@spectrum-css/taggroup@3.3.35)
+
+**Note:** Version bump only for package @spectrum-css/taggroup
+
+
+
+
+
+<a name="3.3.34"></a>
+## 3.3.34
+🗓 2023-04-25 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/taggroup@3.3.33...@spectrum-css/taggroup@3.3.34)
+
+**Note:** Version bump only for package @spectrum-css/taggroup
+
+
+
+
+
+<a name="3.3.33"></a>
+## 3.3.33
+🗓 2023-04-25 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/taggroup@3.3.32...@spectrum-css/taggroup@3.3.33)
+
+**Note:** Version bump only for package @spectrum-css/taggroup
+
+
+
+
+
+<a name="3.3.32"></a>
+## 3.3.32
+🗓 2023-04-21 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/taggroup@3.3.31...@spectrum-css/taggroup@3.3.32)
+
+**Note:** Version bump only for package @spectrum-css/taggroup
+
+
+
+
+
+<a name="3.3.31"></a>
+## 3.3.31
+🗓 2023-04-20 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/taggroup@3.3.30...@spectrum-css/taggroup@3.3.31)
+
+**Note:** Version bump only for package @spectrum-css/taggroup
+
+
+
+
+
 <a name="3.3.30"></a>
 ## 3.3.30
 🗓 2023-04-17 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/taggroup@3.3.29...@spectrum-css/taggroup@3.3.30)

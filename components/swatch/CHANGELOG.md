@@ -3,6 +3,76 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="4.0.12"></a>
+## 4.0.12
+🗓 2023-05-02 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/swatch@4.0.11...@spectrum-css/swatch@4.0.12)
+
+**Note:** Version bump only for package @spectrum-css/swatch
+
+
+
+
+
+<a name="4.0.11"></a>
+## 4.0.11
+🗓 2023-04-26 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/swatch@4.0.10...@spectrum-css/swatch@4.0.11)
+
+**Note:** Version bump only for package @spectrum-css/swatch
+
+
+
+
+
+<a name="4.0.10"></a>
+## 4.0.10
+🗓 2023-04-25 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/swatch@4.0.8...@spectrum-css/swatch@4.0.10)
+
+**Note:** Version bump only for package @spectrum-css/swatch
+
+
+
+
+
+<a name="4.0.9"></a>
+## 4.0.9
+🗓 2023-04-25 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/swatch@4.0.8...@spectrum-css/swatch@4.0.9)
+
+**Note:** Version bump only for package @spectrum-css/swatch
+
+
+
+
+
+<a name="4.0.8"></a>
+## 4.0.8
+🗓 2023-04-25 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/swatch@4.0.7...@spectrum-css/swatch@4.0.8)
+
+**Note:** Version bump only for package @spectrum-css/swatch
+
+
+
+
+
+<a name="4.0.7"></a>
+## 4.0.7
+🗓 2023-04-21 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/swatch@4.0.6...@spectrum-css/swatch@4.0.7)
+
+**Note:** Version bump only for package @spectrum-css/swatch
+
+
+
+
+
+<a name="4.0.6"></a>
+## 4.0.6
+🗓 2023-04-20 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/swatch@4.0.5...@spectrum-css/swatch@4.0.6)
+
+**Note:** Version bump only for package @spectrum-css/swatch
+
+
+
+
+
 <a name="4.0.5"></a>
 ## 4.0.5
 🗓 2023-04-17 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/swatch@4.0.4...@spectrum-css/swatch@4.0.5)
