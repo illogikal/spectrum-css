@@ -1,7 +1,8 @@
 {
   "extends": ["stylelint-config-standard"],
   "plugins": [
-   "./custom-stylelint-plugins/css-logical-properties.js"
+   "./custom-stylelint-plugins/css-logical-properties.js",
+   "./custom-stylelint-plugins/no-missing-parenthesis.js"
   ],
   "rules": {
     "rule-empty-line-before": null,
@@ -17,6 +18,7 @@
     "no-duplicate-selectors": null,
     "property-no-vendor-prefix": null,
     "max-nesting-depth": 2,
-    "custom-rule/no-logical-properties": true
+    "custom-rule/no-logical-properties": true,
+    "custom-rule/no-missing-parenthesis": true
   }
 }
