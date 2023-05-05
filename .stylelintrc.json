@@ -1,5 +1,8 @@
 {
-  "extends": "stylelint-config-standard",
+  "extends": ["stylelint-config-standard"],
+  "plugins": [
+   "./custom-stylelint-plugins/css-logical-properties.js"
+  ],
   "rules": {
     "rule-empty-line-before": null,
     "block-no-empty": null,
@@ -12,6 +15,8 @@
     "comment-whitespace-inside": null,
     "comment-empty-line-before": null,
     "no-duplicate-selectors": null,
-    "property-no-vendor-prefix": null
+    "property-no-vendor-prefix": null,
+    "max-nesting-depth": 2,
+    "custom-rule/no-logical-properties": true
   }
 }
