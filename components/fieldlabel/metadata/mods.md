@@ -1,5 +1,6 @@
 | Modifiable Custom Properties |
 | --- |
+|`--mod-fieldlabel-min-height`|
 |`--mod-fieldlabel-font-size`|
 |`--mod-fieldlabel-font-weight`|
 |`--mod-fieldlabel-line-height`|
