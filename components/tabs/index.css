@@ -18,9 +18,13 @@ governing permissions and limitations under the License.
   --spectrum-tabs-compact-item-height: var(--spectrum-tab-item-compact-height-medium);
   --spectrum-tabs-item-horizontal-spacing: var(--spectrum-tab-item-to-tab-item-horizontal-medium);
   --spectrum-tabs-item-vertical-spacing: var(--spectrum-tab-item-to-tab-item-vertical-medium);
+  --spectrum-tabs-start-to-edge-vertical: var(--spectrum-tab-item-start-to-edge-medium);
+  --spectrum-tabs-top-to-text: var(--spectrum-tab-item-top-to-text-medium);
+  --spectrum-tabs-bottom-to-text: var(--spectrum-tab-item-top-to-text-medium);
 
+  
   /* Quiet */
-  --spectrum-tabs-start-to-item-quiet: var(--spectrum-tab-item-start-to-edge-quiet);
+  --spectrum-tabs-start-to-edge-quiet: var(--spectrum-tab-item-start-to-edge-quiet);
 
   --spectrum-tabs-list-background-direction: top;
   --spectrum-tabs-textonly-divider-background-color: var(--spectrum-tabs-quiet-textonly-divider-background-color);
@@ -32,7 +36,9 @@ governing permissions and limitations under the License.
   --spectrum-tabs-compact-item-height: var(--spectrum-tab-item-compact-height-small);
   --spectrum-tabs-item-horizontal-spacing: var(--spectrum-tab-item-to-tab-item-horizontal-small);
   --spectrum-tabs-item-vertical-spacing: var(--spectrum-tab-item-to-tab-item-vertical-small);
-
+  --spectrum-tabs-start-to-edge-vertical: var(--spectrum-tab-item-start-to-edge-small);
+  --spectrum-tabs-top-to-text: var(--spectrum-tab-item-top-to-text-small);
+  --spectrum-tabs-bottom-to-text: var(--spectrum-tab-item-top-to-text-small);
 }
 
 .spectrum-Tabs--sizeM {
@@ -40,7 +46,7 @@ governing permissions and limitations under the License.
   --spectrum-tabs-compact-item-height: var(--spectrum-tab-item-compact-height-medium);
   --spectrum-tabs-item-horizontal-spacing: var(--spectrum-tab-item-to-tab-item-horizontal-medium);
   --spectrum-tabs-item-vertical-spacing: var(--spectrum-tab-item-to-tab-item-vertical-medium);
-
+  --spectrum-tabs-start-to-edge-vertical: var(--spectrum-tab-item-start-to-edge-medium);
 
 }
 
@@ -49,7 +55,9 @@ governing permissions and limitations under the License.
   --spectrum-tabs-compact-item-height: var(--spectrum-tab-item-compact-height-large);
   --spectrum-tabs-item-horizontal-spacing: var(--spectrum-tab-item-to-tab-item-horizontal-large);
   --spectrum-tabs-item-vertical-spacing: var(--spectrum-tab-item-to-tab-item-vertical-large);
-
+  --spectrum-tabs-start-to-edge-vertical: var(--spectrum-tab-item-start-to-edge-large);
+  --spectrum-tabs-top-to-text: var(--spectrum-tab-item-top-to-text-large);
+  --spectrum-tabs-bottom-to-text: var(--spectrum-tab-item-top-to-text-large);
 
 }
 
@@ -58,7 +66,9 @@ governing permissions and limitations under the License.
   --spectrum-tabs-compact-item-height: var(--spectrum-tab-item-compact-height-extra-large);
   --spectrum-tabs-item-horizontal-spacing: var(--spectrum-tab-item-to-tab-item-horizontal-extra-large);
   --spectrum-tabs-item-vertical-spacing: var(--spectrum-tab-item-to-tab-item-vertical-extra-large);
-
+  --spectrum-tabs-start-to-edge-vertical: var(--spectrum-tab-item-start-to-edge-extra-large);
+  --spectrum-tabs-top-to-text: var(--spectrum-tab-item-top-to-text-extra-large);
+  --spectrum-tabs-bottom-to-text: var(--spectrum-tab-item-top-to-text-extra-large);
 
 }
 
@@ -100,6 +110,8 @@ governing permissions and limitations under the License.
 
   block-size: var(--mod-tabs-item-height, var(--spectrum-tabs-item-height));
   line-height: var(--spectrum-tabs-quiet-textonly-tabitem-height);
+  padding-block-start: var(--mod-tabs-top-to-text, var(--spectrum-tabs-top-to-text));
+  padding-block-end: var(--mod-tabs-bottom-to-text, var(--spectrum-tabs-bottom-to-text));
 
   /* Float above the tab line */
   z-index: 1;
@@ -260,7 +272,7 @@ governing permissions and limitations under the License.
 .spectrum-Tabs--quiet {
   display: inline-flex;
   border-block-end-color: var(--spectrum-tabs-quiet-textonly-divider-background-color);
-  padding-inline-start: var(--mod-tabs-start-to-item-quiet, var(--spectrum-tabs-start-to-item-quiet));
+  padding-inline-start: var(--mod-tabs-start-to-edge-quiet, var(--spectrum-tabs-start-to-edge-quiet));
 
   .spectrum-Tabs-selectionIndicator {
     padding-inline-start: var(--mod-tabs-start-to-item-quiet, var(--spectrum-tabs-start-to-item-quiet));
@@ -301,7 +313,7 @@ governing permissions and limitations under the License.
     padding-inline: var(--spectrum-tabs-quiet-textonly-tabitem-focus-ring-padding-x);
 
     margin-block-end: var(--mod-tabs-item-vertical-spacing, var(--spectrum-tabs-item-vertical-spacing));
-    margin-inline-start: calc(var(--spectrum-tabs-vertical-textonly-tabitem-gap) / 2);
+    margin-inline-start: var(--mod-tabs-start-to-edge-vertical, var(--spectrum-tabs-start-to-edge-vertical));
 
     &::before {
       /* padding is included in click area of tab items, so only need to offset by the size of the focus ring's border */
