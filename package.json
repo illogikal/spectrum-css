@@ -60,6 +60,9 @@
     "components/*",
     "tools/*"
   ],
+  "dependencies": {
+    "@adobe/spectrum-tokens": "^0.0.0-tabs-20230503165321"
+  },
   "devDependencies": {
     "@adobe/focus-ring-polyfill": "^0.1.5",
     "@commitlint/cli": "^17.6.1",
