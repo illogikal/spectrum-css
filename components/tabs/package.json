@@ -20,14 +20,14 @@
   "peerDependencies": {
     "@spectrum-css/menu": ">=4",
     "@spectrum-css/picker": ">=3",
-    "@spectrum-css/vars": ">=9"
+    "@spectrum-css/tokens": ">=8 <=9"
   },
   "devDependencies": {
-    "@spectrum-css/component-builder": "^4.0.8",
+    "@spectrum-css/component-builder-simple": "^2.0.10",
     "@spectrum-css/icon": "^3.0.42",
     "@spectrum-css/menu": "^4.0.28",
     "@spectrum-css/picker": "^4.0.0",
-    "@spectrum-css/vars": "^9.0.5",
+    "@spectrum-css/tokens": "^9.2.0",
     "gulp": "^4.0.0"
   },
   "publishConfig": {

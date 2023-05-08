@@ -10,41 +10,68 @@ OF ANY KIND, either express or implied. See the License for the specific languag
 governing permissions and limitations under the License.
 */
 
-@import "../vars/css/components/spectrum-tabs.css";
 @import "../vars/css/scales/spectrum-large.css";
 @import "../vars/css/scales/spectrum-medium.css";
 
+.spectrum-Tabs {
+  --spectrum-tabs-item-height: var(--spectrum-tab-item-height-medium);
+  --spectrum-tabs-compact-item-height: var(--spectrum-tab-item-compact-height-medium);
+  --spectrum-tabs-item-horizontal-spacing: var(--spectrum-tab-item-to-tab-item-horizontal-medium);
+  --spectrum-tabs-item-vertical-spacing: var(--spectrum-tab-item-to-tab-item-vertical-medium);
+
+  /* Quiet */
+  --spectrum-tabs-start-to-item-quiet: var(--spectrum-tab-item-start-to-edge-quiet);
+
+  --spectrum-tabs-list-background-direction: top;
+  --spectrum-tabs-textonly-divider-background-color: var(--spectrum-tabs-quiet-textonly-divider-background-color);
+  --spectrum-tabs-selection-indicator-background-color-selected: var(--spectrum-tabs-textonly-tabitem-selection-indicator-background-color-selected);
+}
+
 .spectrum-Tabs--sizeS {
-  @remapvars {
-    find: /--spectrum-tabs-s-(.*)/;
-    replace: --spectrum-tabs-$1;
-  }
+  --spectrum-tabs-item-height: var(--spectrum-tab-item-height-small);
+  --spectrum-tabs-compact-item-height: var(--spectrum-tab-item-compact-height-small);
+  --spectrum-tabs-item-horizontal-spacing: var(--spectrum-tab-item-to-tab-item-horizontal-small);
+  --spectrum-tabs-item-vertical-spacing: var(--spectrum-tab-item-to-tab-item-vertical-small);
+
 }
 
 .spectrum-Tabs--sizeM {
-  @remapvars {
-    find: /--spectrum-tabs-m-(.*)/;
-    replace: --spectrum-tabs-$1;
-  }
+  --spectrum-tabs-item-height: var(--spectrum-tab-item-height-medium);
+  --spectrum-tabs-compact-item-height: var(--spectrum-tab-item-compact-height-medium);
+  --spectrum-tabs-item-horizontal-spacing: var(--spectrum-tab-item-to-tab-item-horizontal-medium);
+  --spectrum-tabs-item-vertical-spacing: var(--spectrum-tab-item-to-tab-item-vertical-medium);
+
+
 }
 
 .spectrum-Tabs--sizeL {
-  @remapvars {
-    find: /--spectrum-tabs-l-(.*)/;
-    replace: --spectrum-tabs-$1;
-  }
+  --spectrum-tabs-item-height: var(--spectrum-tab-item-height-large);
+  --spectrum-tabs-compact-item-height: var(--spectrum-tab-item-compact-height-large);
+  --spectrum-tabs-item-horizontal-spacing: var(--spectrum-tab-item-to-tab-item-horizontal-large);
+  --spectrum-tabs-item-vertical-spacing: var(--spectrum-tab-item-to-tab-item-vertical-large);
+
+
 }
 
 .spectrum-Tabs--sizeXL {
-  @remapvars {
-    find: /--spectrum-tabs-xl-(.*)/;
-    replace: --spectrum-tabs-$1;
-  }
+  --spectrum-tabs-item-height: var(--spectrum-tab-item-height-extra-large);
+  --spectrum-tabs-compact-item-height: var(--spectrum-tab-item-compact-height-extra-large);
+  --spectrum-tabs-item-horizontal-spacing: var(--spectrum-tab-item-to-tab-item-horizontal-extra-large);
+  --spectrum-tabs-item-vertical-spacing: var(--spectrum-tab-item-to-tab-item-vertical-extra-large);
+
+
 }
 
-.spectrum-Tabs {
-  --spectrum-tabs-compact-item-height: calc(var(--spectrum-tabs-compact-textonly-height) - var(--spectrum-tabs-compact-textonly-divider-size));
+.spectrum-Tabs--emphasized {
+  --spectrum-tabs-textonly-divider-background-color: var(--spectrum-tabs-emphasized-textonly-divider-background-color);
+  --spectrum-tabs-selection-indicator-background-color-selected-emphasized: var(--spectrum-tabs-emphasized-texticon-tabitem-selection-indicator-background-color-selected);
 }
+
+.spectrum-Tabs--vertical {
+  --spectrum-tabs-list-background-direction: right;
+}
+
+
 
 .spectrum-Tabs {
   display: flex;
@@ -58,15 +85,20 @@ governing permissions and limitations under the License.
 
   /* Friends should align to the top of the tabs */
   vertical-align: top;
+
+  background: linear-gradient(
+    to var(--spectrum-tabs-list-background-direction),
+    var(--spectrum-tabs-textonly-divider-background-color) 0 var(--spectrum-tabs-quiet-textonly-divider-size),
+    transparent var(--spectrum-tabs-quiet-textonly-divider-size)
+  );
 }
 
 .spectrum-Tabs-item {
   /* Contain the focus ring */
   position: relative;
-
   box-sizing: border-box;
 
-  block-size: var(--spectrum-tabs-quiet-textonly-tabitem-height);
+  block-size: var(--mod-tabs-item-height, var(--spectrum-tabs-item-height));
   line-height: var(--spectrum-tabs-quiet-textonly-tabitem-height);
 
   /* Float above the tab line */
@@ -75,21 +107,16 @@ governing permissions and limitations under the License.
   text-decoration: none;
   white-space: nowrap;
 
+  color: var(--spectrum-tabs-textonly-tabitem-text-color);
+
   transition: color var(--spectrum-tabs-texticon-tabitem-selection-indicator-animation-duration) ease-out;
   cursor: pointer;
   outline: none;
 
-  &.is-disabled {
-    cursor: default;
-
-    .spectrum-Tabs-itemLabel {
-      cursor: default;
-    }
-  }
-
   .spectrum-Icon {
     /* Vertical centering */
     block-size: var(--spectrum-tabs-quiet-textonly-tabitem-height);
+    color: var(--spectrum-tabs-textonly-tabitem-icon-color)
 
     & + .spectrum-Tabs-itemLabel {
       /* icons are inexplicably offset by 3px. Subtract this value from the icon-gap
@@ -116,6 +143,47 @@ governing permissions and limitations under the License.
 
     pointer-events: none;
   }
+
+  &:hover {
+    color: var(--spectrum-tabs-textonly-tabitem-text-color-hover);
+
+    .spectrum-Icon {
+      color: var(--spectrum-tabs-textonly-tabitem-icon-color-hover)
+    }
+  }
+
+  &.is-selected {
+    color: var(--spectrum-tabs-textonly-tabitem-text-color-selected);
+
+    .spectrum-Icon {
+      color: var(--spectrum-tabs-textonly-tabitem-icon-color-selected);
+    }
+  }
+
+  &.is-disabled {
+    cursor: default;
+    color: var(--spectrum-tabs-textonly-tabitem-text-color-disabled);
+
+    .spectrum-Tabs-itemLabel {
+      cursor: default;
+    }
+
+    .spectrum-Icon {
+      color: var(--spectrum-tabs-textonly-tabitem-icon-color-disabled)
+    }
+  }
+
+  &:focus-within {
+    color: var(--spectrum-tabs-textonly-tabitem-text-color-selected-key-focus);
+
+    &::before {
+      border-color: var(--spectrum-tabs-textonly-tabitem-focus-ring-border-color-key-focus);
+    }
+
+    .spectrum-Icon {
+      color: var(--spectrum-tabs-textonly-tabitem-icon-color-selected-key-focus)
+    }
+  }
 }
 
 .spectrum-Tabs-itemLabel {
@@ -138,6 +206,7 @@ governing permissions and limitations under the License.
 .spectrum-Tabs-selectionIndicator {
   position: absolute;
   inset-inline-start: 0;
+  background-color: var(--spectrum-tabs-selection-indicator-background-color-selected);
 
   /* Be below the tab */
   z-index: 0;
@@ -168,7 +237,7 @@ governing permissions and limitations under the License.
 
     /* Target anything since React likes to add lots of happy <div>s around all things */
     & + *:not(.spectrum-Tabs-selectionIndicator) {
-      margin-inline-start: var(--spectrum-tabs-textonly-tabitem-margin-right);
+      margin-inline-start: var(--mod-tabs-item-horizontal-spacing, var(--spectrum-tabs-item-horizontal-spacing));
     }
   }
 
@@ -182,7 +251,7 @@ governing permissions and limitations under the License.
   &.spectrum-Tabs--compact {
     /* The ActionButton is taller than the tabs, so don't push tabs around */
     box-sizing: content-box;
-    block-size: var(--spectrum-tabs-compact-item-height);
+    block-size: var(--mod-tabs-compact-item-height, var(--spectrum-tabs-compact-item-height));
     align-items: end;
   }
 }
@@ -190,6 +259,35 @@ governing permissions and limitations under the License.
 /* Quiet tabs should not extend all the way across the screen as their line doesn't */
 .spectrum-Tabs--quiet {
   display: inline-flex;
+  border-block-end-color: var(--spectrum-tabs-quiet-textonly-divider-background-color);
+  padding-inline-start: var(--mod-tabs-start-to-item-quiet, var(--spectrum-tabs-start-to-item-quiet));
+
+  .spectrum-Tabs-selectionIndicator {
+    padding-inline-start: var(--mod-tabs-start-to-item-quiet, var(--spectrum-tabs-start-to-item-quiet));
+    background-color: var(--spectrum-tabs-quiet-textonly-tabitem-selection-indicator-background-color-selected);
+  }
+
+  &.spectrum-Tabs--emphasized {
+    .spectrum-Tabs-selectionIndicator {
+      background-color: var(--spectrum-tabs-emphasized-texticon-tabitem-selection-indicator-background-color-selected);
+    }
+  }
+}
+
+.spectrum-Tabs--emphasized {
+  .spectrum-Tabs-selectionIndicator {
+    background-color: var(--spectrum-tabs-selection-indicator-background-color-selected-emphasized);
+  }
+
+  .spectrum-Tabs-item {
+    &.is-selected {
+      color: var(--spectrum-tabs-emphasized-texticon-tabitem-text-color-selected);
+
+      .spectrum-Icon {
+        color: var(--spectrum-tabs-emphasized-texticon-tabitem-icon-color-selected);
+      }
+    }
+  }
 }
 
 .spectrum-Tabs--vertical {
@@ -198,12 +296,11 @@ governing permissions and limitations under the License.
   padding: 0;
 
   .spectrum-Tabs-item {
-    block-size: var(--spectrum-tabs-vertical-textonly-tabitem-height);
     line-height: var(--spectrum-tabs-vertical-textonly-tabitem-height);
     padding-block: 0;
     padding-inline: var(--spectrum-tabs-quiet-textonly-tabitem-focus-ring-padding-x);
 
-    margin-block-end: var(--spectrum-tabs-vertical-textonly-tabitem-gap);
+    margin-block-end: var(--mod-tabs-item-vertical-spacing, var(--spectrum-tabs-item-vertical-spacing));
     margin-inline-start: calc(var(--spectrum-tabs-vertical-textonly-tabitem-gap) / 2);
 
     &::before {
@@ -216,6 +313,12 @@ governing permissions and limitations under the License.
   .spectrum-Icon {
     height: var(--spectrum-tabs-vertical-textonly-tabitem-height);
     line-height: var(--spectrum-tabs-vertical-textonly-tabitem-height);
+  }
+
+  .spectrum-Tabs-selectionIndicator {
+    position: absolute;
+    inset-inline-start: 0px;
+    inline-size: var(--spectrum-tabs-quiet-textonly-divider-size);
   }
 
   &.spectrum-Tabs--compact {
@@ -231,9 +334,114 @@ governing permissions and limitations under the License.
     }
   }
 
-  .spectrum-Tabs-selectionIndicator {
-    position: absolute;
-    inset-inline-start: 0px;
-    inline-size: var(--spectrum-tabs-quiet-textonly-divider-size);
+  &.spectrum-Tabs--quiet,
+  &.spectrum-Tabs--compact {
+    .spectrum-Tabs-selectionIndicator {
+      background-color: var(--spectrum-tabs-vertical-textonly-tabitem-selection-indicator-background-color-selected);
+    }
+  }
+
+  &.spectrum-Tabs--emphasized {
+    .spectrum-Tabs-selectionIndicator {
+      background-color: var(--spectrum-tabs-emphasized-texticon-tabitem-selection-indicator-background-color-selected);
+    }
+  } 
+}
+
+@media (forced-colors: active) {
+  .spectrum-Tabs {
+    --spectrum-tabs-emphasized-texticon-tabitem-icon-color-selected: HighlightText;
+    --spectrum-tabs-emphasized-texticon-tabitem-selection-indicator-background-color-selected: Highlight;
+    --spectrum-tabs-emphasized-texticon-tabitem-text-color-selected: HighlightText;
+    --spectrum-tabs-emphasized-textonly-divider-background-color: transparent;
+    --spectrum-tabs-emphasized-textonly-tabitem-icon-color-selected: HighlightText;
+    --spectrum-tabs-quiet-textonly-divider-background-color: transparent;
+    --spectrum-tabs-quiet-textonly-tabitem-selection-indicator-background-color-selected: Highlight;
+    --spectrum-tabs-quiet-textonly-tabitem-selection-indicator-background-color: transparent;
+    --spectrum-tabs-textonly-divider-background-color: transparent;
+    --spectrum-tabs-textonly-tabitem-focus-ring-border-color-key-focus: ButtonText;
+    --spectrum-tabs-textonly-tabitem-icon-color-disabled: GrayText;
+    --spectrum-tabs-textonly-tabitem-icon-color-hover: ButtonText;
+    --spectrum-tabs-textonly-tabitem-icon-color-selected-key-focus: ButtonText;
+    --spectrum-tabs-textonly-tabitem-icon-color-selected: HighlightText;
+    --spectrum-tabs-textonly-tabitem-selection-indicator-background-color-selected: Highlight;
+    --spectrum-tabs-textonly-tabitem-text-color-disabled: GrayText;
+    --spectrum-tabs-textonly-tabitem-text-color-hover: ButtonText;
+    --spectrum-tabs-textonly-tabitem-text-color-selected-key-focus: ButtonText;
+    --spectrum-tabs-textonly-tabitem-text-color-selected: HighlightText;
+    --spectrum-tabs-textonly-tabitem-text-color: ButtonText;
+    --spectrum-tabs-vertical-quiet-textonly-divider-background-color: transparent;
+    --spectrum-tabs-vertical-rule-color: transparent;
+    --spectrum-tabs-vertical-textonly-divider-background-color: transparent;
+    --spectrum-tabs-vertical-textonly-tabitem-selection-indicator-background-color-selected: Highlight;
+    forced-color-adjust: none;
+
+    .spectrum-Tabs-item {
+      &:before {
+        background-color: ButtonFace;
+      }
+
+      .spectrum-Icon {
+        z-index: 1;
+        position: relative;
+      }
+
+      .spectrum-Tabs-itemLabel {
+        position: relative;
+        z-index: 1;
+      }
+    }
+
+    .is-selected {
+      color: HighlightText;
+
+      .spectrum-Icon {
+        color: HighlightText;
+      }
+
+      &:before {
+        background-color: Highlight;
+        color: HighlightText;
+      }
+
+      .spectrum-Tabs-itemLabel {
+        color: HighlightText;
+      }
+    }
+
+    &.spectrum-Tabs--emphasized {
+      .spectrum-Tabs-item {
+        &:before {
+          background-color: ButtonFace;
+        }
+
+        .spectrum-Icon {
+          z-index: 1;
+          position: relative;
+        }
+
+        .spectrum-Tabs-itemLabel {
+          position: relative;
+          z-index: 1;
+        }
+      }
+
+      .is-selected {
+        color: HighlightText;
+
+        .spectrum-Icon {
+          color: HighlightText;
+        }
+
+        &:before {
+          background-color: Highlight;
+          color: HighlightText;
+        }
+
+        .spectrum-Tabs-itemLabel {
+          color: HighlightText;
+        }
+      }
+    }
   }
 }
