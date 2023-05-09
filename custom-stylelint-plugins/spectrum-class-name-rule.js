@@ -6,7 +6,10 @@ const messages = stylelint.utils.ruleMessages(ruleName, {
     `Class name "${className}" should follow the SUIT-style naming conventions with the ".spectrum" prefix.`,
 });
 
+// style lint pattern which will only check for SUIT patterns 
+// and discard any patterns in combination with SUIT and BEM
 const suitPattern = /^\.spectrum-[A-Z][a-zA-Z0-9]*(-[a-zA-Z0-9]+)*$/;
+const suitBemPattern = /^\.spectrum-[A-Z][a-zA-Z0-9]*(-[a-zA-Z0-9]+)*(--?[a-zA-Z0-9]+(-[a-zA-Z0-9]+)*)*$/;
 
 module.exports = stylelint.createPlugin(ruleName, (enabled) => {
   return (root, result) => {
@@ -16,7 +19,11 @@ module.exports = stylelint.createPlugin(ruleName, (enabled) => {
 
     root.walkRules((rule) => {
       rule.selectors.forEach((selector) => {
-        if (selector !== '.spectrum' && suitPattern.test(selector) === false) {
+        if (
+          selector !== '.spectrum' &&
+          !suitBemPattern.test(selector) &&
+          suitPattern.test(selector) === false
+        ) {
           stylelint.utils.report({
             ruleName,
             result,
