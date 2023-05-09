@@ -16,7 +16,7 @@ module.exports = stylelint.createPlugin(ruleName, (enabled) => {
 
     root.walkRules((rule) => {
       rule.selectors.forEach((selector) => {
-        if (suitPattern.test(selector) === false) {
+        if (selector !== '.spectrum' && suitPattern.test(selector) === false) {
           stylelint.utils.report({
             ruleName,
             result,
