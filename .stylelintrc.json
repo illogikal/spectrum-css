@@ -2,7 +2,8 @@
   "extends": ["stylelint-config-standard"],
   "plugins": [
    "./custom-stylelint-plugins/css-logical-properties.js",
-   "./custom-stylelint-plugins/no-missing-parenthesis.js"
+   "./custom-stylelint-plugins/no-missing-parenthesis.js",
+   "./custom-stylelint-plugins/spectrum-class-name-rule.js"
   ],
   "rules": {
     "rule-empty-line-before": null,
@@ -19,6 +20,7 @@
     "property-no-vendor-prefix": null,
     "max-nesting-depth": 2,
     "custom-rule/no-logical-properties": true,
-    "custom-rule/no-missing-parenthesis": true
+    "custom-rule/no-missing-parenthesis": true,
+    "custom-rule/spectrum-class-name": true
   }
 }
