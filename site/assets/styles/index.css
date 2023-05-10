@@ -1,0 +1,186 @@
+/* @todo use the updated builder to process the docs site CSS too */
+
+@import url("https://unpkg.com/prismjs@1.20.0/themes/prism.css") screen and ((prefers-color-scheme: light) or (prefers-color-scheme: no-preference));
+@import url("https://unpkg.com/prismjs@1.20.0/themes/prism-dark.css") screen and (prefers-color-scheme: dark);
+@import url("https://cdn.jsdelivr.net/npm/@mdi/font@6.5.95/css/materialdesignicons.min.css") screen;
+@import url("https://cdnjs.cloudflare.com/ajax/libs/Primer/19.1.1/tooltips.min.css") screen and ((prefers-color-scheme: light) or (prefers-color-scheme: no-preference));
+
+/* --- TOKENS --- */
+@import "@spectrum-css/vars/spectrum-global.css";
+@import "@spectrum-css/vars/spectrum-light.css" screen and ((prefers-color-scheme: light) or (prefers-color-scheme: no-preference));
+@import "@spectrum-css/vars/spectrum-dark.css" screen and (prefers-color-scheme: dark);
+@import "@spectrum-css/vars/spectrum-darkest.css" screen and (prefers-color-scheme: dark);
+@import "@spectrum-css/vars/spectrum-medium.css" screen;
+@import "@spectrum-css/vars/spectrum-large.css" screen and (max-width: 961px);
+
+@import "@spectrum-css/expressvars/spectrum-global.css" (--system: express);
+@import "@spectrum-css/expressvars/spectrum-light.css" screen and(--system: express) and ((prefers-color-scheme: light) or (prefers-color-scheme: no-preference));
+@import "@spectrum-css/expressvars/spectrum-dark.css" screen and (--system: express) and (prefers-color-scheme: dark);
+@import "@spectrum-css/expressvars/spectrum-darkest.css" screen and (--system: express) and (prefers-color-scheme: dark);
+@import "@spectrum-css/expressvars/spectrum-medium.css" screen and (--system: express);
+@import "@spectrum-css/expressvars/spectrum-large.css" screen and (--system: express) and (max-width: 961px);
+
+@import "@spectrum-css/tokens/index.css";
+
+
+/* Component customizations specific to the documentation site */
+:root {
+  /* Limit slider widths */
+  --spectrum-slider-min-width: var(--spectrum-global-dimension-size-3000);
+}
+
+body,
+html {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+}
+
+[hidden] {
+  display: none !important;
+}
+
+pre {
+  margin: 0;
+  padding: 0;
+  border: none;
+  background: transparent;
+}
+
+pre.html {
+  margin: 0;
+  white-space: pre-wrap; /* css-3 */
+}
+
+code[class*="language-"],
+pre[class*="language-"] {
+  text-shadow: none;
+  font-size: inherit;
+}
+
+.spectrum-Table:first-of-type {
+  margin-top: var(--spectrum-global-dimension-size-500);
+  margin-bottom: var(--spectrum-global-dimension-size-450);
+}
+
+.spectrum-Table:first-of-type th {
+  padding-right: var(--spectrum-global-dimension-size-300);
+}
+
+.spectrum-Table:first-of-type th:dir("rtl") {
+  padding-left: var(--spectrum-global-dimension-size-300);
+}
+
+.spectrum-Table:first-of-type th {
+  text-align: left;
+  height: var(--spectrum-global-dimension-size-350);
+  font-weight: var(--spectrum-global-font-weight-regular, 400);
+}
+
+.spectrum-Card[type="github"] {
+  background-color: rgba(0, 0, 0, 0.1) !important;
+  color: black;
+}
+
+.spectrum--dark .spectrum-Card[type="github"],
+.spectrum--darkest .spectrum-Card[type="github"] {
+    background-color: rgba(245, 245, 245, 0.1) !important;
+    color: rgb(245, 245, 245);
+  }
+
+.spectrum-Card[type="npm"] {
+  background-color: rgba(203, 56, 55, 0.1) !important;
+}
+
+.spectrum-Card[type="adobe"] {
+  color: #FA0F00 !important;
+  background-color: var(--spectrum-global-color-gray-100) !important;
+}
+
+.spectrum-Image--centered {
+  width: 100%;
+  max-width: 720px;
+  margin: auto;
+  display: block;
+}
+
+.is-scrollable {
+  overflow-x: hidden;
+  overflow-y: auto;
+
+  -webkit-overflow-scrolling: touch;
+}
+
+.is-scrollable::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+.is-scrollable::-webkit-scrollbar-thumb {
+  border-radius: 8px;
+  width: 8px;
+  height: 8px;
+  border-top: 2px solid rgba(0, 0, 0, 0);
+  border-bottom: 2px solid rgba(0, 0, 0, 0);
+  background-clip: padding-box;
+  background-color: var(--spectrum-global-color-gray-75);
+}
+
+.is-scrollable::-webkit-scrollbar-track,
+.is-scrollable::-webkit-scrollbar-track-piece {
+  background: var(--spectrum-global-color-gray-75);
+}
+
+.is-scrollable:hover::-webkit-scrollbar-thumb {
+  background-color: var(--spectrum-global-color-gray-400);
+}
+
+.spectrum-Heading > a {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  outline: none;
+  /* vertical-align: middle; (does nothing with display block) */
+}
+
+.spectrum-Heading > a.focus-ring,
+.spectrum-Heading > a:focus,
+.spectrum-Heading > a:hover {
+  text-decoration: underline;
+}
+
+/* For documentation beautification only - DO NOT COPY */
+.dummy-spacing {
+  height: var(--spectrum-global-dimension-size-2400);
+}
+
+.spectrum-Tabs {
+  flex-flow: column nowrap;
+  background-color: none;
+}
+
+.spectrum-Tabs-items {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  position: relative;
+
+  /* Friends should align to the top of the tabs */
+  vertical-align: top;
+  background: linear-gradient(
+    to var(--spectrum-tabs-list-background-direction),
+    var(--spectrum-tabs-textonly-divider-background-color) 0 var(--spectrum-tabs-quiet-textonly-divider-size),
+    transparent var(--spectrum-tabs-quiet-textonly-divider-size)
+  );
+}
+
+.spectrum-Tabs-panel {
+  display: inline-flex;
+}
+
+.spectrum-Tabs-panel:not(.is-selected),
+.spectrum-Tabs-item:not(.is-selected) .spectrum-Tabs-selectionIndicator {
+  display: none;
+}

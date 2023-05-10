@@ -14,11 +14,11 @@ examples:
   - id: swatch-sizing
     name: Sizing
     markup: |
-      <div class="spectrum-Examples">
-        <div class="spectrum-Examples-item">
-          <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">XS</h4>
+      <div class="site-Examples">
+        <div class="site-Examples-item">
+          <h4 class="spectrum-Heading spectrum-Heading--sizeXS site-Examples-itemHeading">XS</h4>
 
-          <div class="spectrum-Examples-itemGroup">
+          <div class="site-Examples-itemGroup">
             <div class="spectrum-Swatch spectrum-Swatch--sizeXS" style="--spectrum-picked-color: rgb(174, 216, 230)" tabindex="0">
               <div class="spectrum-Swatch-fill"></div>
             </div>
@@ -27,10 +27,10 @@ examples:
             </div>
           </div>
         </div>
-        <div class="spectrum-Examples-item">
-          <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">S</h4>
+        <div class="site-Examples-item">
+          <h4 class="spectrum-Heading spectrum-Heading--sizeXS site-Examples-itemHeading">S</h4>
 
-          <div class="spectrum-Examples-itemGroup">
+          <div class="site-Examples-itemGroup">
             <div class="spectrum-Swatch spectrum-Swatch--sizeS" style="--spectrum-picked-color: rgb(174, 216, 230)" tabindex="0">
               <div class="spectrum-Swatch-fill"></div>
             </div>
@@ -39,10 +39,10 @@ examples:
             </div>
           </div>
         </div>
-        <div class="spectrum-Examples-item">
-          <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">M (default)</h4>
+        <div class="site-Examples-item">
+          <h4 class="spectrum-Heading spectrum-Heading--sizeXS site-Examples-itemHeading">M (default)</h4>
 
-          <div class="spectrum-Examples-itemGroup">
+          <div class="site-Examples-itemGroup">
             <div class="spectrum-Swatch spectrum-Swatch--sizeM" style="--spectrum-picked-color: rgb(174, 216, 230)" tabindex="0">
               <div class="spectrum-Swatch-fill"></div>
             </div>
@@ -52,10 +52,10 @@ examples:
           </div>
         </div>
 
-        <div class="spectrum-Examples-item">
-          <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">L</h4>
+        <div class="site-Examples-item">
+          <h4 class="spectrum-Heading spectrum-Heading--sizeXS site-Examples-itemHeading">L</h4>
 
-          <div class="spectrum-Examples-itemGroup">
+          <div class="site-Examples-itemGroup">
             <div class="spectrum-Swatch spectrum-Swatch--sizeL" style="--spectrum-picked-color: rgb(174, 216, 230)" tabindex="0">
               <div class="spectrum-Swatch-fill"></div>
             </div>
@@ -106,7 +106,7 @@ examples:
     markup: |
       <div class="spectrum-Swatch spectrum-Swatch--sizeM is-image" tabindex="0">
         <div class="spectrum-Swatch-fill">
-          <img src="img/example-ava.jpg" class="spectrum-Swatch-image">
+          <img src="images/example-ava.png" class="spectrum-Swatch-image">
         </div>
       </div>
   - id: swatch-gradient
@@ -136,11 +136,11 @@ examples:
   - id: swatch-nothing
     name: Nothing
     markup: |
-      <div class="spectrum-Examples">
-        <div class="spectrum-Examples-item">
-          <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">XS</h4>
+      <div class="site-Examples">
+        <div class="site-Examples-item">
+          <h4 class="spectrum-Heading spectrum-Heading--sizeXS site-Examples-itemHeading">XS</h4>
 
-          <div class="spectrum-Examples-itemGroup">
+          <div class="site-Examples-itemGroup">
             <div class="spectrum-Swatch spectrum-Swatch--sizeXS is-nothing" tabindex="0">
               <div class="spectrum-Swatch-fill"></div>
             </div>
@@ -152,10 +152,10 @@ examples:
             </div>
           </div>
         </div>
-        <div class="spectrum-Examples-item">
-          <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">S</h4>
+        <div class="site-Examples-item">
+          <h4 class="spectrum-Heading spectrum-Heading--sizeXS site-Examples-itemHeading">S</h4>
 
-          <div class="spectrum-Examples-itemGroup">
+          <div class="site-Examples-itemGroup">
             <div class="spectrum-Swatch spectrum-Swatch--sizeS is-nothing" tabindex="0">
               <div class="spectrum-Swatch-fill"></div>
             </div>
@@ -167,10 +167,10 @@ examples:
             </div>
           </div>
         </div>
-        <div class="spectrum-Examples-item">
-          <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">M (default)</h4>
+        <div class="site-Examples-item">
+          <h4 class="spectrum-Heading spectrum-Heading--sizeXS site-Examples-itemHeading">M (default)</h4>
 
-          <div class="spectrum-Examples-itemGroup">
+          <div class="site-Examples-itemGroup">
             <div class="spectrum-Swatch spectrum-Swatch--sizeM is-nothing" tabindex="0">
               <div class="spectrum-Swatch-fill"></div>
             </div>
@@ -183,10 +183,10 @@ examples:
           </div>
         </div>
 
-        <div class="spectrum-Examples-item">
-          <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">L</h4>
+        <div class="site-Examples-item">
+          <h4 class="spectrum-Heading spectrum-Heading--sizeXS site-Examples-itemHeading">L</h4>
 
-          <div class="spectrum-Examples-itemGroup">
+          <div class="site-Examples-itemGroup">
             <div class="spectrum-Swatch spectrum-Swatch--sizeL is-nothing" tabindex="0">
               <div class="spectrum-Swatch-fill"></div>
             </div>
@@ -206,11 +206,11 @@ examples:
       [Hide unavailable swatches when possible](https://spectrum.corp.adobe.com/page/swatch/#Hide-unavailable-swatches-when-possible)
     markup: |
 
-      <div class="spectrum-Examples">
-        <div class="spectrum-Examples-item">
-          <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">XS</h4>
+      <div class="site-Examples">
+        <div class="site-Examples-item">
+          <h4 class="spectrum-Heading spectrum-Heading--sizeXS site-Examples-itemHeading">XS</h4>
 
-          <div class="spectrum-Examples-itemGroup">
+          <div class="site-Examples-itemGroup">
             <div class="spectrum-Swatch spectrum-Swatch--sizeXS is-disabled" style="--spectrum-picked-color: rgb(174, 216, 230)" tabindex="0">
               <div class="spectrum-Swatch-fill">
                 <svg xmlns="http://www.w3.org/2000/svg" class="spectrum-Swatch-disabledIcon" viewBox="0 0 20 20">
@@ -229,10 +229,10 @@ examples:
             </div>
           </div>
         </div>
-        <div class="spectrum-Examples-item">
-          <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">S</h4>
+        <div class="site-Examples-item">
+          <h4 class="spectrum-Heading spectrum-Heading--sizeXS site-Examples-itemHeading">S</h4>
 
-          <div class="spectrum-Examples-itemGroup">
+          <div class="site-Examples-itemGroup">
             <div class="spectrum-Swatch spectrum-Swatch--sizeS is-disabled" style="--spectrum-picked-color: rgb(174, 216, 230)" tabindex="0">
               <div class="spectrum-Swatch-fill">
                 <svg xmlns="http://www.w3.org/2000/svg" class="spectrum-Swatch-disabledIcon" viewBox="0 0 20 20">
@@ -251,10 +251,10 @@ examples:
             </div>
           </div>
         </div>
-        <div class="spectrum-Examples-item">
-          <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">M (default)</h4>
+        <div class="site-Examples-item">
+          <h4 class="spectrum-Heading spectrum-Heading--sizeXS site-Examples-itemHeading">M (default)</h4>
 
-          <div class="spectrum-Examples-itemGroup">
+          <div class="site-Examples-itemGroup">
             <div class="spectrum-Swatch spectrum-Swatch--sizeM is-disabled" style="--spectrum-picked-color: rgb(174, 216, 230)" tabindex="0">
               <div class="spectrum-Swatch-fill">
                 <svg xmlns="http://www.w3.org/2000/svg" class="spectrum-Swatch-disabledIcon" viewBox="0 0 20 20">
@@ -274,10 +274,10 @@ examples:
           </div>
         </div>
 
-        <div class="spectrum-Examples-item">
-          <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">L</h4>
+        <div class="site-Examples-item">
+          <h4 class="spectrum-Heading spectrum-Heading--sizeXS site-Examples-itemHeading">L</h4>
 
-          <div class="spectrum-Examples-itemGroup">
+          <div class="site-Examples-itemGroup">
             <div class="spectrum-Swatch spectrum-Swatch--sizeL is-disabled" style="--spectrum-picked-color: rgb(174, 216, 230)" tabindex="0">
               <div class="spectrum-Swatch-fill">
                 <svg xmlns="http://www.w3.org/2000/svg" class="spectrum-Swatch-disabledIcon" viewBox="0 0 20 20">

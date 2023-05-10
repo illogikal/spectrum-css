@@ -62,7 +62,7 @@ export default {
     size: "500",
     isCover: false,
     isDisabled: false,
-    imageURL: "example-card-landscape.png",
+    imageURL: "images/example-card-landscape.png",
     altText: "Landscape with mountains and lake",
   },
   parameters: {

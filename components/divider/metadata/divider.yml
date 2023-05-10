@@ -45,9 +45,9 @@ examples:
     description: |
       When a vertical Divider is used inside of a flex container, use `align-self: stretch; height: auto` on the Divider.
     markup: |
-      <div class="spectrum-Examples">
-        <div class="spectrum-Examples-item">
-          <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading" style="margin-bottom: 2rem">Small</h4>
+      <div class="site-Examples">
+        <div class="site-Examples-item">
+          <h4 class="spectrum-Heading spectrum-Heading--sizeXS site-Examples-itemHeading" style="margin-bottom: 2rem">Small</h4>
             <div class="spectrum-ActionGroup spectrum-ActionGroup--horizontal">
               <button class="spectrum-ActionButton spectrum-ActionButton--sizeM spectrum-ActionButton--quiet">
                 <svg class="spectrum-Icon spectrum-Icon--sizeM spectrum-ActionButton-icon" focusable="false" aria-hidden="true" aria-label="Properties">
@@ -63,8 +63,8 @@ examples:
             </div>
           </div>
 
-          <div class="spectrum-Examples-item">
-            <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading" style="margin-bottom: 2rem">Medium</h4>
+          <div class="site-Examples-item">
+            <h4 class="spectrum-Heading spectrum-Heading--sizeXS site-Examples-itemHeading" style="margin-bottom: 2rem">Medium</h4>
             <div class="spectrum-ActionGroup spectrum-ActionGroup--horizontal">
               <button class="spectrum-ActionButton spectrum-ActionButton--sizeM spectrum-ActionButton--quiet">
                 <svg class="spectrum-Icon spectrum-Icon--sizeM spectrum-ActionButton-icon" focusable="false" aria-hidden="true" aria-label="Properties">
@@ -80,8 +80,8 @@ examples:
             </div>
           </div>
 
-          <div class="spectrum-Examples-item">
-            <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading" style="margin-bottom: 2rem">Large</h4>
+          <div class="site-Examples-item">
+            <h4 class="spectrum-Heading spectrum-Heading--sizeXS site-Examples-itemHeading" style="margin-bottom: 2rem">Large</h4>
             <div class="spectrum-ActionGroup spectrum-ActionGroup--horizontal">
               <button class="spectrum-ActionButton spectrum-ActionButton--sizeM spectrum-ActionButton--quiet">
                 <svg class="spectrum-Icon spectrum-Icon--sizeM spectrum-ActionButton-icon" focusable="false" aria-hidden="true" aria-label="Properties">
@@ -103,7 +103,7 @@ examples:
   - id: divider-static-white
     name: Static White
     markup: |
-      <div class="spectrum-Examples">
+      <div class="site-Examples">
         <div style="background-color: rgb(0, 119, 114); color: rgb(255, 255, 255); padding: 15px 20px; width: 100%;">
           <h2 class="spectrum-Heading spectrum-Heading--sizeS" style="color: rgb(255, 255, 255);">Small</h2>
           <hr class="spectrum-Divider spectrum-Divider--sizeS spectrum-Divider--staticWhite">
@@ -120,7 +120,7 @@ examples:
   - id: divider-static-black
     name: Static Black
     markup: |
-      <div class="spectrum-Examples">
+      <div class="site-Examples">
         <div style="background-color: rgb(206, 247, 243); padding: 15px 20px; width: 100%;">
           <h2 class="spectrum-Heading spectrum-Heading--sizeS">Small</h2>
           <hr class="spectrum-Divider spectrum-Divider--sizeS spectrum-Divider--staticBlack">

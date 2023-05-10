@@ -19,8 +19,8 @@ examples:
   - id: meter-sizes
     name: Sizing
     markup: |
-      <div class="spectrum-Examples" style="flex-direction: column;">
-        <div class="spectrum-Examples-item">
+      <div class="site-Examples" style="flex-direction: column;">
+        <div class="site-Examples-item">
           <div class="spectrum-ProgressBar spectrum-Meter--sizeS is-positive" value="50" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" style="width: 200px;">
             <div class="spectrum-FieldLabel spectrum-FieldLabel--sizeS spectrum-ProgressBar-label">Storage Space</div>
             <div class="spectrum-FieldLabel spectrum-FieldLabel--sizeS spectrum-ProgressBar-percentage">50%</div>
@@ -30,7 +30,7 @@ examples:
         </div>
       </div>
       </br>
-      <div class="spectrum-Examples-item"  style="margin-bottom: 20px;">
+      <div class="site-Examples-item"  style="margin-bottom: 20px;">
         <div class="spectrum-ProgressBar spectrum-Meter--sizeL is-notice" value="80" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 200px;">
           <div class="spectrum-FieldLabel spectrum-FieldLabel--sizeL spectrum-ProgressBar-label">Storage Space</div>
           <div class="spectrum-FieldLabel spectrum-FieldLabel--sizeL spectrum-ProgressBar-percentage">80%</div>

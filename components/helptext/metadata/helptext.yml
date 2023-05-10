@@ -12,27 +12,27 @@ examples:
   - id: helptext-sizing
     name: Sizing
     markup: |
-      <div class="spectrum-Examples">
-        <div class="spectrum-Examples-item">
-          <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">S</h4>
+      <div class="site-Examples">
+        <div class="site-Examples-item">
+          <h4 class="spectrum-Heading spectrum-Heading--sizeXS site-Examples-itemHeading">S</h4>
           <div class="spectrum-HelpText spectrum-HelpText--sizeS spectrum-HelpText--neutral">
             <div class="spectrum-HelpText-text">Create a password with at least 8 characters.</div>
           </div>
         </div>
-        <div class="spectrum-Examples-item">
-          <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">M</h4>
+        <div class="site-Examples-item">
+          <h4 class="spectrum-Heading spectrum-Heading--sizeXS site-Examples-itemHeading">M</h4>
           <div class="spectrum-HelpText spectrum-HelpText--sizeM spectrum-HelpText--neutral">
             <div class="spectrum-HelpText-text">Create a password with at least 8 characters.</div>
           </div>
         </div>
-        <div class="spectrum-Examples-item">
-          <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">L</h4>
+        <div class="site-Examples-item">
+          <h4 class="spectrum-Heading spectrum-Heading--sizeXS site-Examples-itemHeading">L</h4>
           <div class="spectrum-HelpText spectrum-HelpText--sizeL spectrum-HelpText--neutral">
             <div class="spectrum-HelpText-text">Create a password with at least 8 characters.</div>
           </div>
         </div>
-        <div class="spectrum-Examples-item">
-          <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">XL</h4>
+        <div class="site-Examples-item">
+          <h4 class="spectrum-Heading spectrum-Heading--sizeXS site-Examples-itemHeading">XL</h4>
           <div class="spectrum-HelpText spectrum-HelpText--sizeXL spectrum-HelpText--neutral">
             <div class="spectrum-HelpText-text">Create a password with at least 8 characters.</div>
           </div>
@@ -41,15 +41,15 @@ examples:
   - id: helptext-negative
     name: Negative
     markup: |
-      <div class="spectrum-Examples">
-        <div class="spectrum-Examples-item">
-          <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">Negative</h4>
+      <div class="site-Examples">
+        <div class="site-Examples-item">
+          <h4 class="spectrum-Heading spectrum-Heading--sizeXS site-Examples-itemHeading">Negative</h4>
           <div class="spectrum-HelpText spectrum-HelpText--sizeM spectrum-HelpText--negative">
             <div class="spectrum-HelpText-text">Create a password with at least 8 characters.</div>
           </div>
         </div>
-        <div class="spectrum-Examples-item">
-          <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">Negative with icon</h4>
+        <div class="site-Examples-item">
+          <h4 class="spectrum-Heading spectrum-Heading--sizeXS site-Examples-itemHeading">Negative with icon</h4>
           <div class="spectrum-HelpText spectrum-HelpText--sizeM spectrum-HelpText--negative">
             <svg class="spectrum-Icon spectrum-Icon--sizeM spectrum-HelpText-validationIcon" focusable="false" aria-hidden="true">
               <use xlink:href="#spectrum-icon-18-Alert" />
@@ -61,9 +61,9 @@ examples:
   - id: helptext-negative-sizing
     name: Negative Sizing (with icons)
     markup: |
-      <div class="spectrum-Examples">
-        <div class="spectrum-Examples-item">
-          <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">S</h4>
+      <div class="site-Examples">
+        <div class="site-Examples-item">
+          <h4 class="spectrum-Heading spectrum-Heading--sizeXS site-Examples-itemHeading">S</h4>
           <div class="spectrum-HelpText spectrum-HelpText--sizeS spectrum-HelpText--negative">
             <svg class="spectrum-Icon spectrum-Icon--sizeM spectrum-HelpText-validationIcon" focusable="false" aria-hidden="true">
               <use xlink:href="#spectrum-icon-18-Alert" />
@@ -71,8 +71,8 @@ examples:
             <div class="spectrum-HelpText-text">Create a password with at least 8 characters.</div>
           </div>
         </div>
-        <div class="spectrum-Examples-item">
-          <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">M</h4>
+        <div class="site-Examples-item">
+          <h4 class="spectrum-Heading spectrum-Heading--sizeXS site-Examples-itemHeading">M</h4>
           <div class="spectrum-HelpText spectrum-HelpText--sizeM spectrum-HelpText--negative">
             <svg class="spectrum-Icon spectrum-Icon--sizeM spectrum-HelpText-validationIcon" focusable="false" aria-hidden="true">
               <use xlink:href="#spectrum-icon-18-Alert" />
@@ -80,8 +80,8 @@ examples:
             <div class="spectrum-HelpText-text">Create a password with at least 8 characters.</div>
           </div>
         </div>
-        <div class="spectrum-Examples-item">
-          <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">L</h4>
+        <div class="site-Examples-item">
+          <h4 class="spectrum-Heading spectrum-Heading--sizeXS site-Examples-itemHeading">L</h4>
           <div class="spectrum-HelpText spectrum-HelpText--sizeL spectrum-HelpText--negative">
             <svg class="spectrum-Icon spectrum-Icon--sizeM spectrum-HelpText-validationIcon" focusable="false" aria-hidden="true">
               <use xlink:href="#spectrum-icon-18-Alert" />
@@ -89,8 +89,8 @@ examples:
             <div class="spectrum-HelpText-text">Create a password with at least 8 characters.</div>
           </div>
         </div>
-        <div class="spectrum-Examples-item">
-          <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">XL</h4>
+        <div class="site-Examples-item">
+          <h4 class="spectrum-Heading spectrum-Heading--sizeXS site-Examples-itemHeading">XL</h4>
           <div class="spectrum-HelpText spectrum-HelpText--sizeXL spectrum-HelpText--negative">
             <svg class="spectrum-Icon spectrum-Icon--sizeM spectrum-HelpText-validationIcon" focusable="false" aria-hidden="true">
               <use xlink:href="#spectrum-icon-18-Alert" />
@@ -102,9 +102,9 @@ examples:
   - id: helptext-wrapping
     name: Wrapping
     markup: |
-      <div class="spectrum-Examples">
-        <div class="spectrum-Examples-item">
-          <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">Wrapping</h4>
+      <div class="site-Examples">
+        <div class="site-Examples-item">
+          <h4 class="spectrum-Heading spectrum-Heading--sizeXS site-Examples-itemHeading">Wrapping</h4>
           <div class="spectrum-HelpText spectrum-HelpText--sizeM spectrum-HelpText--negative">
             <svg class="spectrum-Icon spectrum-Icon--sizeM spectrum-HelpText-validationIcon" focusable="false" aria-hidden="true">
               <use xlink:href="#spectrum-icon-18-Alert" />
@@ -116,9 +116,9 @@ examples:
   - id: helptext-disabled
     name: Disabled
     markup: |
-      <div class="spectrum-Examples">
-        <div class="spectrum-Examples-item">
-          <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">Disabled</h4>
+      <div class="site-Examples">
+        <div class="site-Examples-item">
+          <h4 class="spectrum-Heading spectrum-Heading--sizeXS site-Examples-itemHeading">Disabled</h4>
           <div class="spectrum-HelpText spectrum-HelpText--sizeM spectrum-HelpText--neutral is-disabled">
             <div class="spectrum-HelpText-text">Create a password with at least 8 characters.</div>
           </div>

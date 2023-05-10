@@ -47,11 +47,11 @@ examples:
   - id: combobox
     name: Standard
     markup: |
-      <div class="spectrum-Examples">
-        <div class="spectrum-Examples-item">
-          <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">Default</h4>
+      <div class="site-Examples">
+        <div class="site-Examples-item">
+          <h4 class="spectrum-Heading spectrum-Heading--sizeXS site-Examples-itemHeading">Default</h4>
 
-          <div class="spectrum-Examples-itemGroup">
+          <div class="site-Examples-itemGroup">
             <div class="spectrum-Combobox">
               <div class="spectrum-Textfield spectrum-Combobox-textfield">
                 <input type="text" name="field" value="" class="spectrum-Textfield-input spectrum-Combobox-input">
@@ -67,10 +67,10 @@ examples:
             </div>
           </div>
         </div>
-        <div class="spectrum-Examples-item">
-          <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">With Field Label</h4>
+        <div class="site-Examples-item">
+          <h4 class="spectrum-Heading spectrum-Heading--sizeXS site-Examples-itemHeading">With Field Label</h4>
 
-          <div class="spectrum-Examples-itemGroup" style="display:block;">
+          <div class="site-Examples-itemGroup" style="display:block;">
             <div class="spectrum-FieldLabel spectrum-FieldLabel--sizeM">Country</div>
 
             <div class="spectrum-Combobox">
@@ -88,10 +88,10 @@ examples:
             </div>
           </div>
         </div>
-        <div class="spectrum-Examples-item">
-          <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">Disabled</h4>
+        <div class="site-Examples-item">
+          <h4 class="spectrum-Heading spectrum-Heading--sizeXS site-Examples-itemHeading">Disabled</h4>
 
-          <div class="spectrum-Examples-itemGroup">
+          <div class="site-Examples-itemGroup">
             <div class="spectrum-Combobox is-disabled">
               <div class="spectrum-Textfield spectrum-Combobox-textfield is-disabled">
                 <input type="text" name="field" value="" class="spectrum-Textfield-input spectrum-Combobox-input" disabled>
@@ -107,10 +107,10 @@ examples:
             </div>
           </div>
         </div>
-        <div class="spectrum-Examples-item">
-          <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">Open</h4>
+        <div class="site-Examples-item">
+          <h4 class="spectrum-Heading spectrum-Heading--sizeXS site-Examples-itemHeading">Open</h4>
 
-          <div class="spectrum-Examples-itemGroup" style="min-height: 240px;">
+          <div class="site-Examples-itemGroup" style="min-height: 240px;">
             <div class="spectrum-Combobox is-open">
               <div class="spectrum-Textfield spectrum-Combobox-textfield">
                 <input type="text" name="field" value="" class="spectrum-Textfield-input spectrum-Combobox-input">
@@ -149,11 +149,11 @@ examples:
   - id: combobox-quiet
     name: Quiet
     markup: |
-      <div class="spectrum-Examples">
-        <div class="spectrum-Examples-item">
-          <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">Default</h4>
+      <div class="site-Examples">
+        <div class="site-Examples-item">
+          <h4 class="spectrum-Heading spectrum-Heading--sizeXS site-Examples-itemHeading">Default</h4>
 
-          <div class="spectrum-Examples-itemGroup">
+          <div class="site-Examples-itemGroup">
             <div class="spectrum-Combobox spectrum-Combobox--quiet">
               <div class="spectrum-Textfield spectrum-Textfield--quiet spectrum-Combobox-textfield">
                 <input type="text" name="field" value="" class="spectrum-Textfield-input spectrum-Combobox-input">
@@ -169,10 +169,10 @@ examples:
             </div>
           </div>
         </div>
-        <div class="spectrum-Examples-item">
-          <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">With Field Label</h4>
+        <div class="site-Examples-item">
+          <h4 class="spectrum-Heading spectrum-Heading--sizeXS site-Examples-itemHeading">With Field Label</h4>
 
-          <div class="spectrum-Examples-itemGroup" style="display:block;">
+          <div class="site-Examples-itemGroup" style="display:block;">
             <div class="spectrum-FieldLabel spectrum-FieldLabel--sizeM">Country</div>
 
             <div class="spectrum-Combobox spectrum-Combobox--quiet">
@@ -190,10 +190,10 @@ examples:
             </div>
           </div>
         </div>
-        <div class="spectrum-Examples-item">
-          <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">Disabled</h4>
+        <div class="site-Examples-item">
+          <h4 class="spectrum-Heading spectrum-Heading--sizeXS site-Examples-itemHeading">Disabled</h4>
 
-          <div class="spectrum-Examples-itemGroup">
+          <div class="site-Examples-itemGroup">
             <div class="spectrum-Combobox spectrum-Combobox--quiet is-disabled">
               <div class="spectrum-Textfield spectrum-Textfield--quiet spectrum-Combobox-textfield is-disabled">
                 <input type="text" name="field" value="" class="spectrum-Textfield-input spectrum-Combobox-input" disabled>
@@ -209,10 +209,10 @@ examples:
             </div>
           </div>
         </div>
-        <div class="spectrum-Examples-item">
-          <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">Open</h4>
+        <div class="site-Examples-item">
+          <h4 class="spectrum-Heading spectrum-Heading--sizeXS site-Examples-itemHeading">Open</h4>
 
-          <div class="spectrum-Examples-itemGroup" style="min-height: 240px;">
+          <div class="site-Examples-itemGroup" style="min-height: 240px;">
             <div class="spectrum-Combobox spectrum-Combobox--quiet is-open">
               <div class="spectrum-Textfield spectrum-Textfield--quiet spectrum-Combobox-textfield">
                 <input type="text" name="field" value="" class="spectrum-Textfield-input spectrum-Combobox-input">
@@ -251,11 +251,11 @@ examples:
   - id: combobox
     name: Invalid
     markup: |
-      <div class="spectrum-Examples" style="justify-content: space-evenly;">
-        <div class="spectrum-Examples-item">
-          <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">Standard</h4>
+      <div class="site-Examples" style="justify-content: space-evenly;">
+        <div class="site-Examples-item">
+          <h4 class="spectrum-Heading spectrum-Heading--sizeXS site-Examples-itemHeading">Standard</h4>
 
-          <div class="spectrum-Examples-itemGroup">
+          <div class="site-Examples-itemGroup">
             <div class="spectrum-Combobox is-invalid">
               <div class="spectrum-Textfield spectrum-Combobox-textfield is-invalid">
                 <svg class="spectrum-Icon spectrum-Icon--sizeM spectrum-Textfield-validationIcon" focusable="false" aria-hidden="true">
@@ -274,10 +274,10 @@ examples:
             </div>
           </div>
         </div>
-        <div class="spectrum-Examples-item">
-          <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">Quiet</h4>
+        <div class="site-Examples-item">
+          <h4 class="spectrum-Heading spectrum-Heading--sizeXS site-Examples-itemHeading">Quiet</h4>
 
-          <div class="spectrum-Examples-itemGroup">
+          <div class="site-Examples-itemGroup">
             <div class="spectrum-Combobox spectrum-Combobox--quiet is-invalid">
               <div class="spectrum-Textfield spectrum-Textfield--quiet is-invalid spectrum-Combobox-textfield">
                 <svg class="spectrum-Icon spectrum-Icon--sizeM spectrum-Textfield-validationIcon" focusable="false" aria-hidden="true">
@@ -301,11 +301,11 @@ examples:
   - id: combobox
     name: Loading
     markup: |
-      <div class="spectrum-Examples" style="justify-content: space-evenly;">
-        <div class="spectrum-Examples-item">
-          <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">Standard</h4>
+      <div class="site-Examples" style="justify-content: space-evenly;">
+        <div class="site-Examples-item">
+          <h4 class="spectrum-Heading spectrum-Heading--sizeXS site-Examples-itemHeading">Standard</h4>
 
-          <div class="spectrum-Examples-itemGroup">
+          <div class="site-Examples-itemGroup">
             <div class="spectrum-Combobox is-loading">
               <div class="spectrum-Textfield spectrum-Combobox-textfield is-loading">
                 <input type="text" name="field" value="" class="spectrum-Textfield-input spectrum-Combobox-input">
@@ -338,10 +338,10 @@ examples:
           </div>
         </div>
 
-        <div class="spectrum-Examples-item">
-          <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">Quiet</h4>
+        <div class="site-Examples-item">
+          <h4 class="spectrum-Heading spectrum-Heading--sizeXS site-Examples-itemHeading">Quiet</h4>
 
-          <div class="spectrum-Examples-itemGroup">
+          <div class="site-Examples-itemGroup">
             <div class="spectrum-Combobox spectrum-Combobox--quiet is-loading">
               <div class="spectrum-Textfield spectrum-Textfield--quiet spectrum-Combobox-textfield is-loading">
                 <input type="text" name="field" value="" class="spectrum-Textfield-input spectrum-Combobox-input">

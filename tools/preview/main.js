@@ -4,6 +4,8 @@ const { readdirSync } = require('fs');
 const componentsPath = resolve(__dirname, '../../components');
 const componentPkgs = readdirSync(componentsPath, { withFileTypes: true }).filter(dirent => dirent.isDirectory()).map(dirent => dirent.name);
 
+const localWebpack = require('../../webpack.config.js');
+
 module.exports = {
   stories: [
     '../../components/*/stories/*.stories.md',
@@ -50,13 +52,12 @@ module.exports = {
     },
   },
   webpackFinal: function (config) {
-    let storybookRules = config && config.module && config.module.rules ?
-      config.module.rules
-        .filter(rule => !(rule.test && rule.test.toString().includes('css'))) : [];
-
     return {
       ...config,
+      ...localWebpack,
       stats: {
+        ...config.stats ?? {},
+        ...localWebpack?.stats ?? {},
         /* Suppress autoprefixer warnings from storybook build */
         warningsFilter: [
           /autoprefixer: /,
@@ -64,78 +65,24 @@ module.exports = {
       },
       /* Add support for root node_modules imports */
       resolve: {
-        ...config.resolve ? config.resolve : {},
+        ...config.resolve ?? {},
+        ...localWebpack?.resolve ?? {},
         modules: [
-          ...config.resolve ? config.resolve.modules : [],
-          resolve(__dirname, '../../node_modules'),
+          ...config?.resolve?.modules ?? [],
+          ...localWebpack?.resolve?.modules ?? [],
         ],
         alias: {
           ...config.resolve ? config.resolve.alias : {},
-          ...componentPkgs.reduce((pkgs, dir) => {
-            const pkg = require(resolve(componentsPath, dir, 'package.json'));
-            pkgs[pkg.name] = resolve(componentsPath, dir);
-            return pkgs;
-          }, {}),
+          ...localWebpack?.resolve?.alias ?? {},
         }
       },
       module: {
-        ...config.module ?? [],
+        ...config.module ?? {},
+        ...localWebpack?.module ?? {},
         rules: [
-          ...storybookRules,
-          {
-            test: /^\w+\.{ico,jpg,jpeg,png,gif,webp}$/i,
-            use: [{
-              loader: "file-loader",
-              options: {
-                outputPath: (url, resourcePath, context) => {
-                  return `assets/images/${url.replace(/_\//g, '')}`;
-                },
-              },
-            }]
-          },
-          {
-            test: /\.css$/i,
-            sideEffects: true,
-            use: [{
-              loader: "style-loader",
-              options: {
-                injectType: "linkTag",
-                attributes: {
-                  "data-source": "processed"
-                }
-              }
-            },
-            {
-              loader: "file-loader",
-              options: {
-                name: '[path][name].[ext][query]',
-                outputPath: (url, resourcePath, context) => {
-                  return `assets/css/${url.replace(/_\//g, '')}`;
-                },
-                esModule: false,
-              },
-            },
-            {
-              loader: "postcss-loader",
-              options: {
-                implementation: require("postcss"),
-                postcssOptions: {
-                  config: resolve(__dirname, 'postcss.config.js'),
-                },
-              },
-            }],
-          },
-          {
-            test: /\.js$/,
-            enforce: "pre",
-            use: ["source-map-loader"],
-          },
-          /* Raw SVG loader */
-          {
-            test: /\.svg$/i,
-            loader: 'raw-loader',
-          },
-        ]
+          ...config?.module?.rules.filter(rule => !(rule.test && rule.test.toString().includes('css'))) ?? [],
+          ...localWebpack?.module?.rules ?? [],
+        ],
       }
     };
   },

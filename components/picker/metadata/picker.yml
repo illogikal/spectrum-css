@@ -50,10 +50,10 @@ examples:
   - id: picker-standard
     name: Standard
     markup: |
-      <div class="spectrum-Examples" style="flex-direction: column;">
+      <div class="site-Examples" style="flex-direction: column;">
 
         <!-- Closed -->
-        <div class="spectrum-Examples-item">
+        <div class="site-Examples-item">
           <h4>Closed</h4>
           <div class="spectrum-FieldLabel spectrum-FieldLabel--sizeM">Country</div>
           <button class="spectrum-Picker spectrum-Picker--sizeM" aria-haspopup="listbox" style="width: 240px">
@@ -65,7 +65,7 @@ examples:
         </div>
 
         <!-- Open -->
-        <div class="spectrum-Examples-item">
+        <div class="site-Examples-item">
           <h4>Open</h4>
           <button class="spectrum-Picker spectrum-Picker--sizeM is-open" aria-haspopup="listbox" style="width: 240px">
             <span class="spectrum-Picker-label">Donaudampfschifffahrtsgesellschaftskapitän</span>
@@ -107,7 +107,7 @@ examples:
         <div class="dummy-spacing" style="block-size: 15rem;"></div>
 
         <!-- Open with Thumbnails -->
-        <div class="spectrum-Examples-item">
+        <div class="site-Examples-item">
 
           <h4>Open with Thumbnails</h4>
           <button class="spectrum-Picker spectrum-Picker--sizeM is-open" aria-haspopup="listbox" style="width: 240px">
@@ -165,7 +165,7 @@ examples:
         <div class="dummy-spacing" style="block-size: 15rem;"></div>
 
         <!-- Disabled -->
-        <div class="spectrum-Examples-item">
+        <div class="site-Examples-item">
           <h4>Disabled</h4>
           <button class="spectrum-Picker spectrum-Picker--sizeM" disabled aria-haspopup="listbox" style="width: 240px">
             <span class="spectrum-Picker-label is-placeholder">Select a Country</span>
@@ -176,7 +176,7 @@ examples:
         </div>
 
         <!-- Closed and Loading -->
-        <div class="spectrum-Examples-item">
+        <div class="site-Examples-item">
           <h4>Closed and Loading</h4>
           <button class="spectrum-Picker spectrum-Picker--sizeM is-loading" aria-haspopup="listbox" style="width: 240px">
             <span class="spectrum-Picker-label is-placeholder">Loading...</span>
@@ -203,7 +203,7 @@ examples:
         </div>
 
         <!-- Close and Invalid -->
-        <div class="spectrum-Examples-item">
+        <div class="site-Examples-item">
           <h4>Closed and Invalid</h4>
           <button class="spectrum-Picker spectrum-Picker--sizeM is-invalid" aria-haspopup="listbox" style="width: 240px">
             <span class="spectrum-Picker-label is-placeholder">Select a Country</span>
@@ -217,7 +217,7 @@ examples:
         </div>
 
           <!-- Close and Invalid with Help Text -->
-        <div class="spectrum-Examples-item">
+        <div class="site-Examples-item">
           <h4>Closed and Invalid with Help Text</h4>
           <div class="spectrum-FieldLabel spectrum-FieldLabel--sizeM">
             Preferred contact method
@@ -241,7 +241,7 @@ examples:
 
 
         <!-- Open and Invalid -->
-        <div class="spectrum-Examples-item">
+        <div class="site-Examples-item">
           <h4>Open and Invalid </h4>
           <button class="spectrum-Picker spectrum-Picker--sizeM is-invalid is-open" aria-haspopup="listbox" style="width: 240px">
             <span class="spectrum-Picker-label">Ballard</span>
@@ -285,7 +285,7 @@ examples:
 
         <div class="dummy-spacing" style="block-size: 10rem;"></div>
 
-        <div class="spectrum-Examples-item">
+        <div class="site-Examples-item">
           <h4>Closed and Disabled with Thumbnails</h4>
           <div style="position: relative; width: 240px;">
             <button class="spectrum-Picker spectrum-Picker--sizeM is-invalid" disabled aria-haspopup="listbox" style="width: 240px">

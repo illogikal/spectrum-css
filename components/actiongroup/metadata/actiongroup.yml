@@ -306,9 +306,9 @@ examples:
   - id: actiongroup-sizing-horizontal
     name: Horizontal Sizing
     markup: |
-      <div class="spectrum-Examples">
-        <div class="spectrum-Examples-item">
-          <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">S</h4>
+      <div class="site-Examples">
+        <div class="site-Examples-item">
+          <h4 class="spectrum-Heading spectrum-Heading--sizeXS site-Examples-itemHeading">S</h4>
           <div class="spectrum-ActionGroup spectrum-ActionGroup--sizeS">
             <button class="spectrum-ActionButton spectrum-ActionButton--sizeS spectrum-ActionGroup-item">
               <span class="spectrum-ActionButton-label">Edit</span>
@@ -321,8 +321,8 @@ examples:
             </button>
           </div>
         </div>
-        <div class="spectrum-Examples-item">
-          <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">M</h4>
+        <div class="site-Examples-item">
+          <h4 class="spectrum-Heading spectrum-Heading--sizeXS site-Examples-itemHeading">M</h4>
           <div class="spectrum-ActionGroup spectrum-ActionGroup--sizeM">
             <button class="spectrum-ActionButton spectrum-ActionButton--sizeM spectrum-ActionGroup-item">
               <span class="spectrum-ActionButton-label">Edit</span>
@@ -335,8 +335,8 @@ examples:
             </button>
           </div>
         </div>
-        <div class="spectrum-Examples-item">
-          <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">L</h4>
+        <div class="site-Examples-item">
+          <h4 class="spectrum-Heading spectrum-Heading--sizeXS site-Examples-itemHeading">L</h4>
           <div class="spectrum-ActionGroup spectrum-ActionGroup--sizeL">
             <button class="spectrum-ActionButton spectrum-ActionButton--sizeL spectrum-ActionGroup-item">
               <span class="spectrum-ActionButton-label">Edit</span>
@@ -349,8 +349,8 @@ examples:
             </button>
           </div>
         </div>
-        <div class="spectrum-Examples-item">
-          <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">XL</h4>
+        <div class="site-Examples-item">
+          <h4 class="spectrum-Heading spectrum-Heading--sizeXS site-Examples-itemHeading">XL</h4>
           <div class="spectrum-ActionGroup spectrum-ActionGroup--sizeXL">
             <button class="spectrum-ActionButton spectrum-ActionButton--sizeXL spectrum-ActionGroup-item">
               <span class="spectrum-ActionButton-label">Edit</span>
@@ -368,9 +368,9 @@ examples:
   - id: actiongroup-sizing-vertical
     name: Vertical Sizing
     markup: |
-      <div class="spectrum-Examples">
-        <div class="spectrum-Examples-item">
-          <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">S</h4>
+      <div class="site-Examples">
+        <div class="site-Examples-item">
+          <h4 class="spectrum-Heading spectrum-Heading--sizeXS site-Examples-itemHeading">S</h4>
           <div class="spectrum-ActionGroup spectrum-ActionGroup--vertical spectrum-ActionGroup--sizeS">
             <button class="spectrum-ActionButton spectrum-ActionButton--sizeS spectrum-ActionGroup-item">
               <span class="spectrum-ActionButton-label">Edit</span>
@@ -383,8 +383,8 @@ examples:
             </button>
           </div>
         </div>
-        <div class="spectrum-Examples-item">
-          <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">M</h4>
+        <div class="site-Examples-item">
+          <h4 class="spectrum-Heading spectrum-Heading--sizeXS site-Examples-itemHeading">M</h4>
           <div class="spectrum-ActionGroup spectrum-ActionGroup--vertical spectrum-ActionGroup--sizeM">
             <button class="spectrum-ActionButton spectrum-ActionButton--sizeM spectrum-ActionGroup-item">
               <span class="spectrum-ActionButton-label">Edit</span>
@@ -397,8 +397,8 @@ examples:
             </button>
           </div>
         </div>
-        <div class="spectrum-Examples-item">
-          <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">L</h4>
+        <div class="site-Examples-item">
+          <h4 class="spectrum-Heading spectrum-Heading--sizeXS site-Examples-itemHeading">L</h4>
           <div class="spectrum-ActionGroup spectrum-ActionGroup--vertical spectrum-ActionGroup--sizeL">
             <button class="spectrum-ActionButton spectrum-ActionButton--sizeL spectrum-ActionGroup-item">
               <span class="spectrum-ActionButton-label">Edit</span>
@@ -411,8 +411,8 @@ examples:
             </button>
           </div>
         </div>
-        <div class="spectrum-Examples-item">
-          <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">XL</h4>
+        <div class="site-Examples-item">
+          <h4 class="spectrum-Heading spectrum-Heading--sizeXS site-Examples-itemHeading">XL</h4>
           <div class="spectrum-ActionGroup spectrum-ActionGroup--vertical spectrum-ActionGroup--sizeXL">
             <button class="spectrum-ActionButton spectrum-ActionButton--sizeXL spectrum-ActionGroup-item">
               <span class="spectrum-ActionButton-label">Edit</span>

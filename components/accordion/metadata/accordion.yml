@@ -5,6 +5,7 @@ SWC:
   tag: sp-accordion
 examples:
   - id: accordion
+    name: Standard
     markup: |
       <!-- WAI-ARIA 1.1: Accordion container role changed from "tablist" to "region" -->
       <div class="spectrum-Accordion" role="region">

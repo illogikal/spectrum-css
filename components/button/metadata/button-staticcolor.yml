@@ -39,9 +39,9 @@ examples:
     name: Static White
     markup: |
       <div style="background-color: rgb(15, 121, 125); color: rgb(15, 121, 125); --spectrum-alias-heading-text-color: white; padding: 15px 20px;">
-        <div class="spectrum-Examples">
-          <div class="spectrum-Examples-item">
-            <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">S</h4>
+        <div class="site-Examples">
+          <div class="site-Examples-item">
+            <h4 class="spectrum-Heading spectrum-Heading--sizeXS site-Examples-itemHeading">S</h4>
 
             <button class="spectrum-Button spectrum-Button--fill spectrum-Button--staticWhite spectrum-Button--sizeS">
               <span class="spectrum-Button-label">Edit</span>
@@ -60,8 +60,8 @@ examples:
               </svg>
             </button>
           </div>
-          <div class="spectrum-Examples-item">
-            <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">M (default)</h4>
+          <div class="site-Examples-item">
+            <h4 class="spectrum-Heading spectrum-Heading--sizeXS site-Examples-itemHeading">M (default)</h4>
 
             <button class="spectrum-Button spectrum-Button--fill spectrum-Button--staticWhite spectrum-Button--sizeM">
               <span class="spectrum-Button-label">Edit</span>
@@ -81,8 +81,8 @@ examples:
             </button>
           </div>
 
-          <div class="spectrum-Examples-item">
-            <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">L</h4>
+          <div class="site-Examples-item">
+            <h4 class="spectrum-Heading spectrum-Heading--sizeXS site-Examples-itemHeading">L</h4>
 
             <button class="spectrum-Button spectrum-Button--fill spectrum-Button--staticWhite spectrum-Button--sizeL">
               <span class="spectrum-Button-label">Edit</span>
@@ -102,8 +102,8 @@ examples:
             </button>
           </div>
 
-          <div class="spectrum-Examples-item">
-            <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">XL</h4>
+          <div class="site-Examples-item">
+            <h4 class="spectrum-Heading spectrum-Heading--sizeXS site-Examples-itemHeading">XL</h4>
 
             <button class="spectrum-Button spectrum-Button--fill spectrum-Button--staticWhite spectrum-Button--sizeXL">
               <span class="spectrum-Button-label">Edit</span>
@@ -173,9 +173,9 @@ examples:
     name: Static Black
     markup: |
       <div style="background-color: rgb(181, 209, 211); color: rgb(181, 209, 211); padding: 15px 20px;">
-        <div class="spectrum-Examples">
-          <div class="spectrum-Examples-item">
-            <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">S</h4>
+        <div class="site-Examples">
+          <div class="site-Examples-item">
+            <h4 class="spectrum-Heading spectrum-Heading--sizeXS site-Examples-itemHeading">S</h4>
 
             <button class="spectrum-Button spectrum-Button--fill spectrum-Button--staticBlack spectrum-Button--sizeS">
               <span class="spectrum-Button-label">Edit</span>
@@ -194,8 +194,8 @@ examples:
               </svg>
             </button>
           </div>
-          <div class="spectrum-Examples-item">
-            <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">M (default)</h4>
+          <div class="site-Examples-item">
+            <h4 class="spectrum-Heading spectrum-Heading--sizeXS site-Examples-itemHeading">M (default)</h4>
 
             <button class="spectrum-Button spectrum-Button--fill spectrum-Button--staticBlack spectrum-Button--sizeM">
               <span class="spectrum-Button-label">Edit</span>
@@ -215,8 +215,8 @@ examples:
             </button>
           </div>
 
-          <div class="spectrum-Examples-item">
-            <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">L</h4>
+          <div class="site-Examples-item">
+            <h4 class="spectrum-Heading spectrum-Heading--sizeXS site-Examples-itemHeading">L</h4>
 
             <button class="spectrum-Button spectrum-Button--fill spectrum-Button--staticBlack spectrum-Button--sizeL">
               <span class="spectrum-Button-label">Edit</span>
@@ -236,8 +236,8 @@ examples:
             </button>
           </div>
 
-          <div class="spectrum-Examples-item">
-            <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">XL</h4>
+          <div class="site-Examples-item">
+            <h4 class="spectrum-Heading spectrum-Heading--sizeXS site-Examples-itemHeading">XL</h4>
 
             <button class="spectrum-Button spectrum-Button--fill spectrum-Button--staticBlack spectrum-Button--sizeXL">
               <span class="spectrum-Button-label">Edit</span>
@@ -307,9 +307,9 @@ examples:
     name: Static White - Outline
     markup: |
       <div style="background-color: rgb(15, 121, 125); color: rgb(15, 121, 125); --spectrum-alias-heading-text-color: white; padding: 15px 20px;">
-        <div class="spectrum-Examples">
-          <div class="spectrum-Examples-item">
-            <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">S</h4>
+        <div class="site-Examples">
+          <div class="site-Examples-item">
+            <h4 class="spectrum-Heading spectrum-Heading--sizeXS site-Examples-itemHeading">S</h4>
 
             <button class="spectrum-Button spectrum-Button--outline spectrum-Button--staticWhite spectrum-Button--sizeS">
               <span class="spectrum-Button-label">Edit</span>
@@ -328,8 +328,8 @@ examples:
               </svg>
             </button>
           </div>
-          <div class="spectrum-Examples-item">
-            <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">M (default)</h4>
+          <div class="site-Examples-item">
+            <h4 class="spectrum-Heading spectrum-Heading--sizeXS site-Examples-itemHeading">M (default)</h4>
 
             <button class="spectrum-Button spectrum-Button--outline spectrum-Button--staticWhite spectrum-Button--sizeM">
               <span class="spectrum-Button-label">Edit</span>
@@ -349,8 +349,8 @@ examples:
             </button>
           </div>
 
-          <div class="spectrum-Examples-item">
-            <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">L</h4>
+          <div class="site-Examples-item">
+            <h4 class="spectrum-Heading spectrum-Heading--sizeXS site-Examples-itemHeading">L</h4>
 
             <button class="spectrum-Button spectrum-Button--outline spectrum-Button--staticWhite spectrum-Button--sizeL">
               <span class="spectrum-Button-label">Edit</span>
@@ -370,8 +370,8 @@ examples:
             </button>
           </div>
 
-          <div class="spectrum-Examples-item">
-            <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">XL</h4>
+          <div class="site-Examples-item">
+            <h4 class="spectrum-Heading spectrum-Heading--sizeXS site-Examples-itemHeading">XL</h4>
 
             <button class="spectrum-Button spectrum-Button--outline spectrum-Button--staticWhite spectrum-Button--sizeXL">
               <span class="spectrum-Button-label">Edit</span>
@@ -441,9 +441,9 @@ examples:
     name: Static Black - Outline
     markup: |
       <div style="background-color: rgb(181, 209, 211); color: rgb(181, 209, 211); padding: 15px 20px;">
-        <div class="spectrum-Examples">
-          <div class="spectrum-Examples-item">
-            <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">S</h4>
+        <div class="site-Examples">
+          <div class="site-Examples-item">
+            <h4 class="spectrum-Heading spectrum-Heading--sizeXS site-Examples-itemHeading">S</h4>
 
             <button class="spectrum-Button spectrum-Button--outline spectrum-Button--staticBlack spectrum-Button--sizeS">
               <span class="spectrum-Button-label">Edit</span>
@@ -462,8 +462,8 @@ examples:
               </svg>
             </button>
           </div>
-          <div class="spectrum-Examples-item">
-            <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">M (default)</h4>
+          <div class="site-Examples-item">
+            <h4 class="spectrum-Heading spectrum-Heading--sizeXS site-Examples-itemHeading">M (default)</h4>
 
             <button class="spectrum-Button spectrum-Button--outline spectrum-Button--staticBlack spectrum-Button--sizeM">
               <span class="spectrum-Button-label">Edit</span>
@@ -483,8 +483,8 @@ examples:
             </button>
           </div>
 
-          <div class="spectrum-Examples-item">
-            <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">L</h4>
+          <div class="site-Examples-item">
+            <h4 class="spectrum-Heading spectrum-Heading--sizeXS site-Examples-itemHeading">L</h4>
 
             <button class="spectrum-Button spectrum-Button--outline spectrum-Button--staticBlack spectrum-Button--sizeL">
               <span class="spectrum-Button-label">Edit</span>
@@ -504,8 +504,8 @@ examples:
             </button>
           </div>
 
-          <div class="spectrum-Examples-item">
-            <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">XL</h4>
+          <div class="site-Examples-item">
+            <h4 class="spectrum-Heading spectrum-Heading--sizeXS site-Examples-itemHeading">XL</h4>
 
             <button class="spectrum-Button spectrum-Button--outline spectrum-Button--staticBlack spectrum-Button--sizeXL">
               <span class="spectrum-Button-label">Edit</span>

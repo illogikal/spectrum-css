@@ -12,13 +12,11 @@
 
         {% initClipboardJS %}
 
-        <script src="{{ '/js/loadicons/index.js' | url }}"></script>
-        <script src="{{ '/js/focus-ring-polyfill/index.js' | url }}"></script>
-        <script src="{{ '/js/typekit.js' | url }}"></script>
+        <script src="{{ '/assets/scripts/typekit.js' | url }}"></script>
 
         {% for packageName in dependencies | dedupe -%}
             {% if packageName %}<script src="{{ '/components/' + packageName + '/enhancement.js' | url }}"></script>{% endif %}
         {%- endfor %}
-        <script src="{{ '/js/site.js' | url }}"></script>
+        <script src="{{ '/assets/scripts/index.js' | url }}"></script>
     </body>
 </html>

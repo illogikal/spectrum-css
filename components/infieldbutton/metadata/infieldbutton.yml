@@ -17,9 +17,9 @@ examples:
   - id: infieldbutton-sizing
     name: Sizing
     markup: |
-      <div class="spectrum-Examples">
-        <div class="spectrum-Examples-item">
-          <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">S</h4>
+      <div class="site-Examples">
+        <div class="site-Examples-item">
+          <h4 class="spectrum-Heading spectrum-Heading--sizeXS site-Examples-itemHeading">S</h4>
           <button class="spectrum-InfieldButton spectrum-InfieldButton--sizeS spectrum-InfieldButton--right" aria-haspopup="listbox">
             <div class="spectrum-InfieldButton-fill">
               <svg xmlns="http://www.w3.org/2000/svg" class="spectrum-Icon spectrum-InfieldButton-icon" focusable="false" aria-hidden="true" aria-label="Add">
@@ -29,8 +29,8 @@ examples:
           </button>
         </div>
 
-        <div class="spectrum-Examples-item">
-          <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">M</h4>
+        <div class="site-Examples-item">
+          <h4 class="spectrum-Heading spectrum-Heading--sizeXS site-Examples-itemHeading">M</h4>
           <button class="spectrum-InfieldButton spectrum-InfieldButton--sizeM spectrum-InfieldButton--right" aria-haspopup="listbox">
             <div class="spectrum-InfieldButton-fill">
               <svg xmlns="http://www.w3.org/2000/svg" class="spectrum-Icon spectrum-InfieldButton-icon" focusable="false" aria-hidden="true" aria-label="Add">
@@ -40,8 +40,8 @@ examples:
           </button>
         </div>
 
-        <div class="spectrum-Examples-item">
-          <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">L</h4>
+        <div class="site-Examples-item">
+          <h4 class="spectrum-Heading spectrum-Heading--sizeXS site-Examples-itemHeading">L</h4>
           <button class="spectrum-InfieldButton spectrum-InfieldButton--sizeL spectrum-InfieldButton--right" aria-haspopup="listbox">
             <div class="spectrum-InfieldButton-fill">
               <svg xmlns="http://www.w3.org/2000/svg" class="spectrum-Icon spectrum-InfieldButton-icon" focusable="false" aria-hidden="true" aria-label="Add">
@@ -51,8 +51,8 @@ examples:
           </button>
         </div>
 
-        <div class="spectrum-Examples-item">
-          <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">XL</h4>
+        <div class="site-Examples-item">
+          <h4 class="spectrum-Heading spectrum-Heading--sizeXS site-Examples-itemHeading">XL</h4>
           <button class="spectrum-InfieldButton spectrum-InfieldButton--sizeXL spectrum-InfieldButton--right" aria-haspopup="listbox">
             <div class="spectrum-InfieldButton-fill">
               <svg xmlns="http://www.w3.org/2000/svg" class="spectrum-Icon spectrum-InfieldButton-icon" focusable="false" aria-hidden="true" aria-label="Add">
@@ -66,8 +66,8 @@ examples:
   - id: infieldbutton-quiet
     name: Quiet
     markup: |
-      <div class="spectrum-Examples">
-        <div class="spectrum-Examples-item">
+      <div class="site-Examples">
+        <div class="site-Examples-item">
           <button class="spectrum-InfieldButton spectrum-InfieldButton--sizeM spectrum-InfieldButton--quiet spectrum-InfieldButton--right" aria-haspopup="listbox">
             <div class="spectrum-InfieldButton-fill">
               <svg xmlns="http://www.w3.org/2000/svg" class="spectrum-Icon spectrum-InfieldButton-icon" focusable="false" aria-hidden="true" aria-label="Add">
@@ -81,9 +81,9 @@ examples:
   - id: infieldbutton-position
     name: Position
     markup: |
-      <div class="spectrum-Examples" style="justify-content: space-around;">
-        <div class="spectrum-Examples-item">
-          <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">Start</h4>
+      <div class="site-Examples" style="justify-content: space-around;">
+        <div class="site-Examples-item">
+          <h4 class="spectrum-Heading spectrum-Heading--sizeXS site-Examples-itemHeading">Start</h4>
           <button class="spectrum-InfieldButton spectrum-InfieldButton--sizeM spectrum-InfieldButton--left" aria-haspopup="listbox">
             <div class="spectrum-InfieldButton-fill">
               <svg xmlns="http://www.w3.org/2000/svg" class="spectrum-Icon spectrum-InfieldButton-icon" focusable="false" aria-hidden="true" aria-label="Add">
@@ -92,8 +92,8 @@ examples:
             </div>
           </button>
         </div>
-        <div class="spectrum-Examples-item">
-          <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">End</h4>
+        <div class="site-Examples-item">
+          <h4 class="spectrum-Heading spectrum-Heading--sizeXS site-Examples-itemHeading">End</h4>
           <button class="spectrum-InfieldButton spectrum-InfieldButton--sizeM spectrum-InfieldButton--right" aria-haspopup="listbox">
             <div class="spectrum-InfieldButton-fill">
               <svg xmlns="http://www.w3.org/2000/svg" class="spectrum-Icon spectrum-InfieldButton-icon" focusable="false" aria-hidden="true" aria-label="Add">

@@ -42,7 +42,7 @@ BranchesSelectable.args = {
         isBranch: true,
         isSelectable: true,
         isSelected: false,
-        image: "example-ava.png",
+        image: "images/example-ava.png",
       }]
     },
     {
@@ -63,7 +63,7 @@ BranchesSelectable.args = {
         isBranch: true,
         isSelectable: true,
         isSelected: true,
-        image: "example-ava.png",
+        image: "images/example-ava.png",
       }]
     },
   ]
@@ -91,7 +91,7 @@ FilesSelectable.args = {
         isSelectable: false,
         isSelected: false,
         isNavigated: true,
-        image: "example-ava.png",
+        image: "images/example-ava.png",
       }]
     },
     {
@@ -112,7 +112,7 @@ FilesSelectable.args = {
         isBranch: false,
         isSelectable: false,
         isSelected: true,
-        image: "example-ava.png",
+        image: "images/example-ava.png",
       }]
     },
   ]

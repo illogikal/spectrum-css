@@ -91,7 +91,7 @@ export default {
     rootClass: "spectrum-Tag",
     size: "m",
     label: "Tag label",
-    avatarUrl: "example-ava.png",
+    avatarUrl: "images/example-ava.png",
     isSelected: false,
     isDisabled: false,
     isInvalid: false,

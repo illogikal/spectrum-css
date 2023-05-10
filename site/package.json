@@ -14,10 +14,14 @@
   },
   "main": ".eleventy.js",
   "scripts": {
-    "build": "eleventy",
+    "build": "cross-env NODE_ENV=production npm-run-all -l clean build:*",
+    "build:eleventy": "eleventy",
+    "build:webpack": "webpack",
     "clean": "rimraf dist",
-    "dev": "NODE_ENV=development yarn start",
-    "start": "eleventy --serve"
+    "dev": "yarn start",
+    "start": "cross-env NODE_ENV=development npm-run-all -l clean -p start:* & wait-on http://localhost:${PORT:-8080}/ && open http://localhost:${PORT:-8080}",
+    "start:eleventy": "eleventy --serve --incremental",
+    "start:webpack": "webpack --watch"
   },
   "optionalDependencies": {
     "@spectrum-css/preview": "^3.0.12"
@@ -30,7 +34,8 @@
     "@11ty/eleventy-plugin-directory-output": "^1.0.1",
     "@11ty/eleventy-plugin-syntaxhighlight": "^5.0.0",
     "@adobe/focus-ring-polyfill": "^0.1.5",
-    "@types/markdown-it": "^12.2.3",
+    "@spectrum-web-components/picker": "^0.30.0",
+    "cross-env": "^7.0.3",
     "eleventy-plugin-code-clipboard": "^0.1.0",
     "fast-glob": "^3.2.12",
     "js-yaml": "^4.1.0",
@@ -43,8 +48,10 @@
     "markdown-it-container": "^3.0.0",
     "npm-run-all": "^4.1.5",
     "nunjucks": "^3.2.4",
+    "outdent": "^0.8.0",
     "prismjs": "^1.29.0",
-    "rimraf": "^5.0.0"
+    "rimraf": "^5.0.0",
+    "wait-on": "^7.0.1"
   },
   "nx": {
     "targets": {

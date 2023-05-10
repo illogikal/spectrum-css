@@ -56,7 +56,7 @@ examples:
   - id: badge
     name: Sizing
     markup: |
-        <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">Label Only</h4>
+        <h4 class="spectrum-Heading spectrum-Heading--sizeXS site-Examples-itemHeading">Label Only</h4>
         <br>
         <div class="spectrum-Badge spectrum-Badge--sizeS spectrum-Badge--neutral">
           <div class="spectrum-Badge-label">Small</div>
@@ -79,7 +79,7 @@ examples:
         <hr>
         <br>
 
-        <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">Icon Only</h4>
+        <h4 class="spectrum-Heading spectrum-Heading--sizeXS site-Examples-itemHeading">Icon Only</h4>
         <br>
         <div class="spectrum-Badge spectrum-Badge--sizeS spectrum-Badge--neutral">
           <svg class="spectrum-Icon spectrum-Icon--sizeS spectrum-Badge-icon spectrum-Badge-icon--no-label" focusable="false" aria-hidden="true">
@@ -110,7 +110,7 @@ examples:
         <hr>
         <br>
 
-        <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">Icon with Label</h4>
+        <h4 class="spectrum-Heading spectrum-Heading--sizeXS site-Examples-itemHeading">Icon with Label</h4>
         <br>
         <div class="spectrum-Badge spectrum-Badge--sizeS spectrum-Badge--neutral">
           <svg class="spectrum-Icon spectrum-Icon--sizeS spectrum-Badge-icon spectrum-Badge-icon" focusable="false" aria-hidden="true">
@@ -156,9 +156,9 @@ examples:
     name: Fixed Edge
     markup: |
 
-      <div class="spectrum-Examples">
-        <div class="spectrum-Examples-item">
-          <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">Fixed Inline Start</h4>
+      <div class="site-Examples">
+        <div class="site-Examples-item">
+          <h4 class="spectrum-Heading spectrum-Heading--sizeXS site-Examples-itemHeading">Fixed Inline Start</h4>
 
           <div class="spectrum-Badge spectrum-Badge--sizeM spectrum-Badge--neutral spectrum-Badge--fixed-inline-start">
             <svg class="spectrum-Icon spectrum-Icon--sizeM spectrum-Badge-icon spectrum-Badge-icon" focusable="false" aria-hidden="true">
@@ -168,8 +168,8 @@ examples:
           </div>
         </div>
 
-        <div class="spectrum-Examples-item">
-          <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">Fixed Inline End</h4>
+        <div class="site-Examples-item">
+          <h4 class="spectrum-Heading spectrum-Heading--sizeXS site-Examples-itemHeading">Fixed Inline End</h4>
 
           <div class="spectrum-Badge spectrum-Badge--sizeM spectrum-Badge--neutral spectrum-Badge--fixed-inline-end">
             <svg class="spectrum-Icon spectrum-Icon--sizeM spectrum-Badge-icon spectrum-Badge-icon" focusable="false" aria-hidden="true">
@@ -179,8 +179,8 @@ examples:
           </div>
         </div>
 
-        <div class="spectrum-Examples-item">
-          <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">Fixed Block Start</h4>
+        <div class="site-Examples-item">
+          <h4 class="spectrum-Heading spectrum-Heading--sizeXS site-Examples-itemHeading">Fixed Block Start</h4>
 
           <div class="spectrum-Badge spectrum-Badge--sizeM spectrum-Badge--neutral spectrum-Badge--fixed-block-start">
             <svg class="spectrum-Icon spectrum-Icon--sizeM spectrum-Badge-icon spectrum-Badge-icon" focusable="false" aria-hidden="true">
@@ -190,8 +190,8 @@ examples:
           </div>
         </div>
 
-        <div class="spectrum-Examples-item">
-          <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">Fixed Block End</h4>
+        <div class="site-Examples-item">
+          <h4 class="spectrum-Heading spectrum-Heading--sizeXS site-Examples-itemHeading">Fixed Block End</h4>
 
           <div class="spectrum-Badge spectrum-Badge--sizeM spectrum-Badge--neutral spectrum-Badge--fixed-block-end">
             <svg class="spectrum-Icon spectrum-Icon--sizeM spectrum-Badge-icon spectrum-Badge-icon" focusable="false" aria-hidden="true">
@@ -207,9 +207,9 @@ examples:
   - id: badge
     name: Text and Icon Color
     markup: |
-      <div class="spectrum-Examples">
-        <div class="spectrum-Examples-item">
-          <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">White (default)</h4>
+      <div class="site-Examples">
+        <div class="site-Examples-item">
+          <h4 class="spectrum-Heading spectrum-Heading--sizeXS site-Examples-itemHeading">White (default)</h4>
 
           <div class="spectrum-Badge spectrum-Badge--sizeM spectrum-Badge--neutral">
             <svg class="spectrum-Icon spectrum-Icon--sizeM spectrum-Badge-icon spectrum-Badge-icon" focusable="false" aria-hidden="true">
@@ -220,8 +220,8 @@ examples:
 
         </div>
 
-        <div class="spectrum-Examples-item">
-          <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">Black</h4>
+        <div class="site-Examples-item">
+          <h4 class="spectrum-Heading spectrum-Heading--sizeXS site-Examples-itemHeading">Black</h4>
 
           <div class="spectrum-Badge spectrum-Badge--sizeM spectrum-Badge--neutral spectrum-Badge--black-text">
             <svg class="spectrum-Icon spectrum-Icon--sizeM spectrum-Badge-icon spectrum-Badge-icon" focusable="false" aria-hidden="true">

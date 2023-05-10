@@ -25,9 +25,9 @@ examples:
     name: Vertical
     description: A vertical group of fields.
     markup: |
-      <div class="spectrum-Examples">
-        <div class="spectrum-Examples-item">
-          <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">Radio</h4>
+      <div class="site-Examples">
+        <div class="site-Examples-item">
+          <h4 class="spectrum-Heading spectrum-Heading--sizeXS site-Examples-itemHeading">Radio</h4>
 
           <form class="spectrum-Form">
             <div class="spectrum-FieldGroup" role="radiogroup" aria-labelledby="radiogroup-label-1">
@@ -54,8 +54,8 @@ examples:
           </form>
         </div>
 
-        <div class="spectrum-Examples-item">
-          <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">Radio</h4>
+        <div class="site-Examples-item">
+          <h4 class="spectrum-Heading spectrum-Heading--sizeXS site-Examples-itemHeading">Radio</h4>
 
           <form class="spectrum-Form">
             <div class="spectrum-FieldGroup spectrum-FieldGroup--toplabel spectrum-FieldGroup--vertical" role="radiogroup" aria-labelledby="radiogroup-label-1">
@@ -82,8 +82,8 @@ examples:
           </form>
         </div>
 
-        <div class="spectrum-Examples-item">
-          <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">Checkbox</h4>
+        <div class="site-Examples-item">
+          <h4 class="spectrum-Heading spectrum-Heading--sizeXS site-Examples-itemHeading">Checkbox</h4>
 
           <form class="spectrum-Form">
             <div class="spectrum-FieldGroup spectrum-FieldGroup--toplabel spectrum-FieldGroup--vertical" role="group" aria-labelledby="checkboxgroup-label-1">
@@ -125,9 +125,9 @@ examples:
     name: Horizontal
     description: A horizontal group of fields.
     markup: |
-      <div class="spectrum-Examples">
-        <div class="spectrum-Examples-item">
-          <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">Radio</h4>
+      <div class="site-Examples">
+        <div class="site-Examples-item">
+          <h4 class="spectrum-Heading spectrum-Heading--sizeXS site-Examples-itemHeading">Radio</h4>
 
           <form class="spectrum-Form">
             <div class="spectrum-FieldGroup spectrum-FieldGroup--toplabel spectrum-FieldGroup--horizontal" role="radiogroup" aria-labelledby="radiogroup-label-2">
@@ -154,8 +154,8 @@ examples:
           </form>
         </div>
 
-        <div class="spectrum-Examples-item">
-          <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">Checkbox</h4>
+        <div class="site-Examples-item">
+          <h4 class="spectrum-Heading spectrum-Heading--sizeXS site-Examples-itemHeading">Checkbox</h4>
 
           <form class="spectrum-Form">
             <div class="spectrum-FieldGroup spectrum-FieldGroup--toplabel spectrum-FieldGroup--horizontal" role="group" aria-labelledby="checkboxgroup-label-2">
@@ -198,9 +198,9 @@ examples:
     description: An invalid group of fields.
     markup: |
 
-      <div class="spectrum-Examples">
-        <div class="spectrum-Examples-item">
-          <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">Radio</h4>
+      <div class="site-Examples">
+        <div class="site-Examples-item">
+          <h4 class="spectrum-Heading spectrum-Heading--sizeXS site-Examples-itemHeading">Radio</h4>
 
           <form class="spectrum-Form">
             <div class="spectrum-FieldGroup spectrum-FieldGroup--toplabel spectrum-FieldGroup--horizontal" role="radiogroup" aria-labelledby="radiogroup-label-3">
@@ -231,8 +231,8 @@ examples:
         </div>
 
 
-        <div class="spectrum-Examples-item">
-          <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">Checkbox</h4>
+        <div class="site-Examples-item">
+          <h4 class="spectrum-Heading spectrum-Heading--sizeXS site-Examples-itemHeading">Checkbox</h4>
 
           <form class="spectrum-Form">
             <div class="spectrum-FieldGroup spectrum-FieldGroup--toplabel spectrum-FieldGroup--horizontal" role="group" aria-labelledby="checkboxgroup-label-3">
@@ -277,9 +277,9 @@ examples:
     name: Required or Optional
     description: An optional or required group of fields.
     markup: |
-      <div class="spectrum-Examples">
-        <div class="spectrum-Examples-item">
-          <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">Required</h4>
+      <div class="site-Examples">
+        <div class="site-Examples-item">
+          <h4 class="spectrum-Heading spectrum-Heading--sizeXS site-Examples-itemHeading">Required</h4>
           <form class="spectrum-Form">
             <div class="spectrum-FieldGroup spectrum-FieldGroup--toplabel spectrum-FieldGroup--vertical" role="radiogroup" aria-labelledby="radiogroup-label-4">
               <div class="spectrum-FieldLabel spectrum-FieldLabel--sizeM" id="radiogroup-label-4">Radio Group Label (required)</div>
@@ -305,8 +305,8 @@ examples:
           </form>
         </div>
 
-        <div class="spectrum-Examples-item">
-          <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">Required Asterisk</h4>
+        <div class="site-Examples-item">
+          <h4 class="spectrum-Heading spectrum-Heading--sizeXS site-Examples-itemHeading">Required Asterisk</h4>
           <form class="spectrum-Form">
             <div class="spectrum-FieldGroup spectrum-FieldGroup--toplabel spectrum-FieldGroup--vertical" role="radiogroup" aria-labelledby="radiogroup-label-5">
               <div class="spectrum-FieldLabel spectrum-FieldLabel--sizeM" id="radiogroup-label-5">Radio Group Label
@@ -336,8 +336,8 @@ examples:
           </form>
         </div>
 
-        <div class="spectrum-Examples-item">
-          <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">Optional</h4>
+        <div class="site-Examples-item">
+          <h4 class="spectrum-Heading spectrum-Heading--sizeXS site-Examples-itemHeading">Optional</h4>
           <form class="spectrum-Form">
             <div class="spectrum-FieldGroup spectrum-FieldGroup--toplabel spectrum-FieldGroup--vertical" role="radiogroup" aria-labelledby="radiogroup-label-6">
               <div class="spectrum-FieldLabel spectrum-FieldLabel--sizeM" id="radiogroup-label-6">Radio Group Label (optional)</div>
@@ -364,10 +364,10 @@ examples:
   - id: fieldgroup-sidelabel
     name: Side Label Position
     markup: |
-      <div class="spectrum-Examples">
+      <div class="site-Examples">
 
-        <div class="spectrum-Examples-item">
-          <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">Side Label Vertical Radio</h4>
+        <div class="site-Examples-item">
+          <h4 class="spectrum-Heading spectrum-Heading--sizeXS site-Examples-itemHeading">Side Label Vertical Radio</h4>
 
           <form class="spectrum-Form">
             <div class="spectrum-FieldGroup spectrum-FieldGroup--sidelabel spectrum-FieldGroup--vertical" role="radiogroup" aria-labelledby="radiogroup-label-7">
@@ -394,8 +394,8 @@ examples:
           </form>
         </div>
 
-        <div class="spectrum-Examples-item">
-          <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">Side Label Vertical Checkbox</h4>
+        <div class="site-Examples-item">
+          <h4 class="spectrum-Heading spectrum-Heading--sizeXS site-Examples-itemHeading">Side Label Vertical Checkbox</h4>
 
           <form class="spectrum-Form">
             <div class="spectrum-FieldGroup spectrum-FieldGroup--sidelabel spectrum-FieldGroup--vertical" role="radiogroup" aria-labelledby="checkboxgroup-label-4">
@@ -429,8 +429,8 @@ examples:
           </form>
         </div>
 
-        <div class="spectrum-Examples-item">
-          <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">Side Label Horizontal Radio</h4>
+        <div class="site-Examples-item">
+          <h4 class="spectrum-Heading spectrum-Heading--sizeXS site-Examples-itemHeading">Side Label Horizontal Radio</h4>
 
           <form class="spectrum-Form">
             <div class="spectrum-FieldGroup spectrum-FieldGroup--sidelabel spectrum-FieldGroup--horizontal" role="radiogroup" aria-labelledby="radiogroup-label-8">
@@ -458,7 +458,7 @@ examples:
 
           <hr>
 
-          <h4 class="spectrum-Heading spectrum-Heading--sizeXS spectrum-Examples-itemHeading">Side Label Horizontal Checkbox</h4>
+          <h4 class="spectrum-Heading spectrum-Heading--sizeXS site-Examples-itemHeading">Side Label Horizontal Checkbox</h4>
 
           <form class="spectrum-Form">
             <div class="spectrum-FieldGroup spectrum-FieldGroup--sidelabel spectrum-FieldGroup--horizontal" role="radiogroup" aria-labelledby="checkboxgroup-label-5">

@@ -48,7 +48,7 @@ export default {
   args: {
     rootClass: "spectrum-Avatar",
     size: "700",
-    image: "example-ava.png",
+    image: "images/example-ava.png",
     altText: "Avatar",
     isDisabled: false,
   },

@@ -45,17 +45,14 @@
     "postcss": "^7.0.36",
     "postcss-class-prefix": "^0.3.0",
     "postcss-import": "^11.0.0",
-    "postcss-loader": "^4.0.0",
     "postcss-prefix-selector": "^1.16.0",
     "postcss-selector-replace": "^1.0.2",
     "postcss-warn-cleaner": "^0.1.9",
     "prettier": "^2.8.8",
-    "raw-loader": "^4.0.2",
     "react": "^17.0.0",
     "react-dom": "^17.0.0",
     "react-syntax-highlighter": "^15.5.0",
     "rimraf": "^5.0.0",
-    "source-map-loader": "^1.0.0",
     "webpack": "^4.46.0"
   },
   "nx": {

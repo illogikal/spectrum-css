@@ -10,12 +10,21 @@ OF ANY KIND, either express or implied. See the License for the specific languag
 governing permissions and limitations under the License.
 */
 
-const { readdirSync, readFileSync } = require('fs');
+const { readdirSync } = require('fs');
 const { join, dirname } = require('path');
 
-const fg = require('fast-glob');
+const filters = require('./utils/filters');
+const markdown = require('./utils/markdown');
+const shortcodes = require('./utils/shortcodes');
+const transforms = require('./utils/transforms');
 
 const { EleventyRenderPlugin } = require('@11ty/eleventy');
+
+const Navigation = require('@11ty/eleventy-navigation');
+const Bundle = require('@11ty/eleventy-plugin-bundle');
+const Output = require('@11ty/eleventy-plugin-directory-output');
+const SyntaxHighlight = require('@11ty/eleventy-plugin-syntaxhighlight');
+const CodeClipboard = require('eleventy-plugin-code-clipboard');
 
 /**
  * @type import('@11ty/eleventy').EleventyConfig
@@ -23,53 +32,55 @@ const { EleventyRenderPlugin } = require('@11ty/eleventy');
 module.exports = (config) => {
   /** --------- PLUGINS --------- */
   config.addPlugin(EleventyRenderPlugin);
-  config.addPlugin(require('@11ty/eleventy-navigation')); // Shows error name, message, and fancy stacktrace
-  config.addPlugin(require('@11ty/eleventy-plugin-bundle'));
-  config.addPlugin(require('@11ty/eleventy-plugin-directory-output'), {});
-  config.addPlugin(require('@11ty/eleventy-plugin-syntaxhighlight'), {
+  config.addPlugin(Navigation); // Shows error name, message, and fancy stacktrace
+  config.addPlugin(Bundle);
+  config.addPlugin(Output, {});
+  config.addPlugin(SyntaxHighlight, {
     init: function ({ Prism }) {
       Prism.languages['html-live'] = Prism.languages.html;
       Prism.languages['html-no-demo'] = Prism.languages.html;
     },
   });
-  config.addPlugin(require('eleventy-plugin-code-clipboard'));
+  config.addPlugin(CodeClipboard);
 
   /** --------- CONFIG --------- */
   config.setUseGitIgnore(false);
   config.setDataDeepMerge(true);
   config.setWatchThrottleWaitTime(0);
   config.setServerOptions({
-    port: process.env.BROWSERSYNC_PORT || 8080,
-    notify: true,
-    open: true,
+    liveReload: true,
+    domDiff: true,
+    port: process.env.PORT || 8080,
+    // watch: [],
     showAllHosts: true,
+    // https: {},
+    encoding: 'utf-8',
+    // notify: true,
+    // open: true,
   });
 
   /** --------- LIBRARY SETTINGS --------- */
   config.addNunjucksGlobal('WATCH_MODE', process.env.WATCH_MODE);
-  const md = require('./.markdown.config.js')();
-  config.setLibrary('md', md);
+
+  /** --------- MARKDOWN --------- */
+  config.setLibrary('md', markdown);
 
   /** --------- FILTERS --------- */
-  config.addFilter('markdownify', (value) => md.render(value));
-  config.addFilter('jsonify', (value) => JSON.stringify(value, null, 2));
+  Object.keys(filters).forEach((key) => {
+    config.addFilter(key, filters[key]);
+  });
 
-  config.addFilter('dedupe', (value) => [...new Set(value)].filter(Boolean));
-  config.addFilter('getStatusLight', (status) => {
-    if (!status) return 'neutral';
-    if (status === 'Deprecated') return 'negative';
-    if (['Beta Contribution', 'Contribution', 'Unverified'].includes(status)) return 'notice';
-    if (['Canon', 'Verified'].includes(status)) return 'positive';
-    return 'neutral';
+  /** --------- TRANSFORMS --------- */
+  Object.keys(transforms).forEach((key) => {
+    config.addTransform(key, transforms[key]);
   });
-  config.addFilter('map', (row) => {
-    return [ row[0], row[1].fallback ]
-  });
-  config.addFilter('mapToArray', map => {
-    return [...map].filter(Boolean)
-  });
-  config.addFilter('basename', path => {
-    return path.split('/').pop();
+
+  /** --------- SHORTCODES --------- */
+  // Fetch shortcodes by type
+  Object.entries(shortcodes).forEach(([type, codes]) => {
+    Object.keys(codes).forEach((key) => {
+      config[type](key, shortcodes[key]);
+    });
   });
 
   /** --------- List of component folder names --------- */
@@ -80,16 +91,8 @@ module.exports = (config) => {
 
     /** --------- PASSTHROUGHS --------- */
   config.addPassthroughCopy({
-    'assets/favicon.png': 'favicon.png',
-    'assets/css': 'css',
-    'assets/img': 'img',
-    'assets/js/*.js': 'js/',
-    'assets/js/site.mjs': 'js/site.js',
-    [require.resolve('@adobe/spectrum-css-workflow-icons/dist/spectrum-icons.svg')]: 'img/spectrum-icons.svg',
-    [require.resolve('@spectrum-css/icon/dist/spectrum-css-icons.svg')]: 'img/spectrum-css-icons.svg',
-    [require.resolve('loadicons')]: 'js/loadicons/index.js',
-    [require.resolve('@adobe/focus-ring-polyfill')]: 'js/focus-ring-polyfill/index.js',
-    [require.resolve('lunr')]: 'js/lunr/lunr.js',
+    'assets/favicon*.{png,ico,svg}': '/',
+    'assets/scripts/typekit.js': 'assets/scripts/typekit.js',
     [`${dirname(require.resolve('prismjs'))}/themes/{prism-dark,prism}.min.css`]: 'css/prism/',
     ...components.reduce((acc, c) => {
       acc[`${componentDir}/${c}/dist/*`] = `components/${c}`;
