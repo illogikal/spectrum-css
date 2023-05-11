@@ -51,15 +51,16 @@ function dropUnused(root, {
   usedInProps,
   variableRelationships
 }) {
-  root.walkRules((rule, ruleIndex) => {
+  root.walkRules((rule) => {
     rule.walkDecls((decl) => {
       if (decl.prop.startsWith('--')) {
         const varName = decl.prop;
-        // Definitely drop it if it's never used
+        // Note if it seems like this variable is unused
         if (!usedAnywhere.includes(varName)) {
-          decl.remove();
-        }
-        else if (!usedInProps.includes(varName)) {
+          decl.warn(root.toResult(), 'Possible unused variable definition', {
+            word: varName,
+          });
+        } else if (!usedInProps.includes(varName)) {
           // Drop a variable if everything that references it has been removed
           let relatedVars = variableRelationships[varName];
           if (relatedVars && relatedVars.length) {

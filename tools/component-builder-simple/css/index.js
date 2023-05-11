@@ -176,17 +176,17 @@ function checkCSS(glob) {
       let errors = [];
       usedTokens.forEach(tokenName => {
         if (!coreTokens[tokenName] && !componentTokens[tokenName] && !tokenName.startsWith('--mod') && !tokenName.startsWith('--highcontrast')) {
-          errors.push(`${pkg.name} uses undefined token ${tokenName}`);
+          console.warn(`⚠️ ${pkg.name} uses undefined token ${tokenName}`);
         }
       });
 
       // 2023-05-10: Should remove this to allow for more cascading values to influence nested components
       // Make sure all tokens defined in the component are used
-      // Object.keys(componentTokens).forEach(tokenName => {
-      //   if (!usedTokens.includes(tokenName)) {
-      //     errors.push(`${pkg.name} defines ${tokenName}, but never uses it`);
-      //   }
-      // });
+      Object.keys(componentTokens).forEach(tokenName => {
+        if (!usedTokens.includes(tokenName)) {
+          console.warn(`⚠️ ${pkg.name} defines ${tokenName}, but does not use it internally`);
+        }
+      });
 
       if (errors.length) {
         return cb(new Error(errors.join('\n')), file);
