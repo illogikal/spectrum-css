@@ -1,0 +1,58 @@
+.spectrum-SplitView-pane{
+  background-color:var(--spectrum-panel-s-background-color, var(--spectrum-alias-toolbar-background-color));
+}
+
+.spectrum-SplitView-splitter{
+  background-color:var(--spectrum-dragbar-handle-background-color, var(--spectrum-global-color-gray-300));
+}
+
+.spectrum-SplitView-gripper{
+  border-color:var(--spectrum-dragbar-handle-background-color, var(--spectrum-global-color-gray-300));
+}
+
+.spectrum-SplitView-gripper:before{
+    background-color:var(--spectrum-dragbar-handle-background-color, var(--spectrum-global-color-gray-300));
+  }
+
+.spectrum-SplitView-splitter.is-draggable:hover,
+    .spectrum-SplitView-splitter.is-draggable.is-hovered{
+      background-color:var(--spectrum-dragbar-handle-background-color-hover, var(--spectrum-global-color-gray-400));
+    }
+
+.spectrum-SplitView-splitter.is-draggable:hover .spectrum-SplitView-gripper, .spectrum-SplitView-splitter.is-draggable.is-hovered .spectrum-SplitView-gripper{
+        border-color:var(--spectrum-dragbar-handle-background-color-hover, var(--spectrum-global-color-gray-400));
+      }
+
+.spectrum-SplitView-splitter.is-draggable:hover .spectrum-SplitView-gripper:before, .spectrum-SplitView-splitter.is-draggable.is-hovered .spectrum-SplitView-gripper:before{
+          background-color:var(--spectrum-dragbar-handle-background-color-hover, var(--spectrum-global-color-gray-400));
+        }
+
+.spectrum-SplitView-splitter.is-draggable:active,
+    .spectrum-SplitView-splitter.is-draggable.is-active{
+      background-color:var(--spectrum-dragbar-handle-background-color-down, var(--spectrum-global-color-gray-800));
+    }
+
+.spectrum-SplitView-splitter.is-draggable:active .spectrum-SplitView-gripper, .spectrum-SplitView-splitter.is-draggable.is-active .spectrum-SplitView-gripper{
+        border-color:var(--spectrum-dragbar-handle-background-color-down, var(--spectrum-global-color-gray-800));
+      }
+
+.spectrum-SplitView-splitter.is-draggable:active .spectrum-SplitView-gripper:before, .spectrum-SplitView-splitter.is-draggable.is-active .spectrum-SplitView-gripper:before{
+          background-color:var(--spectrum-dragbar-handle-background-color-down, var(--spectrum-global-color-gray-800));
+        }
+
+.spectrum-SplitView-splitter.is-draggable:focus{
+      outline:none;
+    }
+
+.spectrum-SplitView-splitter.is-draggable.focus-ring{
+      background-color:var(--spectrum-alias-focus-color, var(--spectrum-global-color-blue-400));
+    }
+
+.spectrum-SplitView-splitter.is-draggable.focus-ring .spectrum-SplitView-gripper{
+        border-color:var(--spectrum-alias-focus-color, var(--spectrum-global-color-blue-400));
+        box-shadow:0 0 0 1px var(--spectrum-alias-focus-color, var(--spectrum-global-color-blue-400));
+      }
+
+.spectrum-SplitView-splitter.is-draggable.focus-ring .spectrum-SplitView-gripper:before{
+          background-color:var(--spectrum-alias-focus-color, var(--spectrum-global-color-blue-400));
+        }

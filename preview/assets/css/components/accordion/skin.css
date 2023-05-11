@@ -1,0 +1,46 @@
+.spectrum-Accordion-item{
+  border-color:var(--spectrum-accordion-border-color, var(--spectrum-global-color-gray-300));
+}
+
+.spectrum-Accordion-itemIndicator{
+  color:var(--spectrum-accordion-icon-color, var(--spectrum-global-color-gray-600));
+}
+
+.spectrum-Accordion-itemHeader{
+  color:var(--spectrum-accordion-text-color, var(--spectrum-global-color-gray-700));
+}
+
+.spectrum-Accordion-itemHeader:hover{
+    color:var(--spectrum-accordion-text-color-hover, var(--spectrum-global-color-gray-900));
+
+    background-color:var(--spectrum-accordion-item-background-color-hover, var(--spectrum-global-color-gray-200));
+  }
+
+.spectrum-Accordion-itemHeader:hover + .spectrum-Accordion-itemIndicator{
+      color:var(--spectrum-accordion-icon-color-hover, var(--spectrum-alias-icon-color-hover));
+    }
+
+.spectrum-Accordion-itemHeader.focus-ring:after{
+      background-color:var(--spectrum-accordion-item-border-left-color-key-focus, var(--spectrum-alias-border-color-key-focus));
+    }
+
+.spectrum-Accordion-item.is-open .spectrum-Accordion-itemHeader:hover{
+        background-color:transparent;
+      }
+
+.spectrum-Accordion-item.is-disabled .spectrum-Accordion-itemHeader,
+    .spectrum-Accordion-item.is-disabled .spectrum-Accordion-itemHeader:hover,
+    .spectrum-Accordion-item.is-disabled .spectrum-Accordion-itemHeader.focus-ring{
+      color:var(--spectrum-accordion-text-color-disabled, var(--spectrum-global-color-gray-500));
+      background-color:transparent;
+    }
+
+.spectrum-Accordion-item.is-disabled .spectrum-Accordion-itemHeader + .spectrum-Accordion-itemIndicator{
+      color:var(--spectrum-accordion-icon-color-disabled, var(--spectrum-alias-icon-color-disabled));
+    }
+
+@media (forced-colors: active){
+    .spectrum-Accordion-itemHeader.focus-ring{
+      outline:3px solid CanvasText;
+    }
+}

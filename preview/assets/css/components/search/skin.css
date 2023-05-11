@@ -1,0 +1,19 @@
+.spectrum-Search-icon{
+  color:var(--spectrum-textfield-m-texticon-icon-color, var(--spectrum-alias-component-icon-color-default));
+}
+
+.spectrum-Search-input:hover ~ .spectrum-Search-icon{
+      color:var(--spectrum-search-m-icon-color-hover, var(--spectrum-alias-component-icon-color-hover));
+    }
+
+.spectrum-Search-input:active ~ .spectrum-Search-icon{
+      color:var(--spectrum-search-m-icon-color-down, var(--spectrum-alias-component-icon-color-down));
+    }
+
+.spectrum-Search-input.focus-ring ~ .spectrum-Search-icon{
+      color:var(--spectrum-search-m-icon-color-key-focus, var(--spectrum-alias-component-icon-color-key-focus));
+    }
+
+.spectrum-Search-input:disabled ~ .spectrum-Search-icon{
+      color:var(--spectrum-textfield-m-texticon-text-color-disabled, var(--spectrum-alias-component-text-color-disabled));
+    }

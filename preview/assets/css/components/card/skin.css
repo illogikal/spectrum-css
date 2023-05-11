@@ -1,0 +1,119 @@
+.spectrum-Card{
+  border-color:var(--spectrum-card-m-border-color, var(--spectrum-global-color-gray-200));
+  background-color:var(--spectrum-card-m-background-color, var(--spectrum-global-color-gray-50));
+}
+
+.spectrum-Card:hover{
+    border-color:var(--spectrum-card-m-border-color-hover, var(--spectrum-global-color-gray-400));
+  }
+
+.spectrum-Card.is-selected,
+  .spectrum-Card.focus-ring{
+    border-color:var(--spectrum-card-m-border-color-key-focus, var(--spectrum-alias-border-color-key-focus));
+    box-shadow:0 0 0 1px var(--spectrum-card-m-border-color-key-focus, var(--spectrum-alias-border-color-key-focus));
+  }
+
+.spectrum-Card.is-drop-target{
+    border-color:var(--spectrum-card-m-border-color-key-focus, var(--spectrum-alias-border-color-key-focus));
+    box-shadow:0 0 0 1px var(--spectrum-card-m-border-color-key-focus, var(--spectrum-alias-border-color-key-focus));
+    background-color:var(--spectrum-alias-highlight-selected);
+  }
+
+.spectrum-Card .spectrum-Card-subtitle{
+    color:var(--spectrum-card-m-description-text-color, var(--spectrum-global-color-gray-700));
+  }
+
+.spectrum-Card-description{
+  color:var(--spectrum-card-m-description-text-color, var(--spectrum-global-color-gray-700));
+}
+
+.spectrum-Card-coverPhoto{
+  background-color:var(--spectrum-card-m-coverphoto-background-color, var(--spectrum-global-color-gray-200));
+  border-bottom-color:var(--spectrum-card-m-coverphoto-border-color, var(--spectrum-global-color-gray-200));
+}
+
+.spectrum-Card-footer{
+  border-color:var(--spectrum-card-m-border-color, var(--spectrum-global-color-gray-200));
+}
+
+.spectrum-Card--quiet,
+.spectrum-Card--gallery{
+  border-color:transparent;
+  background-color:transparent;
+}
+
+.spectrum-Card--quiet .spectrum-Card-preview, .spectrum-Card--gallery .spectrum-Card-preview{
+    background-color:var(--spectrum-card-m-quiet-preview-background-color, var(--spectrum-global-color-gray-200));
+  }
+
+.spectrum-Card--quiet:hover, .spectrum-Card--gallery:hover{
+    border-color:transparent;
+  }
+
+.spectrum-Card--quiet:hover .spectrum-Card-preview, .spectrum-Card--gallery:hover .spectrum-Card-preview{
+      background-color:var(--spectrum-card-m-quiet-preview-background-color-hover, var(--spectrum-global-color-gray-300));
+    }
+
+.spectrum-Card--quiet.is-selected,
+  .spectrum-Card--quiet.focus-ring,
+  .spectrum-Card--gallery.is-selected,
+  .spectrum-Card--gallery.focus-ring{
+    border-color:transparent;
+    box-shadow:none;
+  }
+
+.spectrum-Card--quiet.is-selected .spectrum-Card-preview, .spectrum-Card--quiet.focus-ring .spectrum-Card-preview, .spectrum-Card--gallery.is-selected .spectrum-Card-preview, .spectrum-Card--gallery.focus-ring .spectrum-Card-preview{
+      background-color:var(--spectrum-card-m-quiet-preview-background-color, var(--spectrum-global-color-gray-200));
+    }
+
+.spectrum-Card--quiet.is-selected .spectrum-Card-preview:before, .spectrum-Card--quiet.focus-ring .spectrum-Card-preview:before, .spectrum-Card--gallery.is-selected .spectrum-Card-preview:before, .spectrum-Card--gallery.focus-ring .spectrum-Card-preview:before{
+        border-color:var(--spectrum-card-m-quiet-border-color-selected, var(--spectrum-global-color-blue-500));
+        box-shadow:0 0 0 1px var(--spectrum-card-m-quiet-border-color-selected, var(--spectrum-global-color-blue-500));
+      }
+
+.spectrum-Card--quiet.is-drop-target, .spectrum-Card--gallery.is-drop-target{
+    border-color:transparent;
+    background-color:transparent;
+    box-shadow:none;
+  }
+
+.spectrum-Card--quiet.is-drop-target .spectrum-Card-preview, .spectrum-Card--gallery.is-drop-target .spectrum-Card-preview{
+      background-color:var(--spectrum-alias-highlight-selected);
+    }
+
+.spectrum-Card--quiet.is-drop-target .spectrum-Card-preview:before, .spectrum-Card--gallery.is-drop-target .spectrum-Card-preview:before{
+        border-color:var(--spectrum-card-m-quiet-border-color-selected, var(--spectrum-global-color-blue-500));
+        box-shadow:0 0 0 1px var(--spectrum-card-m-quiet-border-color-selected, var(--spectrum-global-color-blue-500));
+      }
+
+.spectrum-Card--quiet.is-drop-target .spectrum-Asset-folderBackground,
+    .spectrum-Card--quiet.is-drop-target .spectrum-Asset-fileBackground,
+    .spectrum-Card--gallery.is-drop-target .spectrum-Asset-folderBackground,
+    .spectrum-Card--gallery.is-drop-target .spectrum-Asset-fileBackground{
+      fill:var(--spectrum-alias-highlight-selected);
+    }
+
+.spectrum-Card--quiet.is-drop-target .spectrum-Asset-folderOutline,
+    .spectrum-Card--quiet.is-drop-target .spectrum-Asset-fileOutline,
+    .spectrum-Card--gallery.is-drop-target .spectrum-Asset-folderOutline,
+    .spectrum-Card--gallery.is-drop-target .spectrum-Asset-fileOutline{
+      fill:var(--spectrum-card-m-quiet-border-color-selected, var(--spectrum-global-color-blue-500));
+    }
+
+.spectrum-Card--quiet .spectrum-Card-title, .spectrum-Card--gallery .spectrum-Card-title{
+    color:var(--spectrum-card-m-quiet-title-text-color, var(--spectrum-global-color-gray-800));
+  }
+
+.spectrum-Card--quiet .spectrum-Card-subtitle, .spectrum-Card--gallery .spectrum-Card-subtitle{
+    color:var(--spectrum-card-m-quiet-subtitle-text-color, var(--spectrum-global-color-gray-700));
+  }
+
+.spectrum-Card--horizontal:hover .spectrum-Card-preview{
+      border-color:var(--spectrum-card-m-border-color-hover, var(--spectrum-global-color-gray-400));
+    }
+
+.spectrum-Card--horizontal .spectrum-Card-preview{
+    background-color:var(--spectrum-card-m-quiet-preview-background-color, var(--spectrum-global-color-gray-200));
+
+    border-color:var(--spectrum-card-m-border-color, var(--spectrum-global-color-gray-200));
+  }
